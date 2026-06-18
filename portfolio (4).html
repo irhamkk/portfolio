@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRHAM KHAIRUL KALAM — Data & Automation Builder</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0b;color:#e1e1e6;line-height:1.6}
+::selection{background:#3b82f6;color:#fff}
+
+/* nav */
+nav{position:fixed;top:0;width:100%;z-index:100;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,11,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.04)}
+nav a{color:#666;text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.03em;transition:color .2s;text-transform:uppercase;margin-left:2rem}
+nav a:hover{color:#e1e1e6}
+.logo{font-weight:700;font-size:1.1rem;color:#e1e1e6;letter-spacing:-.02em}
+
+/* sections */
+section{padding:6rem 3rem;max-width:1100px;margin:0 auto}
+.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:#555;margin-bottom:2rem;font-weight:600}
+
+/* hero */
+#hero{padding-top:10rem;min-height:90vh;display:flex;flex-direction:column;justify-content:center}
+#hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:1.5rem}
+#hero h1 span{display:block;color:#666;font-weight:300}
+#hero p{font-size:1.15rem;color:#888;max-width:600px;margin-bottom:2.5rem;line-height:1.7}
+.tagline{color:#3b82f6;font-weight:600;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1rem}
+.social-links{display:flex;gap:1rem}
+.social-links a{width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#888;text-decoration:none;transition:.2s;font-size:1.1rem}
+.social-links a:hover{border-color:#3b82f6;color:#3b82f6;background:rgba(59,130,246,.08)}
+
+/* projects */
+.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.projects-grid{grid-template-columns:1fr}}
+.project-card{border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:2rem;transition:.2s;background:rgba(255,255,255,.02);cursor:default}
+.project-card:hover{border-color:rgba(59,130,246,.2);background:rgba(59,130,246,.03)}
+.project-card .emoji{font-size:1.5rem;margin-bottom:.75rem}
+.project-card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+.project-card p{font-size:.88rem;color:#777;line-height:1.6;margin-bottom:1rem}
+.project-card .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.project-card .tags span{background:rgba(255,255,255,.05);padding:.2rem .7rem;border-radius:20px;font-size:.7rem;color:#888;border:1px solid rgba(255,255,255,.04)}
+.project-card .links{display:flex;gap:1rem}
+.project-card .links a{font-size:.82rem;color:#3b82f6;text-decoration:none;font-weight:500}
+.project-card .links a:hover{text-decoration:underline}
+
+/* experience */
+.exp-item{display:flex;gap:2rem;margin-bottom:2.5rem}
+.exp-item .year{min-width:100px;font-size:.82rem;color:#555;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.exp-item .desc h4{font-size:.95rem;font-weight:600;margin-bottom:.25rem}
+.exp-item .desc .role{color:#3b82f6;font-size:.82rem;font-weight:500;margin-bottom:.5rem}
+.exp-item .desc p{color:#777;font-size:.85rem;line-height:1.6}
+
+/* skills */
+.skills-grid{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.skills-grid span{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:.5rem 1rem;border-radius:8px;font-size:.82rem;color:#999;transition:.2s}
+.skills-grid span:hover{border-color:rgba(59,130,246,.2);color:#e1e1e6;background:rgba(59,130,246,.04)}
+
+/* contact */
+#contact{padding-bottom:4rem;text-align:center}
+#contact .big-email{font-size:1.5rem;font-weight:700;color:#e1e1e6;text-decoration:none;transition:.2s;display:inline-block;margin-top:.5rem}
+#contact .big-email:hover{color:#3b82f6}
+.footer-text{color:#444;font-size:.8rem;margin-top:2rem}
+
+/* dividers */
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);max-width:1100px;margin:0 auto}
+
+/* education */
+.edu-item{display:flex;gap:2rem;margin-bottom:2rem}
+.edu-item .year{min-width:100px;font-size:.82rem;color:#555;font-weight:600}
+.edu-item .desc h4{font-weight:600;font-size:.95rem}
+.edu-item .desc p{color:#777;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="logo">Irham</span>
+  <div>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <h1>
+    IRHAM KHAIRUL KALAM
+    <span>Data & Automation Builder</span>
+  </h1>
+  <p>Statistics graduate from Universitas Padjadjaran who builds practical automation tools instead of just talking about them. I create Telegram-based ordering systems for small businesses, autonomous content schedulers for X/Twitter, AI-powered WhatsApp assistants, and data-driven financial analysis — all running quietly in production. My work lives at the intersection of data, code, and real-world impact: making systems that solve tangible problems for real people.</p>
+  <div class="social-links">
+    <a href="https://github.com/irhamkk" target="_blank" rel="noopener" title="GitHub">&#8599;</a>
+    <a href="https://x.com/parsialverse" target="_blank" rel="noopener" title="X/Twitter">&#8599;</a>
+    <a href="https://medium.com/@parsial" target="_blank" rel="noopener" title="Medium">&#8599;</a>
+    <a href="mailto:irham.kk16@gmail.com" title="Email">&#9993;</a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="projects">
+  <div class="section-label">Featured Projects</div>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <div class="emoji">🤖</div>
+      <h3>WhatsApp AI Assistant (Ciel)</h3>
+      <p>WhatsApp-based AI assistant handling customer inquiries autonomously. Connected via DeepSeek on custom router, with session persistence across restarts. Handles message queuing, reasoning mode parsing, and chat history storage — all through WhatsApp Web.</p>
+      <div class="tags">
+        <span>Node.js</span><span>WhatsApp Web.js</span><span>LLM API</span><span>Session Persist</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="emoji">📊</div>
+      <h3>UMKM Analyst Bot</h3>
+      <p>Telegram-based analytics and ordering system for UMKM TEMEN. Parses natural language orders, tracks sales, manages pricing with margin separation — all through chat interface. Built to help small business owners manage operations without a dashboard.</p>
+      <div class="tags">
+        <span>Python</span><span>Telegram Bot</span><span>Analytics</span><span>Automation</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="emoji">🐦</div>
+      <h3>X Auto Poster</h3>
+      <p>Full-featured autonomous X/Twitter scheduler — 6 posts daily in English. AI-written content on Web3, AI, and crypto. Cookie-based auth (no API fees), queue management, and scheduled cron.</p>
+      <div class="tags">
+        <span>Python</span><span>Playwright</span><span>Hermes Cron</span><span>AI Content</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="emoji">📈</div>
+      <h3>Fed · Gold · BTC</h3>
+      <p>Analysis of Federal Reserve policy impact on gold and Bitcoin prices. 5 charts, event study, 365-day data window across 7 consecutive rate cuts. Includes published academic paper.</p>
+      <div class="tags">
+        <span>Python</span><span>FRED API</span><span>CoinGecko</span><span>Data Viz</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="experience">
+  <div class="section-label">Experience</div>
+
+  <div class="exp-item">
+    <div class="year">2024–2025</div>
+    <div class="desc">
+      <h4>Dumpling Warehousing Project</h4>
+      <div class="role">Manager &amp; Automation Lead</div>
+      <p>Managed dimsum production, social media marketing, and sales. Built Telegram ordering bot to automate order processing, pricing control, and sales tracking.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="year">2022</div>
+    <div class="desc">
+      <h4>PT. Ruang Guru</h4>
+      <div class="role">Data &amp; Business Analytics · Bootcamp</div>
+      <p>Implemented data processing, analysis, and visualization for business needs using SQL, Python, and data analytics platforms.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="year">2022</div>
+    <div class="desc">
+      <h4>DISKOMINFO Kota Cimahi</h4>
+      <div class="role">Data &amp; Statistics Intern</div>
+      <p>Processed government data and built Tableau visualizations published on the Open Data Cimahi platform.</p>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="year">2021</div>
+    <div class="desc">
+      <h4>Gradient Studio</h4>
+      <div class="role">Graphic Designer</div>
+      <p>Created motion graphics, book designs, infographic posters, logo designs, and branding materials.</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
+<section>
+  <div class="section-label">Education</div>
+  <div class="edu-item">
+    <div class="year">2019–2024</div>
+    <div class="desc">
+      <h4>Universitas Padjadjaran</h4>
+      <p>S1 Statistika · IPK 3.30/4.00</p>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:3rem">Skills &amp; Tools</div>
+  <div class="skills-grid">
+    <span>Python</span><span>SQL</span><span>Playwright</span><span>Tableau</span>
+    <span>R Studio</span><span>Google Sheets</span><span>Excel</span><span>Hermes AI</span>
+    <span>Canva</span><span>Photoshop</span><span>Illustrator</span><span>InDesign</span>
+    <span>Data Analysis</span><span>Automation</span><span>Bot Development</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="contact">
+  <div style="font-size:.85rem;color:#666;letter-spacing:.1em;text-transform:uppercase;font-weight:600">Get in touch</div>
+  <a href="mailto:irham.kk16@gmail.com" class="big-email">irham.kk16@gmail.com</a>
+  <div style="margin-top:1rem;color:#555;font-size:.9rem">GitHub: irhamkk · X: @parsialverse</div>
+  <div class="footer-text">Built with taste. No templates. No fluff.</div>
+</section>
+
+</body>
+</html>
