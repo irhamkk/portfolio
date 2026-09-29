@@ -1,31 +1,31 @@
 const T={en:{
 "nav.profile":"Profile","nav.work":"Work","nav.process":"Process","nav.experience":"Experience","nav.contact":"Contact","ui.menu":"Menu","ui.scroll":"Scroll",
-"hero.available":"Available for new projects","hero.role":"Data, AI & Automation Builder","hero.copy":"I build practical tools and systems for workflows that are still manual, repetitive, or scattered.","hero.cta":"View my work",
-"profile.lead":"My background is in statistics. <span class='muted-word'>The work gradually moved from analysing data to building the systems around it.</span>",
+"hero.available":"Available for new projects","hero.role":"Data, AI & Automation Builder","hero.copy":"I build practical systems around data, AI, and automation — especially where the current workflow is still manual, repetitive, or messy.","hero.cta":"View my work",
+"profile.lead":"I started with statistics and data analysis. <span class='muted-word'>From there, I moved into automation, AI, and the systems that connect them.</span>",
 "profile.0.title":"Statistics","profile.0.copy":"That is where I learned to break problems down, work with uncertainty, and look for structure before reaching conclusions.",
-"profile.1.title":"Design & Data","profile.1.copy":"Design taught me how information is perceived. Data taught me how to question it. Both still shape how I build things today.",
-"profile.2.title":"Automation","profile.2.copy":"I started automating real operational work — ordering, reporting, browser tasks, content publishing, and repetitive business processes.",
-"profile.3.title":"AI & Systems","profile.3.copy":"Now I care less about isolated scripts and more about the complete system: data, interfaces, automation, deployment, and the people using it.",
-"work.title":"Selected work.","work.copy":"A selection of practical systems across AI, automation, data, and Web3. The visual treatment stays simple so the work remains the focus.",
-"project.view":"View project","p1.sub":"WhatsApp AI Assistant","p1.cat":"AI / Automation","p2.sub":"Business Analytics & Ordering Bot","p2.cat":"Business Automation","p3.sub":"Automated Content Publishing System","p3.cat":"Browser Automation","p4.sub":"Market Event Study","p4.cat":"Data Analysis","p5.sub":"Self-hosted Multi-model Agent Stack","p5.cat":"AI Infrastructure","p6.sub":"Web3 Launch & Distribution System","p6.cat":"Web3 / Product",
-"process.title":"How I build.","process.0.title":"Understand","process.0.copy":"Start with the real problem, not the tool.","process.1.title":"Structure","process.1.copy":"Map the inputs, decisions, data, and handoffs.","process.2.title":"Build","process.2.copy":"Use the lightest stack that solves the problem well.","process.3.title":"Ship","process.3.copy":"Make it usable outside the prototype.",
-"experience.title":"Experience.","exp.0.role":"Manager & Automation Lead","exp.0.copy":"Managed production, social media, and sales while building a Telegram ordering system for orders, pricing control, and sales tracking.","exp.1.copy":"Worked with data processing, SQL, Python, visualization, and business-oriented analytics tasks.","exp.2.role":"Data & Statistics Intern","exp.2.copy":"Processed government data and created Tableau visualizations for the Open Data Cimahi platform.","exp.3.role":"Graphic Designer","exp.3.copy":"Created motion graphics, book layouts, infographic posters, logo work, and branding materials.","education.degree":"B.Sc. in Statistics","education.gpa":"GPA 3.30 / 4.00",
+"profile.1.title":"Design & Data","profile.1.copy":"Design taught me to communicate information clearly. Data taught me to test assumptions instead of relying on them.",
+"profile.2.title":"Automation","profile.2.copy":"I began automating operational work — from orders and reporting to browser tasks and content publishing.",
+"profile.3.title":"AI & Systems","profile.3.copy":"Now I focus on systems as a whole: how data moves, how people interact with it, what should be automated, and how the pieces work together.",
+"work.title":"Selected work.","work.copy":"A selection of systems I’ve built across AI, automation, data, and Web3 — from internal tools to production workflows.",
+"project.view":"View project","p1.sub":"WhatsApp AI Assistant","p1.cat":"AI / Automation","p2.sub":"Ordering & Business Analytics System","p2.cat":"Business Automation","p3.sub":"Automated Content Publishing System","p3.cat":"Browser Automation","p4.sub":"Market Event Study","p4.cat":"Data Analysis","p5.sub":"Self-hosted AI Agent Infrastructure","p5.cat":"AI Infrastructure","p6.sub":"Web3 Launch & Distribution System","p6.cat":"Web3 / Product",
+"process.title":"How I work.","process.0.title":"Find the friction","process.0.copy":"Identify what is slow, repetitive, or unclear before choosing a tool.","process.1.title":"Map the flow","process.1.copy":"Map the data, decisions, handoffs, and edge cases.","process.2.title":"Build the system","process.2.copy":"Build the smallest reliable system that solves the real problem.","process.3.title":"Test in use","process.3.copy":"Put it in use, watch where it breaks, and refine from there.",
+"experience.title":"Experience.","exp.0.role":"Manager & Automation Lead","exp.0.copy":"Managed production, social media, and sales while building a Telegram ordering system for orders, pricing control, and sales tracking.","exp.1.copy":"Worked with data cleaning, SQL, Python, visualization, and case-based business analysis.","exp.2.role":"Data & Statistics Intern","exp.2.copy":"Processed government data and created Tableau visualizations for the Open Data Cimahi platform.","exp.3.role":"Graphic Designer","exp.3.copy":"Created motion graphics, book layouts, infographic posters, logo work, and branding materials.","education.degree":"B.Sc. in Statistics","education.gpa":"GPA 3.30 / 4.00",
 "skills.label":"Capabilities","skills.title":"What I work with.","skills.ai":"AI & Automation","skills.design":"Design",
-"contact.title":"LET'S BUILD SOMETHING USEFUL.","contact.copy":"If there is a workflow, system, or problem worth making simpler, I’m always interested in a good conversation.","footer.note":"Built with intent.","footer.top":"Back to top ↑"
+"contact.title":"LET'S BUILD SOMETHING USEFUL.","contact.copy":"Have a workflow that’s too manual, or a system that could work better? Let’s talk.","footer.note":"Designed & built by Irham Khairul Kalam.","footer.top":"Back to top ↑"
 },id:{
 "nav.profile":"Profil","nav.work":"Karya","nav.process":"Proses","nav.experience":"Pengalaman","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
-"hero.available":"Terbuka untuk project baru","hero.role":"Data, AI & Automation Builder","hero.copy":"Saya membangun tools dan sistem untuk workflow yang masih manual, repetitif, atau tersebar di terlalu banyak tempat.","hero.cta":"Lihat karya saya",
-"profile.lead":"Latar belakang saya statistika. <span class='muted-word'>Pelan-pelan, fokus saya bergeser dari menganalisis data ke membangun sistem di sekitarnya.</span>",
+"hero.available":"Terbuka untuk project baru","hero.role":"Data, AI & Automation Builder","hero.copy":"Saya membangun sistem praktis dengan data, AI, dan automasi — terutama untuk workflow yang masih manual, repetitif, atau belum rapi.","hero.cta":"Lihat karya saya",
+"profile.lead":"Saya mulai dari statistika dan analisis data. <span class='muted-word'>Dari sana, fokus saya berkembang ke automasi, AI, dan sistem yang menghubungkan semuanya.</span>",
 "profile.0.title":"Statistika","profile.0.copy":"Di sini saya belajar membedah masalah, bekerja dengan ketidakpastian, dan mencari struktur sebelum menarik kesimpulan.",
-"profile.1.title":"Desain & Data","profile.1.copy":"Desain mengajari saya bagaimana informasi dilihat. Data mengajari saya bagaimana mempertanyakannya. Dua hal itu masih memengaruhi cara saya membangun sesuatu sampai sekarang.",
-"profile.2.title":"Automasi","profile.2.copy":"Saya mulai mengotomatisasi pekerjaan nyata — order, reporting, browser task, publikasi konten, dan proses bisnis yang berulang.",
-"profile.3.title":"AI & Sistem","profile.3.copy":"Sekarang saya lebih tertarik pada sistem secara utuh: bagaimana data bergerak, bagaimana orang berinteraksi, apa yang layak diautomasi, dan bagaimana semuanya di-deploy.",
-"work.title":"Karya pilihan.","work.copy":"Beberapa sistem yang saya bangun di AI, automasi, data, dan Web3. Visualnya sengaja dibuat sederhana supaya fokus tetap ada pada project-nya.",
-"project.view":"Lihat project","p1.sub":"Asisten AI WhatsApp","p1.cat":"AI / Automasi","p2.sub":"Bot Analitik Bisnis & Pemesanan","p2.cat":"Automasi Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis","p3.cat":"Browser Automation","p4.sub":"Market Event Study","p4.cat":"Analisis Data","p5.sub":"Stack AI Agent Multi-model Self-hosted","p5.cat":"Infrastruktur AI","p6.sub":"Sistem Launch & Distribusi Web3","p6.cat":"Web3 / Produk",
-"process.title":"Cara saya membangun.","process.0.title":"Pahami","process.0.copy":"Mulai dari masalah yang sebenarnya, bukan dari tools.","process.1.title":"Strukturkan","process.1.copy":"Petakan input, keputusan, data, dan handoff.","process.2.title":"Bangun","process.2.copy":"Pakai stack yang paling ringan tapi tetap menyelesaikan masalah dengan baik.","process.3.title":"Deploy","process.3.copy":"Pastikan sistem benar-benar bisa dipakai di luar prototype.",
-"experience.title":"Pengalaman.","exp.0.role":"Manager & Automation Lead","exp.0.copy":"Mengelola produksi, media sosial, dan penjualan sambil membangun sistem pemesanan Telegram untuk order, kontrol harga, dan pencatatan penjualan.","exp.1.copy":"Mengerjakan pemrosesan data, SQL, Python, visualisasi, dan berbagai tugas analitik untuk kebutuhan bisnis.","exp.2.role":"Data & Statistics Intern","exp.2.copy":"Mengolah data pemerintahan dan membuat visualisasi Tableau untuk platform Open Data Cimahi.","exp.3.role":"Graphic Designer","exp.3.copy":"Mengerjakan motion graphics, layout buku, poster infografis, logo, dan kebutuhan branding.","education.degree":"S1 Statistika","education.gpa":"IPK 3.30 / 4.00",
+"profile.1.title":"Desain & Data","profile.1.copy":"Desain melatih saya menyampaikan informasi dengan jelas. Data melatih saya menguji asumsi dengan angka.",
+"profile.2.title":"Automasi","profile.2.copy":"Saya mulai mengotomatisasi pekerjaan operasional — dari order dan reporting sampai browser task dan publikasi konten.",
+"profile.3.title":"AI & Sistem","profile.3.copy":"Sekarang saya melihat sistem secara utuh: bagaimana data bergerak, bagaimana orang berinteraksi dengannya, bagian mana yang layak diautomasi, dan bagaimana semuanya bekerja bersama.",
+"work.title":"Karya pilihan.","work.copy":"Beberapa sistem yang saya bangun di AI, automasi, data, dan Web3 — dari internal tools sampai workflow yang dipakai langsung.",
+"project.view":"Lihat project","p1.sub":"Asisten AI WhatsApp","p1.cat":"AI / Automasi","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p2.cat":"Automasi Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis","p3.cat":"Browser Automation","p4.sub":"Market Event Study","p4.cat":"Analisis Data","p5.sub":"Self-hosted AI Agent Infrastructure","p5.cat":"Infrastruktur AI","p6.sub":"Sistem Launch & Distribusi Web3","p6.cat":"Web3 / Produk",
+"process.title":"Cara saya bekerja.","process.0.title":"Cari masalahnya","process.0.copy":"Cari bagian yang lambat, repetitif, atau membingungkan sebelum memilih tools.","process.1.title":"Petakan alurnya","process.1.copy":"Petakan data, keputusan, handoff, dan edge case yang harus ditangani.","process.2.title":"Bangun sistemnya","process.2.copy":"Bangun sistem paling sederhana yang tetap andal untuk menyelesaikan masalahnya.","process.3.title":"Uji di penggunaan nyata","process.3.copy":"Pakai di kondisi nyata, lihat titik lemahnya, lalu perbaiki dari sana.",
+"experience.title":"Pengalaman.","exp.0.role":"Manager & Automation Lead","exp.0.copy":"Mengelola produksi, media sosial, dan penjualan sambil membangun sistem pemesanan Telegram untuk order, kontrol harga, dan pencatatan penjualan.","exp.1.copy":"Mengerjakan data cleaning, SQL, Python, visualisasi, dan analisis berbasis studi kasus bisnis.","exp.2.role":"Data & Statistics Intern","exp.2.copy":"Mengolah data pemerintahan dan membuat visualisasi Tableau untuk platform Open Data Cimahi.","exp.3.role":"Graphic Designer","exp.3.copy":"Mengerjakan motion graphics, layout buku, poster infografis, logo, dan kebutuhan branding.","education.degree":"S1 Statistika","education.gpa":"IPK 3.30 / 4.00",
 "skills.label":"Kapabilitas","skills.title":"Yang saya gunakan.","skills.ai":"AI & Automasi","skills.design":"Desain",
-"contact.title":"MARI BANGUN SESUATU YANG BERGUNA.","contact.copy":"Kalau ada workflow, sistem, atau masalah yang bisa dibuat lebih sederhana, saya selalu terbuka untuk ngobrol.","footer.note":"Dibangun dengan niat.","footer.top":"Kembali ke atas ↑"
+"contact.title":"MARI BANGUN SESUATU YANG BERGUNA.","contact.copy":"Punya workflow yang masih terlalu manual, atau sistem yang bisa dibuat lebih rapi? Kita bisa ngobrol.","footer.note":"Didesain & dibangun oleh Irham Khairul Kalam.","footer.top":"Kembali ke atas ↑"
 }};
 let lang=localStorage.getItem("portfolioLanguage")||"en";
 const langBox=document.getElementById("lang"),langBtn=document.getElementById("langBtn"),langFlag=document.getElementById("langFlag"),langLabel=document.getElementById("langLabel");
@@ -71,7 +71,7 @@ if(finePointer&&!reduceMotion){
 
   let mouseX=w/2,mouseY=h/2,ringX=mouseX,ringY=mouseY;
   const trail=[];
-  let colorFlip=false;
+  let trailIndex=0;
   let lastX=mouseX,lastY=mouseY;
 
   addEventListener("mousemove",e=>{
@@ -82,20 +82,20 @@ if(finePointer&&!reduceMotion){
     const dx=mouseX-lastX,dy=mouseY-lastY;
     const dist=Math.hypot(dx,dy);
     if(dist>3){
-      colorFlip=!colorFlip;
+      trailIndex++;
       trail.push({
         x:mouseX,y:mouseY,
         px:lastX,py:lastY,
         life:1,
-        width:Math.min(12,5+dist*.09),
-        color:colorFlip?"167,201,74":"241,205,74"
+        width:Math.min(10,4+dist*.075),
+        color:trailIndex%5===0?"232,196,61":"171,198,79"
       });
-      if(trail.length>34)trail.splice(0,trail.length-34);
+      if(trail.length>24)trail.splice(0,trail.length-24);
       lastX=mouseX;lastY=mouseY;
     }
   },{passive:true});
 
-  const interactive="a,button,.project,.timeline-row,.process-step";
+  const interactive="a,button,.project,.timeline-row,.process-step,.exp-row,.skill-row,.email,.contact-socials a";
   document.addEventListener("mouseover",e=>{
     if(e.target.closest(interactive))ring.classList.add("is-hover");
   });
@@ -118,7 +118,7 @@ if(finePointer&&!reduceMotion){
       p.life-=.045;
       if(p.life<=0){trail.splice(i,1);continue}
 
-      const alpha=Math.max(0,p.life)*.20;
+      const alpha=Math.max(0,p.life)*.14;
       ctx.strokeStyle="rgba("+p.color+","+alpha+")";
       ctx.lineWidth=p.width*p.life;
       ctx.beginPath();
