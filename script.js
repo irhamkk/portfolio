@@ -38,3 +38,156 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInte
 const nav=document.getElementById("nav"),sections=["profile","work","process","experience","contact"].map(id=>document.getElementById(id));function updateNav(){nav.classList.toggle("scrolled",scrollY>16);const y=scrollY+innerHeight*.34;let current="";sections.forEach(s=>{if(s&&y>=s.offsetTop)current=s.id});document.querySelectorAll("[data-nav]").forEach(a=>a.classList.toggle("active",a.dataset.nav===current))}addEventListener("scroll",updateNav,{passive:true});updateNav();
 const heroPhoto=document.getElementById("heroPhoto");if(matchMedia("(pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion: reduce)").matches){document.querySelector(".hero-stage").addEventListener("mousemove",e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;heroPhoto.style.transform="translateX(calc(-50% + "+(x*5)+"px)) translateY("+(y*3)+"px)"});document.querySelector(".hero-stage").addEventListener("mouseleave",()=>heroPhoto.style.transform="translateX(-50%)")}
 setLang(lang);
+
+
+/* Custom cursor with subtle lime/yellow brush trail */
+(function initBrushCursor(){
+  const fine = matchMedia("(pointer:fine)").matches;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(!fine || reduce) return;
+
+  document.body.classList.add("cursor-enabled");
+
+  const canvas = document.createElement("canvas");
+  canvas.className = "brush-canvas";
+  canvas.setAttribute("aria-hidden","true");
+
+  const core = document.createElement("div");
+  core.className = "cursor-core";
+  core.setAttribute("aria-hidden","true");
+
+  const ring = document.createElement("div");
+  ring.className = "cursor-ring";
+  ring.setAttribute("aria-hidden","true");
+
+  document.body.append(canvas, core, ring);
+
+  const ctx = canvas.getContext("2d");
+  let dpr = Math.min(devicePixelRatio || 1, 2);
+  let width = innerWidth, height = innerHeight;
+
+  function resizeCanvas(){
+    width = innerWidth;
+    height = innerHeight;
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = width + "px";
+    canvas.style.height = height + "px";
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resizeCanvas();
+  addEventListener("resize", resizeCanvas, {passive:true});
+
+  let targetX = width/2, targetY = height/2;
+  let ringX = targetX, ringY = targetY;
+  let lastX = targetX, lastY = targetY;
+  let visible = false;
+  const strokes = [];
+  const palette = ["#B7FF32","#FFD84A"];
+
+  function setCursorPos(x,y){
+    core.style.left = x + "px";
+    core.style.top = y + "px";
+  }
+
+  addEventListener("pointermove", e => {
+    targetX = e.clientX;
+    targetY = e.clientY;
+    setCursorPos(targetX,targetY);
+
+    if(!visible){
+      visible = true;
+      document.body.classList.add("cursor-active");
+      lastX = targetX; lastY = targetY;
+    }
+
+    const dx = targetX - lastX;
+    const dy = targetY - lastY;
+    const dist = Math.hypot(dx,dy);
+
+    if(dist > 5){
+      const speed = Math.min(dist, 42);
+      const angle = Math.atan2(dy,dx);
+      strokes.push({
+        x:lastX,
+        y:lastY,
+        x2:targetX,
+        y2:targetY,
+        angle,
+        width:Math.max(4, Math.min(11, speed * .24)),
+        life:1,
+        color:palette[Math.floor(performance.now()/140)%palette.length],
+        seed:Math.random()-.5
+      });
+      if(strokes.length > 42) strokes.splice(0, strokes.length-42);
+      lastX = targetX; lastY = targetY;
+    }
+  }, {passive:true});
+
+  addEventListener("pointerleave",()=>{
+    visible = false;
+    document.body.classList.remove("cursor-active");
+  });
+
+  document.addEventListener("pointerover", e => {
+    if(e.target.closest("a,button,.project,.timeline-row,.process-step")){
+      document.body.classList.add("cursor-hover");
+    }
+  });
+
+  document.addEventListener("pointerout", e => {
+    if(e.target.closest("a,button,.project,.timeline-row,.process-step")){
+      document.body.classList.remove("cursor-hover");
+    }
+  });
+
+  function drawStroke(s){
+    const alpha = Math.max(0,s.life) * .34;
+    const ox = Math.sin(s.angle) * s.seed * 6;
+    const oy = -Math.cos(s.angle) * s.seed * 6;
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.strokeStyle = s.color;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    ctx.lineWidth = s.width;
+    ctx.beginPath();
+    ctx.moveTo(s.x + ox, s.y + oy);
+    const mx = (s.x+s.x2)/2 + oy*.6;
+    const my = (s.y+s.y2)/2 - ox*.6;
+    ctx.quadraticCurveTo(mx,my,s.x2 + ox*.2,s.y2 + oy*.2);
+    ctx.stroke();
+
+    ctx.globalAlpha = alpha * .5;
+    ctx.lineWidth = Math.max(1,s.width*.35);
+    ctx.beginPath();
+    ctx.moveTo(s.x - ox*.7, s.y - oy*.7);
+    ctx.lineTo(s.x2 - ox*.15, s.y2 - oy*.15);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function loop(){
+    ringX += (targetX-ringX)*.17;
+    ringY += (targetY-ringY)*.17;
+    ring.style.left = ringX + "px";
+    ring.style.top = ringY + "px";
+
+    ctx.clearRect(0,0,width,height);
+
+    for(let i=strokes.length-1;i>=0;i--){
+      const s = strokes[i];
+      s.life -= .055;
+      if(s.life <= 0){
+        strokes.splice(i,1);
+        continue;
+      }
+      drawStroke(s);
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
