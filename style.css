@@ -113,3 +113,177 @@
   .skill-row:hover,.email:hover,.contact-socials a:hover{transform:none}
   .skill-row:hover{padding-left:0;padding-right:0}
 }
+
+
+/* Preview — refined Selected Work layout */
+section[id]{scroll-margin-top:88px}
+
+#work{
+  padding-top:clamp(108px,9vw,138px);
+}
+
+#work .work-head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,460px);
+  gap:clamp(48px,7vw,110px);
+  align-items:end;
+  margin-bottom:46px;
+  padding-bottom:28px;
+  border-bottom:1px solid var(--line);
+}
+
+#work .work-head > div{min-width:0}
+
+#work .section-title{
+  margin-top:14px;
+  font-size:clamp(50px,5.3vw,78px);
+  line-height:.9;
+  letter-spacing:-.058em;
+  white-space:nowrap;
+}
+
+#work .aside-copy{
+  justify-self:end;
+  max-width:430px;
+  margin:0;
+  font-size:13px;
+  line-height:1.65;
+  color:#626262;
+}
+
+#work .project-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:40px;
+  row-gap:76px;
+}
+
+#work .project{
+  min-width:0;
+}
+
+#work .project-media{
+  aspect-ratio:16/10;
+  border-color:#e5e5e1;
+  box-shadow:none;
+}
+
+#work .project-media-inner{
+  transition:transform .55s var(--ease);
+}
+
+#work .project:hover .project-media-inner{
+  transform:scale(1.014);
+}
+
+#work .project:hover .project-media{
+  border-color:#cfcfca;
+  box-shadow:none;
+}
+
+#work .project-info{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) max-content;
+  column-gap:26px;
+  row-gap:8px;
+  align-items:start;
+  padding-top:18px;
+}
+
+#work .project-info > div:first-child{min-width:0}
+
+#work .project-title{
+  font-size:clamp(28px,2.45vw,37px);
+  line-height:.98;
+  letter-spacing:-.045em;
+}
+
+#work .project-sub{
+  margin-top:7px;
+  font-size:12px;
+  line-height:1.45;
+  color:#737373;
+}
+
+#work .project-meta{
+  min-width:130px;
+  padding-top:2px;
+  text-align:right;
+  font-size:10px;
+  line-height:1.65;
+  letter-spacing:.02em;
+  color:#888;
+}
+
+#work .project-link{
+  margin-top:16px;
+  font-size:11px;
+  border-bottom-color:#b7b7b2;
+}
+
+#work .visual-ciel .phone{
+  width:34%;
+  height:70%;
+  left:33%;
+  top:15%;
+}
+
+#work .visual-ciel .big{
+  right:20px;
+  bottom:18px;
+  font-size:clamp(38px,4.5vw,66px);
+}
+
+#work .umkm-card.a{
+  width:42%;
+  height:34%;
+  left:10%;
+  top:18%;
+}
+
+#work .umkm-card.b{
+  width:38%;
+  height:31%;
+  right:9%;
+  bottom:14%;
+}
+
+#work .visual-umkm .big{
+  left:9%;
+  bottom:8%;
+  font-size:clamp(38px,4.5vw,66px);
+}
+
+@media(max-width:1050px){
+  #work .work-head{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+  #work .aside-copy{
+    justify-self:start;
+    max-width:560px;
+  }
+  #work .section-title{
+    white-space:normal;
+  }
+  #work .project-grid{
+    column-gap:24px;
+    row-gap:60px;
+  }
+}
+
+@media(max-width:820px){
+  #work .project-grid{
+    grid-template-columns:1fr;
+    row-gap:58px;
+  }
+  #work .project-info{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+  #work .project-meta{
+    order:3;
+    min-width:0;
+    padding-top:0;
+    text-align:left;
+  }
+}
