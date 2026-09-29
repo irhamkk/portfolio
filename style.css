@@ -45,3 +45,70 @@
     width:48px;height:48px;border-color:rgba(104,134,41,.58);background:rgba(205,224,96,.10)
   }
 }
+
+
+/* Preview polish — restrained motion and consistent interaction */
+.availability i{position:relative}
+.availability i::after{
+  content:"";position:absolute;inset:-5px;border:1px solid rgba(51,200,120,.32);
+  border-radius:50%;animation:availabilityPulse 2.2s ease-out infinite
+}
+@keyframes availabilityPulse{
+  0%{transform:scale(.55);opacity:.75}
+  75%,100%{transform:scale(1.65);opacity:0}
+}
+
+.hero-name .outline,.hero-name .solid{
+  display:inline-block;animation:heroTypeIn .78s var(--ease) both
+}
+.hero-name .solid{animation-delay:.12s}
+.hero-photo img{
+  animation:heroPortraitIn .9s .12s var(--ease) both;
+  transform-origin:50% 100%
+}
+@keyframes heroTypeIn{
+  from{opacity:0;transform:translateY(18px);clip-path:inset(100% 0 0)}
+  to{opacity:1;transform:none;clip-path:inset(0 0 0)}
+}
+@keyframes heroPortraitIn{
+  from{opacity:0;clip-path:inset(12% 0 0)}
+  to{opacity:1;clip-path:inset(0 0 0)}
+}
+
+.project-media{transition:border-color .35s ease,box-shadow .35s ease}
+.project-title,.project-meta,.project-sub{transition:transform .32s var(--ease),color .25s ease}
+.project:hover .project-media{border-color:#cfcfca;box-shadow:0 18px 46px rgba(0,0,0,.045)}
+.project:hover .project-title{transform:translateY(-3px)}
+.project:hover .project-sub{color:#4f4f4f}
+.project:hover .project-meta{color:#4f4f4f}
+
+.timeline-row,.process-step,.exp-row,.skill-row{
+  transition:transform .3s var(--ease),background .3s ease,padding .3s var(--ease),border-color .3s ease
+}
+.timeline-row:hover{background:#fafaf8}
+.process-step:hover{background:#f7f7f4;transform:translateY(-4px)}
+.process-step:hover .process-no{color:#6f7f2f}
+.process-no{transition:color .25s ease}
+.experience .exp-row:hover{
+  background:rgba(255,255,255,.035);transform:translateX(6px)
+}
+.experience .exp-row:hover .exp-desc{color:#d1d1cd}
+.exp-desc{transition:color .25s ease}
+.skill-row{padding-left:0;padding-right:0}
+.skill-row:hover{
+  background:#fafaf8;padding-left:14px;padding-right:14px
+}
+.skill-row:hover h3{transform:translateX(2px)}
+.skill-row h3{transition:transform .3s var(--ease)}
+
+.email,.contact-socials a{
+  transition:transform .28s var(--ease),color .25s ease,border-color .25s ease
+}
+.email:hover{transform:translateX(5px);border-color:#111}
+.contact-socials a:hover{transform:translateY(-2px)}
+
+@media(max-width:760px){
+  .project:hover .project-title,.process-step:hover,.experience .exp-row:hover,
+  .skill-row:hover,.email:hover,.contact-socials a:hover{transform:none}
+  .skill-row:hover{padding-left:0;padding-right:0}
+}
