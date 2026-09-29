@@ -108,6 +108,7 @@
 .contact-socials a:hover{transform:translateY(-2px)}
 
 @media(max-width:760px){
+  .hero-name .solid{display:block;margin-top:.08em}
   .project:hover .project-title,.process-step:hover,.experience .exp-row:hover,
   .skill-row:hover,.email:hover,.contact-socials a:hover{transform:none}
   .skill-row:hover{padding-left:0;padding-right:0}
