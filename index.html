@@ -1,232 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IRHAM KHAIRUL KALAM — Data & Automation Builder</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0b;color:#e1e1e6;line-height:1.6}
-::selection{background:#3b82f6;color:#fff}
-
-/* nav */
-nav{position:fixed;top:0;width:100%;z-index:100;padding:1.5rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,11,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.04)}
-nav a{color:#666;text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:.03em;transition:color .2s;text-transform:uppercase;margin-left:2rem}
-nav a:hover{color:#e1e1e6}
-.logo{font-weight:700;font-size:1.1rem;color:#e1e1e6;letter-spacing:-.02em}
-
-/* sections */
-section{padding:6rem 3rem;max-width:1100px;margin:0 auto}
-.section-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:#555;margin-bottom:2rem;font-weight:600}
-
-/* hero */
-#hero{padding-top:10rem;min-height:90vh;display:flex;flex-direction:column;justify-content:center}
-#hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.05;margin-bottom:1.5rem}
-#hero h1 span{display:block;color:#666;font-weight:300}
-#hero p{font-size:1.15rem;color:#888;max-width:600px;margin-bottom:2.5rem;line-height:1.7}
-.tagline{color:#3b82f6;font-weight:600;font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1rem}
-.social-links{display:flex;gap:1rem}
-.social-links a{width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#888;text-decoration:none;transition:.2s;font-size:1.1rem}
-.social-links a:hover{border-color:#3b82f6;color:#3b82f6;background:rgba(59,130,246,.08)}
-
-/* projects */
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-@media(max-width:768px){.projects-grid{grid-template-columns:1fr}}
-.project-card{border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:2rem;transition:.2s;background:rgba(255,255,255,.02);cursor:default}
-.project-card:hover{border-color:rgba(59,130,246,.2);background:rgba(59,130,246,.03)}
-.project-card .emoji{font-size:1.5rem;margin-bottom:.75rem}
-.project-card h3{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
-.project-card p{font-size:.88rem;color:#777;line-height:1.6;margin-bottom:1rem}
-.project-card .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
-.project-card .tags span{background:rgba(255,255,255,.05);padding:.2rem .7rem;border-radius:20px;font-size:.7rem;color:#888;border:1px solid rgba(255,255,255,.04)}
-.project-card .links{display:flex;gap:1rem}
-.project-card .links a{font-size:.82rem;color:#3b82f6;text-decoration:none;font-weight:500}
-.project-card .links a:hover{text-decoration:underline}
-
-/* experience */
-.exp-item{display:flex;gap:2rem;margin-bottom:2.5rem}
-.exp-item .year{min-width:100px;font-size:.82rem;color:#555;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-.exp-item .desc h4{font-size:.95rem;font-weight:600;margin-bottom:.25rem}
-.exp-item .desc .role{color:#3b82f6;font-size:.82rem;font-weight:500;margin-bottom:.5rem}
-.exp-item .desc p{color:#777;font-size:.85rem;line-height:1.6}
-
-/* skills */
-.skills-grid{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
-.skills-grid span{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:.5rem 1rem;border-radius:8px;font-size:.82rem;color:#999;transition:.2s}
-.skills-grid span:hover{border-color:rgba(59,130,246,.2);color:#e1e1e6;background:rgba(59,130,246,.04)}
-
-/* contact */
-#contact{padding-bottom:4rem;text-align:center}
-#contact .big-email{font-size:1.5rem;font-weight:700;color:#e1e1e6;text-decoration:none;transition:.2s;display:inline-block;margin-top:.5rem}
-#contact .big-email:hover{color:#3b82f6}
-.footer-text{color:#444;font-size:.8rem;margin-top:2rem}
-
-/* dividers */
-.section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent);max-width:1100px;margin:0 auto}
-
-/* education */
-.edu-item{display:flex;gap:2rem;margin-bottom:2rem}
-.edu-item .year{min-width:100px;font-size:.82rem;color:#555;font-weight:600}
-.edu-item .desc h4{font-weight:600;font-size:.95rem}
-.edu-item .desc p{color:#777;font-size:.85rem}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Irham Khairul Kalam — Data, AI & Automation Builder</title>
+  <meta name="description" content="Portfolio of Irham Khairul Kalam — Data, AI & Automation Builder.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='8' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23111111'%3Eik.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<nav>
-  <span class="logo">Irham</span>
-  <div>
-    <a href="#projects">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<section id="hero">
-  <h1>
-    IRHAM KHAIRUL KALAM
-    <span>Data & Automation Builder</span>
-  </h1>
-  <p>Statistics graduate from Universitas Padjadjaran who builds practical automation tools instead of just talking about them. I create Telegram-based ordering systems for small businesses, autonomous content schedulers for X/Twitter, AI-powered WhatsApp assistants, and data-driven financial analysis — all running quietly in production. My work lives at the intersection of data, code, and real-world impact: making systems that solve tangible problems for real people.</p>
-  <div class="social-links">
-    <a href="https://github.com/irhamkk" target="_blank" rel="noopener" title="GitHub">&#8599;</a>
-    <a href="https://x.com/parsialverse" target="_blank" rel="noopener" title="X/Twitter">&#8599;</a>
-    <a href="https://medium.com/@parsial" target="_blank" rel="noopener" title="Medium">&#8599;</a>
-    <a href="mailto:irham.kk16@gmail.com" title="Email">&#9993;</a>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<section id="projects">
-  <div class="section-label">Featured Projects</div>
-  <div class="projects-grid">
-
-    <div class="project-card">
-      <div class="emoji">🤖</div>
-      <h3>WhatsApp AI Assistant (Ciel)</h3>
-      <p>WhatsApp-based AI assistant handling customer inquiries autonomously. Connected via DeepSeek on custom router, with session persistence across restarts. Handles message queuing, reasoning mode parsing, and chat history storage — all through WhatsApp Web.</p>
-      <div class="tags">
-        <span>Node.js</span><span>WhatsApp Web.js</span><span>LLM API</span><span>Session Persist</span>
-      </div>
-      <div class="links">
-        <a href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener">GitHub →</a>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Back to top">ik<span class="dot">.</span></a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#profile" data-nav="profile" data-i18n="nav.profile">Profile</a>
+        <a href="#work" data-nav="work" data-i18n="nav.work">Work</a>
+        <a href="#process" data-nav="process" data-i18n="nav.process">Process</a>
+        <a href="#experience" data-nav="experience" data-i18n="nav.experience">Experience</a>
+        <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang" id="lang">
+          <button class="lang-btn" id="langBtn" aria-expanded="false">
+            <span id="langFlag">🇬🇧</span><span id="langLabel">English</span><span>⌄</span>
+          </button>
+          <div class="lang-menu">
+            <button class="lang-option" data-language="en" aria-pressed="true">🇬🇧 English</button>
+            <button class="lang-option" data-language="id" aria-pressed="false">🇮🇩 Indonesia</button>
+          </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" data-i18n="ui.menu">Menu</button>
       </div>
     </div>
+  </header>
 
-    <div class="project-card">
-      <div class="emoji">📊</div>
-      <h3>UMKM Analyst Bot</h3>
-      <p>Telegram-based analytics and ordering system for UMKM TEMEN. Parses natural language orders, tracks sales, manages pricing with margin separation — all through chat interface. Built to help small business owners manage operations without a dashboard.</p>
-      <div class="tags">
-        <span>Python</span><span>Telegram Bot</span><span>Analytics</span><span>Automation</span>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#profile" data-i18n="nav.profile">Profile</a>
+    <a href="#work" data-i18n="nav.work">Work</a>
+    <a href="#process" data-i18n="nav.process">Process</a>
+    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-topline reveal">
+        <div class="availability"><i></i><span data-i18n="hero.available">Available for new projects</span></div>
+        <div class="hero-year">Portfolio / 2026</div>
       </div>
-      <div class="links">
-        <a href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener">GitHub →</a>
+
+      <div class="hero-stage">
+        <h1 class="hero-name" aria-label="Irham Khairul Kalam"><span class="outline">IRHAM KHAIRUL</span> <span class="solid">KALAM</span></h1>
+
+        <div class="hero-photo" id="heroPhoto">
+          <img src="https://res.cloudinary.com/y2f2lidm/image/upload/v1790579327/Foto_Irhamkk.png" alt="Irham Khairul Kalam">
+        </div>
+
+        <div class="hero-left reveal">
+          <h2 class="hero-role" data-i18n="hero.role">Data, AI &amp; Automation Builder</h2>
+          <p class="hero-copy" data-i18n="hero.copy">I build practical tools and systems for workflows that are still manual, repetitive, or scattered.</p>
+          <a class="hero-cta" href="#work"><span data-i18n="hero.cta">View my work</span> ↗</a>
+        </div>
+
+        <div class="hero-right reveal">
+          <a class="social-pill" href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          <a class="social-pill" href="https://x.com/parsialverse" target="_blank" rel="noopener">X <span>↗</span></a>
+          <a class="social-pill" href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium <span>↗</span></a>
+        </div>
+
+        <a class="scroll-indicator" href="#profile"><span data-i18n="ui.scroll">Scroll</span><span class="scroll-line"></span></a>
       </div>
-    </div>
+    </section>
 
-    <div class="project-card">
-      <div class="emoji">🐦</div>
-      <h3>X Auto Poster</h3>
-      <p>Full-featured autonomous X/Twitter scheduler — 6 posts daily in English. AI-written content on Web3, AI, and crypto. Cookie-based auth (no API fees), queue management, and scheduled cron.</p>
-      <div class="tags">
-        <span>Python</span><span>Playwright</span><span>Hermes Cron</span><span>AI Content</span>
+    <section class="section wrap" id="profile">
+      <div class="profile-intro reveal">
+        <div class="section-kicker">01 / <span data-i18n="nav.profile">Profile</span></div>
+        <p class="profile-copy" data-i18n="profile.lead">
+          My background is in statistics. <span class="muted-word">The work gradually moved from analysing data to building the systems around it.</span>
+        </p>
       </div>
-      <div class="links">
-        <a href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener">GitHub →</a>
+
+      <div class="timeline">
+        <div class="timeline-row reveal"><div class="timeline-year">2019</div><div class="timeline-title" data-i18n="profile.0.title">Statistics</div><div class="timeline-desc" data-i18n="profile.0.copy">That is where I learned to break problems down, work with uncertainty, and look for structure before reaching conclusions.</div></div>
+        <div class="timeline-row reveal"><div class="timeline-year">2021—2022</div><div class="timeline-title" data-i18n="profile.1.title">Design &amp; Data</div><div class="timeline-desc" data-i18n="profile.1.copy">Design taught me how information is perceived. Data taught me how to question it. Both still shape how I build things today.</div></div>
+        <div class="timeline-row reveal"><div class="timeline-year">2024</div><div class="timeline-title" data-i18n="profile.2.title">Automation</div><div class="timeline-desc" data-i18n="profile.2.copy">I started automating real operational work — ordering, reporting, browser tasks, content publishing, and repetitive business processes.</div></div>
+        <div class="timeline-row reveal"><div class="timeline-year">NOW</div><div class="timeline-title" data-i18n="profile.3.title">AI &amp; Systems</div><div class="timeline-desc" data-i18n="profile.3.copy">Now I care less about isolated scripts and more about the complete system: data, interfaces, automation, deployment, and the people using it.</div></div>
       </div>
-    </div>
+    </section>
 
-    <div class="project-card">
-      <div class="emoji">📈</div>
-      <h3>Fed · Gold · BTC</h3>
-      <p>Analysis of Federal Reserve policy impact on gold and Bitcoin prices. 5 charts, event study, 365-day data window across 7 consecutive rate cuts.</p>
-      <div class="tags">
-        <span>Python</span><span>FRED API</span><span>CoinGecko</span><span>Data Viz</span>
+    <section class="section wrap" id="work">
+      <div class="work-head reveal">
+        <div>
+          <div class="section-kicker">02 / <span data-i18n="nav.work">Work</span></div>
+          <h2 class="section-title" data-i18n="work.title">Selected work.</h2>
+        </div>
+        <p class="aside-copy" data-i18n="work.copy">A selection of practical systems across AI, automation, data, and Web3. The visual treatment stays simple so the work remains the focus.</p>
       </div>
-      <div class="links">
-        <a href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener">GitHub →</a>
+
+      <div class="project-grid">
+        <article class="project reveal">
+          <div class="project-media visual-ciel"><div class="project-media-inner"><span class="label">WhatsApp / AI</span><div class="phone"><div class="phone-bar"></div><div class="bubble mid"></div><div class="bubble dark"></div><div class="bubble short"></div><div class="bubble dark" style="width:58%"></div><div class="bubble mid"></div></div><div class="big">CIEL</div></div></div>
+          <div class="project-info"><div><h3 class="project-title">Ciel</h3><p class="project-sub" data-i18n="p1.sub">WhatsApp AI Assistant</p><a class="project-link" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener"><span data-i18n="project.view">View project</span> <span>↗</span></a></div><div class="project-meta"><span data-i18n="p1.cat">AI / Automation</span><br>Node.js · LLM API</div></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media visual-umkm"><div class="project-media-inner"><div class="gridlines"></div><div class="umkm-card a"><h4>ORDER / TODAY</h4><div class="line-sm dark"></div><div class="line-sm"></div><div class="line-sm s"></div></div><div class="umkm-card b"><h4>SALES / REPORT</h4><div class="line-sm"></div><div class="line-sm dark"></div><div class="line-sm s"></div></div><div class="big">UMKM</div></div></div>
+          <div class="project-info"><div><h3 class="project-title">UMKM Analyst</h3><p class="project-sub" data-i18n="p2.sub">Business Analytics &amp; Ordering Bot</p><a class="project-link" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener"><span data-i18n="project.view">View project</span> <span>↗</span></a></div><div class="project-meta"><span data-i18n="p2.cat">Business Automation</span><br>Python · Telegram</div></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media visual-x"><div class="project-media-inner"><div class="corner">Scheduled Publishing System</div><div class="xmark">X</div><div class="schedule"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+          <div class="project-info"><div><h3 class="project-title">X Automation</h3><p class="project-sub" data-i18n="p3.sub">Automated Content Publishing System</p><a class="project-link" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener"><span data-i18n="project.view">View project</span> <span>↗</span></a></div><div class="project-meta"><span data-i18n="p3.cat">Browser Automation</span><br>Python · Playwright</div></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media visual-fed"><div class="project-media-inner"><div class="chart"><svg viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,220 60,205 120,214 170,171 220,185 270,126 330,145 380,98 440,117 500,64 600,84" fill="none" stroke="#111" stroke-width="3"/><polyline points="0,245 60,235 120,240 170,220 220,205 270,215 330,175 380,187 440,145 500,154 600,110" fill="none" stroke="#888" stroke-width="2"/></svg></div><div class="chart-label a">365 DAY WINDOW</div><div class="chart-label b">FED / GOLD / BTC</div><div class="big">EVENT STUDY</div></div></div>
+          <div class="project-info"><div><h3 class="project-title">Fed · Gold · BTC</h3><p class="project-sub" data-i18n="p4.sub">Market Event Study</p><a class="project-link" href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener"><span data-i18n="project.view">View project</span> <span>↗</span></a></div><div class="project-meta"><span data-i18n="p4.cat">Data Analysis</span><br>Python · FRED · CoinGecko</div></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media visual-agent"><div class="project-media-inner"><div class="nodes"><div class="node">TELEGRAM</div><div class="node center">HERMES</div><div class="node">9ROUTER</div></div><div class="agent-models"><span>GPT</span><span>CLAUDE</span><span>DEEPSEEK</span><span>GEMINI</span></div></div></div>
+          <div class="project-info"><div><h3 class="project-title">AI Agent Infrastructure</h3><p class="project-sub" data-i18n="p5.sub">Self-hosted Multi-model Agent Stack</p></div><div class="project-meta"><span data-i18n="p5.cat">AI Infrastructure</span><br>Hermes · 9Router · Ubuntu</div></div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media visual-rekt"><div class="project-media-inner"><div class="ticket"><div class="ticket-left"><div class="logo">REKT<br>CLUB</div><div class="small">Whitelist · Metadata · IPFS · Reveal</div></div><div class="barcode"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="corner">4444 / WEB3 LAUNCH SYSTEM</div></div></div>
+          <div class="project-info"><div><h3 class="project-title">REKT Club</h3><p class="project-sub" data-i18n="p6.sub">Web3 Launch &amp; Distribution System</p></div><div class="project-meta"><span data-i18n="p6.cat">Web3 / Product</span><br>Supabase · Solidity · IPFS</div></div>
+        </article>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section wrap" id="process">
+      <div class="process-head reveal"><div class="section-kicker">03 / <span data-i18n="nav.process">Process</span></div><h2 class="section-title small" data-i18n="process.title">How I build.</h2></div>
+      <div class="process-grid reveal">
+        <article class="process-step"><div class="process-no">01</div><div><h3 data-i18n="process.0.title">Understand</h3><p data-i18n="process.0.copy">Start with the real problem, not the tool.</p></div></article>
+        <article class="process-step"><div class="process-no">02</div><div><h3 data-i18n="process.1.title">Structure</h3><p data-i18n="process.1.copy">Map the inputs, decisions, data, and handoffs.</p></div></article>
+        <article class="process-step"><div class="process-no">03</div><div><h3 data-i18n="process.2.title">Build</h3><p data-i18n="process.2.copy">Use the lightest stack that solves the problem well.</p></div></article>
+        <article class="process-step"><div class="process-no">04</div><div><h3 data-i18n="process.3.title">Ship</h3><p data-i18n="process.3.copy">Make it usable outside the prototype.</p></div></article>
+      </div>
+    </section>
 
-<div class="section-divider"></div>
+    <section class="section experience" id="experience">
+      <div class="wrap">
+        <div class="experience-head reveal"><div class="section-kicker">04 / <span data-i18n="nav.experience">Experience</span></div><h2 class="section-title small" data-i18n="experience.title">Experience.</h2></div>
+        <div class="exp-list">
+          <article class="exp-row reveal"><div class="exp-year">2024—2026</div><div><h3>Dumpling Warehousing Project</h3><p class="exp-role" data-i18n="exp.0.role">Manager &amp; Automation Lead</p></div><p class="exp-desc" data-i18n="exp.0.copy">Managed production, social media, and sales while building a Telegram ordering system for orders, pricing control, and sales tracking.</p></article>
+          <article class="exp-row reveal"><div class="exp-year">2022</div><div><h3>PT. Ruang Guru</h3><p class="exp-role">Data &amp; Business Analytics — Bootcamp</p></div><p class="exp-desc" data-i18n="exp.1.copy">Worked with data processing, SQL, Python, visualization, and business-oriented analytics tasks.</p></article>
+          <article class="exp-row reveal"><div class="exp-year">2022</div><div><h3>DISKOMINFO Kota Cimahi</h3><p class="exp-role" data-i18n="exp.2.role">Data &amp; Statistics Intern</p></div><p class="exp-desc" data-i18n="exp.2.copy">Processed government data and created Tableau visualizations for the Open Data Cimahi platform.</p></article>
+          <article class="exp-row reveal"><div class="exp-year">2021</div><div><h3>Gradient Studio</h3><p class="exp-role" data-i18n="exp.3.role">Graphic Designer</p></div><p class="exp-desc" data-i18n="exp.3.copy">Created motion graphics, book layouts, infographic posters, logo work, and branding materials.</p></article>
+        </div>
+        <div class="edu-row reveal"><div class="exp-year">2019—2024</div><div><div class="degree" data-i18n="education.degree">B.Sc. in Statistics</div><div class="exp-role" data-i18n="education.gpa">GPA 3.30 / 4.00</div></div><div class="school">Universitas Padjadjaran</div></div>
+      </div>
+    </section>
 
-<section id="experience">
-  <div class="section-label">Experience</div>
+    <section class="section wrap" id="skills">
+      <div class="skills-head reveal"><div class="section-kicker">05 / <span data-i18n="skills.label">Capabilities</span></div><h2 class="section-title small" data-i18n="skills.title">What I work with.</h2></div>
+      <div class="skill-list reveal">
+        <div class="skill-row"><h3>Data</h3><p>Python · SQL · R · Tableau · Excel · Google Sheets · Data Analysis</p></div>
+        <div class="skill-row"><h3 data-i18n="skills.ai">AI &amp; Automation</h3><p>LLM APIs · Hermes Agent · Playwright · Telegram Bots · Workflow Automation · Browser Automation</p></div>
+        <div class="skill-row"><h3>Web &amp; Backend</h3><p>JavaScript · Node.js · Supabase · PostgreSQL · REST APIs · GitHub · Vercel</p></div>
+        <div class="skill-row"><h3>Web3</h3><p>Solidity · ERC-721 · IPFS · OpenSea · Metadata Pipelines</p></div>
+        <div class="skill-row"><h3 data-i18n="skills.design">Design</h3><p>Photoshop · Illustrator · InDesign · Canva</p></div>
+      </div>
+    </section>
 
-  <div class="exp-item">
-    <div class="year">2024–2026</div>
-    <div class="desc">
-      <h4>Dumpling Warehousing Project</h4>
-      <div class="role">Manager &amp; Automation Lead</div>
-      <p>Managed dimsum production, social media marketing, and sales. Built Telegram ordering bot to automate order processing, pricing control, and sales tracking.</p>
-    </div>
-  </div>
-
-  <div class="exp-item">
-    <div class="year">2022</div>
-    <div class="desc">
-      <h4>PT. Ruang Guru</h4>
-      <div class="role">Data &amp; Business Analytics · Bootcamp</div>
-      <p>Implemented data processing, analysis, and visualization for business needs using SQL, Python, and data analytics platforms.</p>
-    </div>
-  </div>
-
-  <div class="exp-item">
-    <div class="year">2022</div>
-    <div class="desc">
-      <h4>DISKOMINFO Kota Cimahi</h4>
-      <div class="role">Data &amp; Statistics Intern</div>
-      <p>Processed government data and built Tableau visualizations published on the Open Data Cimahi platform.</p>
-    </div>
-  </div>
-
-  <div class="exp-item">
-    <div class="year">2021</div>
-    <div class="desc">
-      <h4>Gradient Studio</h4>
-      <div class="role">Graphic Designer</div>
-      <p>Created motion graphics, book designs, infographic posters, logo designs, and branding materials.</p>
-    </div>
-  </div>
-
-</section>
-
-<div class="section-divider"></div>
-
-<section>
-  <div class="section-label">Education</div>
-  <div class="edu-item">
-    <div class="year">2019–2024</div>
-    <div class="desc">
-      <h4>Universitas Padjadjaran</h4>
-      <p>S1 Statistika · IPK 3.30/4.00</p>
-    </div>
-  </div>
-
-  <div class="section-label" style="margin-top:3rem">Skills &amp; Tools</div>
-  <div class="skills-grid">
-    <span>Python</span><span>SQL</span><span>Playwright</span><span>Tableau</span>
-    <span>R Studio</span><span>Google Sheets</span><span>Excel</span><span>Hermes AI</span>
-    <span>Canva</span><span>Photoshop</span><span>Illustrator</span><span>InDesign</span>
-    <span>Data Analysis</span><span>Automation</span><span>Bot Development</span>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<section id="contact">
-  <div style="font-size:.85rem;color:#666;letter-spacing:.1em;text-transform:uppercase;font-weight:600">Get in touch</div>
-  <a href="mailto:irham.kk16@gmail.com" class="big-email">irham.kk16@gmail.com</a>
-  <div style="margin-top:1rem;color:#555;font-size:.9rem">GitHub: irhamkk · X: @parsialverse</div>
-  <div class="footer-text">Built with taste. No templates. No fluff.</div>
-</section>
-
+    <section class="section wrap" id="contact">
+      <div class="contact-head reveal"><div class="section-kicker">06 / <span data-i18n="nav.contact">Contact</span></div><h2 class="contact-title" data-i18n="contact.title">LET'S BUILD SOMETHING USEFUL.</h2></div>
+      <div class="contact-bottom reveal"><a class="email" href="mailto:irham.kk16@gmail.com">irham.kk16@gmail.com ↗</a><p class="contact-copy" data-i18n="contact.copy">If there is a workflow, system, or problem worth making simpler, I’m always interested in a good conversation.</p><div class="contact-socials"><a href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub ↗</a><a href="https://x.com/parsialverse" target="_blank" rel="noopener">X ↗</a><a href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium ↗</a></div></div>
+      <footer class="footer"><span>© 2026 Irham Khairul Kalam</span><span data-i18n="footer.note">Built with intent.</span><a href="#top" data-i18n="footer.top">Back to top ↑</a></footer>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
 </body>
 </html>
