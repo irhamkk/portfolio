@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <title>Irham Khairul Kalam — Data, AI & Automation Builder</title>
-  <meta name="description" content="Portfolio of Irham Khairul Kalam — Data, AI & Automation Builder.">
+  <meta name="description" content="Personal website of Irham Khairul Kalam — projects, experiments, signals, and notes around data, AI, and automation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='8' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23111111'%3Eik.%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,12 @@
 <body>
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="#top" aria-label="Back to top">ik<span class="dot">.</span></a>
+      <a class="brand" href="#home" aria-label="Back to home">ik<span class="dot">.</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#profile" data-nav="profile" data-i18n="nav.profile">Profile</a>
-        <a href="#work" data-nav="work" data-i18n="nav.work">Work</a>
-        <a href="#process" data-nav="process" data-i18n="nav.process">Process</a>
-        <a href="#experience" data-nav="experience" data-i18n="nav.experience">Experience</a>
+        <a href="#home" data-nav="home" data-i18n="nav.home">Home</a>
+        <a href="#lab" data-nav="lab" data-i18n="nav.lab">Lab</a>
+        <a href="#signals" data-nav="signals" data-i18n="nav.signals">Signals</a>
+        <a href="#about" data-nav="about" data-i18n="nav.about">About</a>
         <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="nav-right">
@@ -39,239 +39,225 @@
   </header>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#profile" data-i18n="nav.profile">Profile</a>
-    <a href="#work" data-i18n="nav.work">Work</a>
-    <a href="#process" data-i18n="nav.process">Process</a>
-    <a href="#experience" data-i18n="nav.experience">Experience</a>
+    <a href="#home" data-i18n="nav.home">Home</a>
+    <a href="#lab" data-i18n="nav.lab">Lab</a>
+    <a href="#signals" data-i18n="nav.signals">Signals</a>
+    <a href="#about" data-i18n="nav.about">About</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
   </div>
 
-  <main id="top">
-    <section class="hero wrap">
+  <main>
+    <section class="hero wrap" id="home">
       <div class="hero-topline reveal">
         <div class="availability"><i></i><span data-i18n="hero.available">Available for new projects</span></div>
-        <div class="hero-year">Portfolio / 2026</div>
+        <div class="hero-year">IRHAMKK.WORLD / 2026</div>
       </div>
 
       <div class="hero-stage">
         <h1 class="hero-name" aria-label="Irham Khairul Kalam"><span class="outline">IRHAM KHAIRUL</span> <span class="solid">KALAM</span></h1>
-
         <div class="hero-photo" id="heroPhoto">
           <img src="https://res.cloudinary.com/y2f2lidm/image/upload/v1790666576/Foto_Irhamkk_11.png" alt="Irham Khairul Kalam">
         </div>
-
         <div class="hero-left reveal">
           <h2 class="hero-role" data-i18n="hero.role">Data, AI &amp; Automation Builder</h2>
-          <p class="hero-copy" data-i18n="hero.copy">I build practical systems around data, AI, and automation — especially where the current workflow is still manual, repetitive, or messy.</p>
-          <a class="hero-cta" href="#work"><span data-i18n="hero.cta">View my work</span> ↗</a>
+          <p class="hero-copy" data-i18n="hero.copy">I build practical systems around data, AI, and automation — and document what I learn along the way.</p>
+          <a class="hero-cta" href="#projects"><span data-i18n="hero.cta">Explore the site</span> ↗</a>
         </div>
-
         <div class="hero-right reveal">
           <a class="social-pill" href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub <span>↗</span></a>
           <a class="social-pill" href="https://x.com/parsialverse" target="_blank" rel="noopener">X <span>↗</span></a>
           <a class="social-pill" href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium <span>↗</span></a>
         </div>
-
-        <a class="scroll-indicator" href="#profile"><span data-i18n="ui.scroll">Scroll</span><span class="scroll-line"></span></a>
+        <a class="scroll-indicator" href="#intro"><span data-i18n="ui.scroll">Scroll</span><span class="scroll-line"></span></a>
       </div>
     </section>
 
-    <section class="section wrap" id="profile">
+    <section class="section wrap personal-intro" id="intro">
       <div class="profile-intro reveal">
-        <div class="section-kicker">01 / <span data-i18n="nav.profile">Profile</span></div>
-        <p class="profile-copy" data-i18n="profile.lead">
-          I started with statistics and data analysis. <span class="muted-word">From there, I moved into automation, AI, and the systems that connect them.</span>
-        </p>
+        <div class="section-kicker">01 / <span data-i18n="home.introLabel">Intro</span></div>
+        <p class="profile-copy" data-i18n="home.intro">Statistics got me into data. Automation made me want to build systems. AI made the space even more interesting.</p>
       </div>
-
-      <div class="timeline">
-        <div class="timeline-row reveal"><div class="timeline-year">2019</div><div class="timeline-title" data-i18n="profile.0.title">Statistics</div><div class="timeline-desc" data-i18n="profile.0.copy">That is where I learned to break problems down, work with uncertainty, and look for structure before reaching conclusions.</div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2021—2022</div><div class="timeline-title" data-i18n="profile.1.title">Design &amp; Data</div><div class="timeline-desc" data-i18n="profile.1.copy">Design taught me to communicate information clearly. Data taught me to test assumptions instead of relying on them.</div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">2024</div><div class="timeline-title" data-i18n="profile.2.title">Automation</div><div class="timeline-desc" data-i18n="profile.2.copy">I began automating operational work — from orders and reporting to browser tasks and content publishing.</div></div>
-        <div class="timeline-row reveal"><div class="timeline-year">NOW</div><div class="timeline-title" data-i18n="profile.3.title">AI &amp; Systems</div><div class="timeline-desc" data-i18n="profile.3.copy">Now I focus on systems as a whole: how data moves, how people interact with it, what should be automated, and how the pieces work together.</div></div>
+      <div class="intro-foot reveal">
+        <p data-i18n="home.introCopy">This is my corner of the internet — part portfolio, part lab, and part public notebook.</p>
+        <div class="intro-links">
+          <a href="#lab"><span data-i18n="nav.lab">Lab</span> ↗</a>
+          <a href="#signals"><span data-i18n="nav.signals">Signals</span> ↗</a>
+          <a href="#about"><span data-i18n="nav.about">About</span> ↗</a>
+        </div>
       </div>
     </section>
 
-    <section class="section wrap" id="work">
-      <div class="work-showcase">
-        <div class="work-heading reveal">
-          <div class="section-kicker">02 / <span data-i18n="nav.work">Work</span></div>
-          <h2 class="work-display-title"><span class="slash">/</span><span data-i18n="work.title">SELECTED WORK</span></h2>
+    <section class="section wrap" id="projects">
+      <div class="section-head-simple reveal">
+        <div>
+          <div class="section-kicker">02 / <span data-i18n="projects.label">Projects</span></div>
+          <h2 class="section-title medium" data-i18n="projects.title">Selected projects.</h2>
         </div>
+        <p class="aside-copy" data-i18n="projects.copy">A few practical systems I’ve built across AI, automation, data, and operations.</p>
+      </div>
 
-        <div class="work-toolbar reveal">
-          <div class="work-filters" role="tablist" aria-label="Project filters">
-            <button class="work-filter is-active" type="button" data-filter="all" aria-pressed="true" data-i18n="work.filter.all">All</button>
-            <button class="work-filter" type="button" data-filter="real" aria-pressed="false" data-i18n="work.filter.real">Real Project</button>
-            <button class="work-filter" type="button" data-filter="exploration" aria-pressed="false" data-i18n="work.filter.exploration">Exploration</button>
+      <div class="project-grid home-project-grid">
+        <article class="project work-card reveal">
+          <div class="work-card-visual">
+            <a class="project-thumb-link" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener" aria-label="Open Ciel project">
+              <div class="project-media visual-ciel"><div class="project-media-inner"><span class="label">WhatsApp / AI</span><div class="phone"><div class="phone-bar"></div><div class="bubble mid"></div><div class="bubble dark"></div><div class="bubble short"></div><div class="bubble dark" style="width:58%"></div><div class="bubble mid"></div></div><div class="big">CIEL</div></div></div>
+              <span class="project-open">↗</span>
+            </a>
           </div>
-          <a class="work-all" href="https://github.com/irhamkk?tab=repositories" target="_blank" rel="noopener">
-            <span data-i18n="work.viewall">View All Work</span><span>↗</span>
-          </a>
-        </div>
+          <div class="work-card-body"><h3 class="project-title">Ciel</h3><p class="project-sub" data-i18n="p1.sub">WhatsApp AI Assistant</p><div class="work-tags"><span>WhatsApp</span><span>Node.js</span><span>LLM API</span></div></div>
+        </article>
 
-        <div class="project-grid">
-          <article class="project work-card reveal" data-category="real">
-            <div class="work-card-visual">
-              <a class="project-thumb-link" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener" aria-label="Open Ciel project">
-                <div class="project-media visual-ciel">
-                  <div class="project-media-inner">
-                    <span class="work-badge" data-i18n="work.badge.real">Real Project</span>
-                    <span class="label">WhatsApp / AI</span>
-                    <div class="phone"><div class="phone-bar"></div><div class="bubble mid"></div><div class="bubble dark"></div><div class="bubble short"></div><div class="bubble dark" style="width:58%"></div><div class="bubble mid"></div></div>
-                    <div class="big">CIEL</div>
-                  </div>
-                </div>
-                <span class="project-open">↗</span>
-              </a>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">Ciel</h3>
-              <p class="project-sub" data-i18n="p1.sub">WhatsApp AI Assistant</p>
-              <div class="work-tags"><span>WhatsApp</span><span>Node.js</span><span>LLM API</span></div>
-            </div>
-          </article>
+        <article class="project work-card reveal">
+          <div class="work-card-visual">
+            <a class="project-thumb-link" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener" aria-label="Open UMKM Analyst project">
+              <div class="project-media visual-umkm"><div class="project-media-inner"><div class="gridlines"></div><div class="umkm-card a"><h4>ORDER / TODAY</h4><div class="line-sm dark"></div><div class="line-sm"></div><div class="line-sm s"></div></div><div class="umkm-card b"><h4>SALES / REPORT</h4><div class="line-sm"></div><div class="line-sm dark"></div><div class="line-sm s"></div></div><div class="big">UMKM</div></div></div>
+              <span class="project-open">↗</span>
+            </a>
+          </div>
+          <div class="work-card-body"><h3 class="project-title">UMKM Analyst</h3><p class="project-sub" data-i18n="p2.sub">Ordering &amp; Business Analytics System</p><div class="work-tags"><span>Python</span><span>Telegram</span><span data-i18n="p2.cat">Business Automation</span></div></div>
+        </article>
 
-          <article class="project work-card reveal" data-category="real">
-            <div class="work-card-visual">
-              <a class="project-thumb-link" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener" aria-label="Open UMKM Analyst project">
-                <div class="project-media visual-umkm">
-                  <div class="project-media-inner">
-                    <span class="work-badge" data-i18n="work.badge.real">Real Project</span>
-                    <div class="gridlines"></div>
-                    <div class="umkm-card a"><h4>ORDER / TODAY</h4><div class="line-sm dark"></div><div class="line-sm"></div><div class="line-sm s"></div></div>
-                    <div class="umkm-card b"><h4>SALES / REPORT</h4><div class="line-sm"></div><div class="line-sm dark"></div><div class="line-sm s"></div></div>
-                    <div class="big">UMKM</div>
-                  </div>
-                </div>
-                <span class="project-open">↗</span>
-              </a>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">UMKM Analyst</h3>
-              <p class="project-sub" data-i18n="p2.sub">Ordering &amp; Business Analytics System</p>
-              <div class="work-tags"><span>Python</span><span>Telegram</span><span data-i18n="p2.cat">Business Automation</span></div>
-            </div>
-          </article>
+        <article class="project work-card reveal">
+          <div class="work-card-visual">
+            <a class="project-thumb-link" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener" aria-label="Open X Automation project">
+              <div class="project-media visual-x"><div class="project-media-inner"><div class="corner">Scheduled Publishing System</div><div class="xmark">X</div><div class="schedule"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
+              <span class="project-open project-open-light">↗</span>
+            </a>
+          </div>
+          <div class="work-card-body"><h3 class="project-title">X Automation</h3><p class="project-sub" data-i18n="p3.sub">Automated Content Publishing System</p><div class="work-tags"><span>Python</span><span>Playwright</span><span data-i18n="p3.cat">Browser Automation</span></div></div>
+        </article>
 
-          <article class="project work-card reveal" data-category="real">
-            <div class="work-card-visual">
-              <a class="project-thumb-link" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener" aria-label="Open X Automation project">
-                <div class="project-media visual-x">
-                  <div class="project-media-inner">
-                    <span class="work-badge work-badge-dark" data-i18n="work.badge.real">Real Project</span>
-                    <div class="corner">Scheduled Publishing System</div>
-                    <div class="xmark">X</div>
-                    <div class="schedule"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-                  </div>
-                </div>
-                <span class="project-open project-open-light">↗</span>
-              </a>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">X Automation</h3>
-              <p class="project-sub" data-i18n="p3.sub">Automated Content Publishing System</p>
-              <div class="work-tags"><span>Python</span><span>Playwright</span><span data-i18n="p3.cat">Browser Automation</span></div>
-            </div>
-          </article>
-
-          <article class="project work-card reveal" data-category="exploration">
-            <div class="work-card-visual">
-              <a class="project-thumb-link" href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener" aria-label="Open Fed Gold BTC project">
-                <div class="project-media visual-fed">
-                  <div class="project-media-inner">
-                    <span class="work-badge" data-i18n="work.badge.exploration">Exploration</span>
-                    <div class="chart"><svg viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,220 60,205 120,214 170,171 220,185 270,126 330,145 380,98 440,117 500,64 600,84" fill="none" stroke="#111" stroke-width="3"/><polyline points="0,245 60,235 120,240 170,220 220,205 270,215 330,175 380,187 440,145 500,154 600,110" fill="none" stroke="#888" stroke-width="2"/></svg></div>
-                    <div class="chart-label a">365 DAY WINDOW</div><div class="chart-label b">FED / GOLD / BTC</div><div class="big">EVENT STUDY</div>
-                  </div>
-                </div>
-                <span class="project-open">↗</span>
-              </a>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">Fed · Gold · BTC</h3>
-              <p class="project-sub" data-i18n="p4.sub">Market Event Study</p>
-              <div class="work-tags"><span>Python</span><span>FRED</span><span data-i18n="p4.cat">Data Analysis</span></div>
-            </div>
-          </article>
-
-          <article class="project work-card reveal" data-category="exploration">
-            <div class="work-card-visual">
-              <div class="project-media visual-agent">
-                <div class="project-media-inner">
-                  <span class="work-badge" data-i18n="work.badge.exploration">Exploration</span>
-                  <div class="nodes"><div class="node">TELEGRAM</div><div class="node center">HERMES</div><div class="node">9ROUTER</div></div>
-                  <div class="agent-models"><span>GPT</span><span>CLAUDE</span><span>DEEPSEEK</span><span>GEMINI</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">AI Agent Infrastructure</h3>
-              <p class="project-sub" data-i18n="p5.sub">Self-hosted AI Agent Infrastructure</p>
-              <div class="work-tags"><span>Hermes</span><span>9Router</span><span>Ubuntu</span></div>
-            </div>
-          </article>
-
-          <article class="project work-card reveal" data-category="real">
-            <div class="work-card-visual">
-              <div class="project-media visual-rekt">
-                <div class="project-media-inner">
-                  <span class="work-badge" data-i18n="work.badge.real">Real Project</span>
-                  <div class="ticket"><div class="ticket-left"><div class="logo">REKT<br>CLUB</div><div class="small">Whitelist · Metadata · IPFS · Reveal</div></div><div class="barcode"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-                  <div class="corner">4444 / WEB3 LAUNCH SYSTEM</div>
-                </div>
-              </div>
-            </div>
-            <div class="work-card-body">
-              <h3 class="project-title">REKT Club</h3>
-              <p class="project-sub" data-i18n="p6.sub">Web3 Launch &amp; Distribution System</p>
-              <div class="work-tags"><span>Web3</span><span>Supabase</span><span>IPFS</span></div>
-            </div>
-          </article>
-        </div>
+        <article class="project work-card reveal">
+          <div class="work-card-visual">
+            <a class="project-thumb-link" href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener" aria-label="Open Fed Gold BTC project">
+              <div class="project-media visual-fed"><div class="project-media-inner"><div class="chart"><svg viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,220 60,205 120,214 170,171 220,185 270,126 330,145 380,98 440,117 500,64 600,84" fill="none" stroke="#111" stroke-width="3"/><polyline points="0,245 60,235 120,240 170,220 220,205 270,215 330,175 380,187 440,145 500,154 600,110" fill="none" stroke="#888" stroke-width="2"/></svg></div><div class="chart-label a">365 DAY WINDOW</div><div class="chart-label b">FED / GOLD / BTC</div><div class="big">EVENT STUDY</div></div></div>
+              <span class="project-open">↗</span>
+            </a>
+          </div>
+          <div class="work-card-body"><h3 class="project-title">Fed · Gold · BTC</h3><p class="project-sub" data-i18n="p4.sub">Market Event Study</p><div class="work-tags"><span>Python</span><span>FRED</span><span data-i18n="p4.cat">Data Analysis</span></div></div>
+        </article>
       </div>
     </section>
 
-    <section class="section wrap" id="process">
-      <div class="process-head reveal"><div class="section-kicker">03 / <span data-i18n="nav.process">Process</span></div><h2 class="section-title small" data-i18n="process.title">How I work.</h2></div>
-      <div class="process-grid reveal">
-        <article class="process-step"><div class="process-no">01</div><div><h3 data-i18n="process.0.title">Find the friction</h3><p data-i18n="process.0.copy">Identify what is slow, repetitive, or unclear before choosing a tool.</p></div></article>
-        <article class="process-step"><div class="process-no">02</div><div><h3 data-i18n="process.1.title">Map the flow</h3><p data-i18n="process.1.copy">Map the data, decisions, handoffs, and edge cases.</p></div></article>
-        <article class="process-step"><div class="process-no">03</div><div><h3 data-i18n="process.2.title">Build the system</h3><p data-i18n="process.2.copy">Build the smallest reliable system that solves the real problem.</p></div></article>
-        <article class="process-step"><div class="process-no">04</div><div><h3 data-i18n="process.3.title">Test in use</h3><p data-i18n="process.3.copy">Put it in use, watch where it breaks, and refine from there.</p></div></article>
+    <section class="section wrap" id="lab-preview">
+      <div class="section-head-simple reveal">
+        <div><div class="section-kicker">03 / <span data-i18n="home.fromLab">From the Lab</span></div><h2 class="section-title medium" data-i18n="home.labTitle">Things I’m testing.</h2></div>
+        <a class="section-link" href="#lab"><span data-i18n="home.viewLab">View the Lab</span> ↗</a>
+      </div>
+      <div class="lab-grid lab-preview-grid" id="labPreview"></div>
+    </section>
+
+    <section class="section wrap" id="signals-preview">
+      <div class="section-head-simple reveal">
+        <div><div class="section-kicker">04 / <span data-i18n="home.latestSignals">Latest Signals</span></div><h2 class="section-title medium" data-i18n="home.signalsTitle">Ideas worth keeping.</h2></div>
+        <a class="section-link" href="#signals"><span data-i18n="home.viewSignals">View all signals</span> ↗</a>
+      </div>
+      <div class="signal-preview-grid" id="signalsPreview"></div>
+      <div class="prototype-note reveal" data-i18n="prototype.note">Prototype content — these sample takes and theses are placeholders for now.</div>
+    </section>
+
+    <section class="section wrap currently" id="currently">
+      <div class="currently-head reveal">
+        <div class="section-kicker">05 / <span data-i18n="currently.label">Currently</span></div>
+        <h2 data-i18n="currently.title">What I’m exploring right now.</h2>
+      </div>
+      <div class="currently-grid reveal">
+        <div><span data-i18n="currently.buildLabel">Building</span><strong data-i18n="currently.build">A personal publishing system and self-hosted AI workflows.</strong></div>
+        <div><span data-i18n="currently.learnLabel">Learning</span><strong data-i18n="currently.learn">Better agent architecture, retrieval, and system design.</strong></div>
+        <div><span data-i18n="currently.exploreLabel">Exploring</span><strong data-i18n="currently.explore">How AI can become part of a workflow without becoming the whole product.</strong></div>
       </div>
     </section>
 
-    <section class="section experience" id="experience">
+    <section class="section wrap about-preview">
+      <div class="about-preview-grid reveal">
+        <div><div class="section-kicker">06 / <span data-i18n="nav.about">About</span></div><h2 class="section-title medium" data-i18n="about.previewTitle">A statistics background, a builder’s mindset.</h2></div>
+        <div><p data-i18n="about.lead">I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.</p><a class="section-link" href="#about"><span data-i18n="about.more">More about me</span> ↗</a></div>
+      </div>
+    </section>
+
+    <section class="section wrap page-section" id="lab">
+      <div class="page-head reveal">
+        <div class="section-kicker">LAB / 001—</div>
+        <h2 data-i18n="lab.title">Lab.</h2>
+        <p data-i18n="lab.copy">Experiments, prototypes, and systems I’m building to understand how things work in practice.</p>
+      </div>
+      <div class="lab-grid" id="labGrid"></div>
+    </section>
+
+    <section class="section signals-section" id="signals">
       <div class="wrap">
-        <div class="experience-head reveal"><div class="section-kicker">04 / <span data-i18n="nav.experience">Experience</span></div><h2 class="section-title small" data-i18n="experience.title">Experience.</h2></div>
-        <div class="exp-list">
-          <article class="exp-row reveal"><div class="exp-year">2024—2026</div><div><h3>Dumpling Warehousing Project</h3><p class="exp-role" data-i18n="exp.0.role">Manager &amp; Automation Lead</p></div><p class="exp-desc" data-i18n="exp.0.copy">Managed production, social media, and sales while building a Telegram ordering system for orders, pricing control, and sales tracking.</p></article>
-          <article class="exp-row reveal"><div class="exp-year">2022</div><div><h3>PT. Ruang Guru</h3><p class="exp-role">Data &amp; Business Analytics — Bootcamp</p></div><p class="exp-desc" data-i18n="exp.1.copy">Worked with data cleaning, SQL, Python, visualization, and case-based business analysis.</p></article>
-          <article class="exp-row reveal"><div class="exp-year">2022</div><div><h3>DISKOMINFO Kota Cimahi</h3><p class="exp-role" data-i18n="exp.2.role">Data &amp; Statistics Intern</p></div><p class="exp-desc" data-i18n="exp.2.copy">Processed government data and created Tableau visualizations for the Open Data Cimahi platform.</p></article>
-          <article class="exp-row reveal"><div class="exp-year">2021</div><div><h3>Gradient Studio</h3><p class="exp-role" data-i18n="exp.3.role">Graphic Designer</p></div><p class="exp-desc" data-i18n="exp.3.copy">Created motion graphics, book layouts, infographic posters, logo work, and branding materials.</p></article>
+        <div class="page-head reveal">
+          <div class="section-kicker">SIGNALS / 001—</div>
+          <h2 data-i18n="signals.title">Signals.</h2>
+          <p data-i18n="signals.copy">Takes, notes, observations, and theses about AI, data, automation, and the systems around them.</p>
         </div>
-        <div class="edu-row reveal"><div class="exp-year">2019—2024</div><div><div class="degree" data-i18n="education.degree">Bachelor’s Degree in Statistics (S.Stat.)</div><div class="exp-role" data-i18n="education.gpa">GPA 3.30 / 4.00</div></div><div class="school">Universitas Padjadjaran</div></div>
+        <div class="signals-list" id="signalsGrid"></div>
+        <div class="prototype-note reveal" data-i18n="prototype.note">Prototype content — these sample takes and theses are placeholders for now.</div>
       </div>
     </section>
 
-    <section class="section wrap" id="skills">
-      <div class="skills-head reveal"><div class="section-kicker">05 / <span data-i18n="skills.label">Capabilities</span></div><h2 class="section-title small" data-i18n="skills.title">What I work with.</h2></div>
-      <div class="skill-list reveal">
-        <div class="skill-row"><h3>Data</h3><p>Python · SQL · R · Tableau · Excel · Google Sheets · Data Analysis</p></div>
-        <div class="skill-row"><h3 data-i18n="skills.ai">AI &amp; Automation</h3><p>LLM APIs · Hermes Agent · Playwright · Telegram Bots · Workflow Automation · Browser Automation</p></div>
-        <div class="skill-row"><h3>Web &amp; Backend</h3><p>JavaScript · Node.js · Supabase · PostgreSQL · REST APIs · GitHub · Vercel</p></div>
-        <div class="skill-row"><h3>Web3</h3><p>Solidity · ERC-721 · IPFS · OpenSea · Metadata Pipelines</p></div>
-        <div class="skill-row"><h3 data-i18n="skills.design">Design</h3><p>Photoshop · Illustrator · InDesign · Canva</p></div>
+    <section class="section personal-about" id="about">
+      <div class="wrap">
+        <div class="about-full-head reveal">
+          <div class="section-kicker">ABOUT / IRHAM</div>
+          <h2 data-i18n="about.title">About me.</h2>
+          <p data-i18n="about.lead">I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.</p>
+        </div>
+
+        <div class="about-story reveal">
+          <p data-i18n="about.story1">Design taught me to communicate information clearly. Statistics taught me to test assumptions. Building systems taught me that the workflow matters as much as the code.</p>
+          <p data-i18n="about.story2">Today I like working where data, software, automation, and real operational problems meet.</p>
+        </div>
+
+        <div class="about-facts reveal">
+          <div><span data-i18n="about.educationLabel">Education</span><strong data-i18n="about.education">S-1 Statistika (S.Stat.) — Universitas Padjadjaran, 2019–2024</strong></div>
+          <div><span data-i18n="about.focusLabel">Focus</span><strong data-i18n="about.focus">Data · AI · Automation · Systems</strong></div>
+          <div><span data-i18n="about.toolsLabel">Working with</span><strong>Python · SQL · JavaScript · Node.js · LLM APIs · Playwright · Supabase · Linux</strong></div>
+        </div>
+
+        <div class="experience-mini reveal">
+          <div class="exp-mini-row"><span>2024—2026</span><strong>Dumpling Warehousing Project</strong><em data-i18n="exp.0.role">Manager &amp; Automation Lead</em></div>
+          <div class="exp-mini-row"><span>2022</span><strong>DISKOMINFO Kota Cimahi</strong><em data-i18n="exp.2.role">Data &amp; Statistics Intern</em></div>
+          <div class="exp-mini-row"><span>2021</span><strong>Gradient Studio</strong><em data-i18n="exp.3.role">Graphic Designer</em></div>
+        </div>
       </div>
     </section>
 
     <section class="section wrap" id="contact">
-      <div class="contact-head reveal"><div class="section-kicker">06 / <span data-i18n="nav.contact">Contact</span></div><h2 class="contact-title" data-i18n="contact.title">LET'S BUILD SOMETHING USEFUL.</h2></div>
+      <div class="contact-head reveal"><div class="section-kicker">CONTACT</div><h2 class="contact-title" data-i18n="contact.title">LET'S BUILD SOMETHING USEFUL.</h2></div>
       <div class="contact-bottom reveal"><a class="email" href="mailto:irham.kk16@gmail.com">irham.kk16@gmail.com ↗</a><p class="contact-copy" data-i18n="contact.copy">Have a workflow that’s too manual, or a system that could work better? Let’s talk.</p><div class="contact-socials"><a href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub ↗</a><a href="https://x.com/parsialverse" target="_blank" rel="noopener">X ↗</a><a href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium ↗</a></div></div>
-      <footer class="footer"><span>© 2026 Irham Khairul Kalam</span><span data-i18n="footer.note">Designed &amp; built by Irham Khairul Kalam.</span><a href="#top" data-i18n="footer.top">Back to top ↑</a></footer>
+      <footer class="footer"><span>© 2026 IRHAMKK.WORLD</span><span data-i18n="footer.note">Designed &amp; built by Irham Khairul Kalam.</span><a href="#home" data-i18n="footer.top">Back to top ↑</a></footer>
     </section>
   </main>
+
+  <button class="ciel-launcher" id="cielLauncher" type="button" aria-expanded="false" aria-controls="cielPanel">
+    <span class="ciel-orb">C</span>
+    <span class="ciel-launcher-copy"><strong>Ciel 3.2</strong><small data-i18n="ciel.launcher">Ask Ciel about Irham</small></span>
+    <span class="ciel-launcher-arrow">↑</span>
+  </button>
+
+  <aside class="ciel-panel" id="cielPanel" aria-hidden="true">
+    <div class="ciel-panel-head">
+      <div><span class="ciel-eyebrow">CIEL / PERSONAL AI</span><h3 data-i18n="ciel.title">Ask Ciel about Irham.</h3></div>
+      <button id="cielClose" type="button" aria-label="Close Ciel">×</button>
+    </div>
+    <p class="ciel-intro" data-i18n="ciel.copy">A prototype AI interface for exploring Irham’s projects, experiments, notes, and published ideas.</p>
+    <div class="ciel-status"><i></i><span data-i18n="ciel.offline">Prototype mode · API not connected</span></div>
+    <div class="ciel-suggestions">
+      <button type="button" data-prompt="projects" data-i18n="ciel.prompt.projects">What kind of projects does Irham build?</button>
+      <button type="button" data-prompt="agents" data-i18n="ciel.prompt.agents">What does Irham think about AI agents?</button>
+      <button type="button" data-prompt="now" data-i18n="ciel.prompt.now">What is Irham exploring right now?</button>
+    </div>
+    <div class="ciel-thread" id="cielThread" aria-live="polite"></div>
+    <form class="ciel-composer" id="cielForm">
+      <textarea id="cielInput" rows="1" data-i18n-placeholder="ciel.placeholder" placeholder="Ask about Irham, his projects, notes, or ideas..."></textarea>
+      <div class="ciel-composer-bottom">
+        <label class="ciel-model"><span data-i18n="ciel.model">Model</span><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select></label>
+        <button class="ciel-send" type="submit" aria-label="Send">↑</button>
+      </div>
+    </form>
+  </aside>
+
   <script src="script.js" defer></script>
 </body>
 </html>
