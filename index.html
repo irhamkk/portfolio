@@ -7,19 +7,13 @@
     (function () {
       function topNow() {
         if (!location.hash || location.hash === "#home") {
-          document.documentElement.style.scrollBehavior = "auto";
           window.scrollTo(0, 0);
         }
       }
       topNow();
-      document.addEventListener("DOMContentLoaded", topNow, { once: true });
-      window.addEventListener("load", function () {
-        topNow();
-        setTimeout(topNow, 40);
-        setTimeout(topNow, 160);
-        setTimeout(topNow, 420);
-      }, { once: true });
-      window.addEventListener("pageshow", topNow);
+      window.addEventListener("pageshow", function(e) {
+        if (e.persisted) topNow();
+      });
     })();
   </script>
   <title>Irham Khairul Kalam — irhamkk.world</title>
@@ -62,19 +56,19 @@
 
 <main>
   <section class="hero wrap home-hero" id="home">
-    <div class="hero-topline reveal">
+    <div class="hero-topline">
       <div class="availability"><i></i><span data-i18n="hero.available">Available for new projects</span></div>
       <div class="hero-year">IRHAMKK.WORLD / 2026</div>
     </div>
     <div class="hero-stage">
       <h1 class="hero-name" aria-label="Irham Khairul Kalam"><span>IRHAM</span> <span class="outline">KHAIRUL</span> <span>KALAM</span></h1>
       <div class="hero-photo" id="heroPhoto"><img src="/assets/hero-photo.png" alt="Irham Khairul Kalam" width="1024" height="1003"></div>
-      <div class="hero-left reveal">
+      <div class="hero-left">
         <h2 class="hero-role" data-i18n="hero.role">Data, AI &amp; Automation Builder</h2>
         <p class="hero-copy" data-i18n="hero.copy">I build practical systems around data, AI, and automation — and document what I learn along the way.</p>
         <a class="hero-cta" href="#overview"><span data-i18n="hero.cta">Explore my work</span> ↗</a>
       </div>
-      <div class="hero-right reveal">
+      <div class="hero-right">
         <a class="social-pill" href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub <span>↗</span></a>
         <a class="social-pill" href="https://x.com/parsialverse" target="_blank" rel="noopener">X <span>↗</span></a>
         <a class="social-pill" href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium <span>↗</span></a>

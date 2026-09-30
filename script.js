@@ -200,14 +200,38 @@ window.addEventListener("pageshow",()=>requestAnimationFrame(resetHomeScroll));
 
 let observer;
 function observeReveals(){
-  if(!observer) observer=new IntersectionObserver(entries=>entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add("in");
-      observer.unobserve(e.target);
+  const winH = window.innerHeight || 800;
+  qsa(".reveal:not(.in)").forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= winH + 100 && rect.bottom >= -100) {
+      el.classList.add("in");
     }
-  }),{threshold:.08});
-  qsa(".reveal:not(.in)").forEach(el=>observer.observe(el));
+  });
+
+  if(!observer && "IntersectionObserver" in window){
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          e.target.classList.add("in");
+          observer.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: "0px 0px 140px 0px", threshold: 0.01 });
+  }
+
+  qsa(".reveal:not(.in)").forEach(el => {
+    if(observer) {
+      observer.observe(el);
+    } else {
+      el.classList.add("in");
+    }
+  });
 }
+
+// Failsafe: After 1.2s, reveal any remaining elements so nothing is EVER stuck hidden
+setTimeout(() => {
+  qsa(".reveal:not(.in)").forEach(el => el.classList.add("in"));
+}, 1200);
 
 function labCard(item){
   return `<article class="lab-card reveal"><div class="lab-card-top"><span>${item.id}</span><span class="lab-status"><i></i>${item.status}</span></div><div><h3>${item.title}</h3><p>${item.copy}</p></div><div class="lab-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></article>`;
