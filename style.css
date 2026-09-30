@@ -1802,3 +1802,336 @@ body[data-page] .nav-links a.active:after{right:0}
   .about-contact-meta{flex-direction:column;gap:10px}
   .about-contact-links{justify-content:flex-start;flex-wrap:wrap}
 }
+
+
+/* =========================================================
+   PREVIEW V4 — restore the earlier Home, only sharpen Signals
+   ========================================================= */
+
+.home-overview-v4{
+  padding:100px 0 110px;
+}
+
+.home-overview-v4 .overview-intro{
+  display:grid;
+  grid-template-columns:160px minmax(0,1.2fr) minmax(280px,.7fr);
+  gap:38px;
+  align-items:end;
+  padding-bottom:38px;
+  border-bottom:1px solid var(--line);
+}
+
+.home-overview-v4 .overview-intro h2{
+  margin:0;
+  max-width:850px;
+  font:600 clamp(42px,5vw,72px)/.98 var(--display);
+  letter-spacing:-.055em;
+}
+
+.home-overview-v4 .overview-intro p{
+  margin:0;
+  max-width:470px;
+  color:#686868;
+  font-size:13px;
+  line-height:1.7;
+}
+
+/* Signals on Home behave like a small editorial news desk, not a generic card grid. */
+.signal-desk{
+  margin-top:48px;
+  border-top:2px solid #151515;
+  border-bottom:1px solid #dcdcd7;
+}
+
+.signal-desk-mast{
+  min-height:72px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+  padding:14px 0 13px;
+  border-bottom:1px solid #151515;
+}
+
+.signal-desk-mast>div:first-child{
+  display:flex;
+  align-items:baseline;
+  gap:18px;
+  min-width:0;
+}
+
+.signal-desk-wordmark{
+  font:600 clamp(22px,2.2vw,31px)/1 var(--display);
+  letter-spacing:-.035em;
+  white-space:nowrap;
+}
+
+.signal-desk-sub{
+  color:#7a7a75;
+  font-size:9px;
+  letter-spacing:.05em;
+}
+
+.signal-desk-issue{
+  display:grid;
+  grid-template-columns:auto auto;
+  column-gap:10px;
+  row-gap:2px;
+  align-items:end;
+  flex:0 0 auto;
+  text-align:right;
+}
+
+.signal-desk-issue span{
+  align-self:center;
+  font-size:8px;
+  letter-spacing:.14em;
+  color:#90908b;
+}
+
+.signal-desk-issue strong{
+  font:600 28px/.8 var(--display);
+  letter-spacing:-.05em;
+}
+
+.signal-desk-issue time{
+  grid-column:1 / -1;
+  font-size:8px;
+  letter-spacing:.11em;
+  color:#8e8e89;
+}
+
+.signal-desk-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);
+}
+
+.signal-desk-lead{
+  padding:24px 38px 34px 0;
+  border-right:1px solid var(--line);
+  min-width:0;
+}
+
+.signal-desk-sectionline,
+.signal-desk-rail-head{
+  min-height:32px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+  color:#7c7c77;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.signal-desk-sectionline:before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#dce960;
+  flex:0 0 auto;
+}
+
+.signal-desk-sectionline>span{
+  margin-right:auto;
+}
+
+.signal-desk-sectionline a{
+  color:#151515;
+  text-decoration:none;
+  text-transform:none;
+  letter-spacing:0;
+  font-size:10px;
+}
+
+.signal-desk-lead .signal-feature{
+  padding-top:28px;
+}
+
+.signal-desk-lead .signal-feature-meta{
+  margin-bottom:18px;
+}
+
+.signal-desk-lead .signal-feature h2{
+  max-width:900px;
+  font-size:clamp(48px,5.6vw,82px);
+  line-height:.92;
+}
+
+.signal-desk-lead .signal-feature p{
+  max-width:720px;
+  margin-top:20px;
+  font-size:13px;
+  line-height:1.68;
+}
+
+.signal-desk-rail{
+  padding:24px 0 0 28px;
+  min-width:0;
+}
+
+.signal-desk-rail-head span:last-child{
+  color:#151515;
+  font:600 25px/.9 var(--display);
+  letter-spacing:-.04em;
+}
+
+.signal-desk-rail #homeSignalsSide{
+  counter-reset:signal-story;
+}
+
+.signal-desk-rail .home-signal-mini{
+  position:relative;
+  min-height:128px;
+  padding:20px 0 20px 38px;
+  border-bottom:1px solid var(--line);
+  counter-increment:signal-story;
+}
+
+.signal-desk-rail .home-signal-mini:before{
+  content:"0" counter(signal-story);
+  position:absolute;
+  left:0;
+  top:21px;
+  font:500 13px/1 var(--display);
+  color:#b7b7b2;
+}
+
+.signal-desk-rail .home-signal-mini>div{
+  margin-bottom:9px;
+}
+
+.signal-desk-rail .home-signal-mini h3{
+  margin-bottom:8px;
+  font-size:20px;
+  line-height:1.04;
+}
+
+.signal-desk-rail .home-signal-mini p{
+  max-width:410px;
+  color:#73736e;
+  font-size:10px;
+  line-height:1.55;
+}
+
+/* Keep the earlier, lighter overview blocks below the news desk. */
+.home-overview-v4 .home-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  margin-top:54px;
+}
+
+.home-overview-v4 .home-about-strip{
+  display:grid;
+  grid-template-columns:1.25fr .75fr auto;
+  gap:38px;
+  align-items:end;
+  margin-top:72px;
+  padding:32px 0 0;
+  border-top:1px solid var(--line);
+}
+
+.home-overview-v4 .home-about-strip h3{
+  margin:13px 0 0;
+  font:600 clamp(30px,3.7vw,50px)/1 var(--display);
+  letter-spacing:-.045em;
+}
+
+.home-overview-v4 .home-about-strip p{
+  margin:0;
+  color:#686868;
+  font-size:12px;
+  line-height:1.65;
+}
+
+.home-overview-v4 .home-about-strip>a{
+  text-decoration:none;
+  font-size:11px;
+  font-weight:600;
+  border-bottom:1px solid #bbb;
+  padding-bottom:3px;
+  white-space:nowrap;
+}
+
+@media(max-width:1050px){
+  .home-overview-v4 .overview-intro{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .signal-desk-grid{
+    grid-template-columns:1fr;
+  }
+
+  .signal-desk-lead{
+    padding-right:0;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .signal-desk-rail{
+    padding-left:0;
+  }
+
+  .signal-desk-rail #homeSignalsSide{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .signal-desk-rail .home-signal-mini{
+    padding:20px 18px 20px 48px;
+    border-right:1px solid var(--line);
+  }
+
+  .signal-desk-rail .home-signal-mini:last-child{
+    border-right:0;
+  }
+
+  .home-overview-v4 .home-columns{
+    grid-template-columns:1fr;
+  }
+
+  .home-overview-v4 .home-about-strip{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+}
+
+@media(max-width:760px){
+  .home-overview-v4{
+    padding-top:72px;
+  }
+
+  .signal-desk-mast{
+    align-items:flex-start;
+  }
+
+  .signal-desk-mast>div:first-child{
+    display:block;
+  }
+
+  .signal-desk-sub{
+    display:block;
+    margin-top:6px;
+  }
+
+  .signal-desk-lead .signal-feature h2{
+    font-size:clamp(40px,12vw,64px);
+  }
+
+  .signal-desk-rail #homeSignalsSide{
+    grid-template-columns:1fr;
+  }
+
+  .signal-desk-rail .home-signal-mini{
+    padding-left:38px;
+    padding-right:0;
+    border-right:0;
+  }
+}
