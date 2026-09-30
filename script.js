@@ -104,6 +104,17 @@ let lang=localStorage.getItem("portfolioLanguage")||"en";
 const qs=(s,r=document)=>r.querySelector(s);
 const qsa=(s,r=document)=>[...r.querySelectorAll(s)];
 
+// Multi-page site: never let the browser restore an old scroll position onto Home.
+// This was causing Home to reopen near the bottom of the hero, which looked like a blank page.
+if("scrollRestoration" in history) history.scrollRestoration="manual";
+function resetHomeScroll(){
+  if(document.body.dataset.page==="home" && !location.hash){
+    window.scrollTo({top:0,left:0,behavior:"auto"});
+  }
+}
+requestAnimationFrame(()=>requestAnimationFrame(resetHomeScroll));
+window.addEventListener("pageshow",()=>requestAnimationFrame(resetHomeScroll));
+
 let observer;
 function observeReveals(){
   if(!observer) observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");observer.unobserve(e.target)}}),{threshold:.08});
@@ -201,6 +212,11 @@ if(menuToggle&&mobileMenu){
 
 const page=document.body.dataset.page||"home";
 qsa("[data-page-link]").forEach(a=>a.classList.toggle("active",a.dataset.pageLink===page));
+
+// Above-the-fold Home elements should never wait on IntersectionObserver.
+if(page==="home"){
+  qsa(".home-hero .reveal").forEach(el=>el.classList.add("in"));
+}
 const nav=qs("#nav");
 function updateNav(){if(nav)nav.classList.toggle("scrolled",scrollY>16)}
 addEventListener("scroll",updateNav,{passive:true});updateNav();
