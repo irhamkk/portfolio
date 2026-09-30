@@ -2135,3 +2135,11 @@ body[data-page] .nav-links a.active:after{right:0}
     border-right:0;
   }
 }
+
+
+/* HOME FIRST-PAINT SAFETY — Home content must never depend on JS reveal state */
+body[data-page="home"] .home-hero .reveal,
+body[data-page="home"] .home-overview-v4 .reveal{
+  opacity:1 !important;
+  transform:none !important;
+}
