@@ -2,6 +2,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#ffffff">
+  <script id="HOME_BOOT_SCROLL_FIX">
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    (function () {
+      function topNow() {
+        if (!location.hash || location.hash === "#home") {
+          document.documentElement.style.scrollBehavior = "auto";
+          window.scrollTo(0, 0);
+        }
+      }
+      topNow();
+      document.addEventListener("DOMContentLoaded", topNow, { once: true });
+      window.addEventListener("load", function () {
+        topNow();
+        setTimeout(topNow, 40);
+        setTimeout(topNow, 160);
+        setTimeout(topNow, 420);
+      }, { once: true });
+      window.addEventListener("pageshow", topNow);
+    })();
+  </script>
   <title>Irham Khairul Kalam — irhamkk.world</title>
   <meta name="description" content="Personal website of Irham Khairul Kalam — projects, experiments, signals, and notes around data, AI, and automation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='8' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23111111'%3Eik.%3C/text%3E%3C/svg%3E">
@@ -12,9 +32,9 @@
 </head><body data-page="home">
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Home">ik<span class="dot">.</span></a>
+    <a class="brand" href="/#home" aria-label="Home">ik<span class="dot">.</span></a>
     <nav class="nav-links" aria-label="Primary navigation">
-      <a href="/" data-page-link="home" data-i18n="nav.home">Home</a>
+      <a href="/#home" data-page-link="home" data-i18n="nav.home">Home</a>
       <a href="/lab" data-page-link="lab" data-i18n="nav.lab">Lab</a>
       <a href="/signals" data-page-link="signals" data-i18n="nav.signals">Signals</a>
       <a href="/about" data-page-link="about" data-i18n="nav.about">About</a>
@@ -33,7 +53,7 @@
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="/" data-i18n="nav.home">Home</a>
+  <a href="/#home" data-i18n="nav.home">Home</a>
   <a href="/lab" data-i18n="nav.lab">Lab</a>
   <a href="/signals" data-i18n="nav.signals">Signals</a>
   <a href="/about" data-i18n="nav.about">About</a>
@@ -131,6 +151,6 @@
 <footer class="site-footer wrap">
   <span>© 2026 IRHAMKK.WORLD</span>
   <span data-i18n="footer.note">A personal space for work, experiments, and ideas.</span>
-  <a href="/" data-i18n="footer.home">Back home ↑</a>
+  <a href="/#home" data-i18n="footer.home">Back home ↑</a>
 </footer>
 <script src="/script.js" defer></script></body></html>
