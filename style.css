@@ -1977,7 +1977,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: min(calc(100% - (var(--pad) * 2)), var(--max));
+    margin: 0 auto;
   }
   .nav-links {
     display: none;
@@ -2035,7 +2036,8 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: min(calc(100% - (var(--pad) * 2)), var(--max));
+    margin: 0 auto;
   }
   .nav-right {
     margin-left: auto;
