@@ -31,12 +31,14 @@
     </div>
   </div>
 </header>
+
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" data-i18n="nav.home">Home</a>
   <a href="/lab" data-i18n="nav.lab">Lab</a>
   <a href="/signals" data-i18n="nav.signals">Signals</a>
   <a href="/about" data-i18n="nav.about">About</a>
 </div>
+
 <main>
   <section class="hero wrap home-hero" id="home">
     <div class="hero-topline reveal">
@@ -60,74 +62,72 @@
     </div>
   </section>
 
-  <section class="home-overview-v3 wrap" id="overview">
-    <div class="world-deck reveal">
-      <div class="world-deck-mark" aria-hidden="true">
-        <span>IRHAMKK.WORLD</span>
-        <strong>001</strong>
-        <small>HOME INDEX / 2026</small>
-      </div>
-      <div class="world-deck-copy">
-        <div class="section-kicker">01 / <span data-i18n="home.overview">Overview</span></div>
-        <h2 data-i18n="home.statement">What I build. What I test. What I think.</h2>
-        <p data-i18n="home.statementCopy">A compact front page for the things that matter right now. The deeper context lives in Lab, Signals, and About.</p>
-      </div>
+  <section class="home-overview home-overview-v4 wrap" id="overview">
+    <div class="overview-intro reveal">
+      <div class="section-kicker">01 / <span data-i18n="home.overview">Overview</span></div>
+      <h2 data-i18n="home.statement">A small map of what I build, test, and think about.</h2>
+      <p data-i18n="home.statementCopy">Home is only the surface. Lab holds the experiments, Signals holds the thinking, and About holds the context.</p>
     </div>
 
-    <div class="frontpage-v3 reveal">
-      <article class="frontpage-lead">
-        <div class="frontpage-kicker"><span data-i18n="home.latestSignal">Latest Signal</span><a href="/signals"><span data-i18n="home.allSignals">All Signals</span> ↗</a></div>
-        <div id="homeSignalLead"></div>
-      </article>
-      <aside class="frontpage-rail">
-        <div class="frontpage-rail-head"><span data-i18n="home.moreSignals">More from Signals</span><strong id="homeSignalCount">12</strong></div>
-        <div id="homeSignalsSide"></div>
-      </aside>
-    </div>
-
-    <nav class="world-index reveal" aria-label="Explore irhamkk.world">
-      <a class="world-index-item world-index-lab" href="/lab">
-        <div class="world-index-top"><span>01 / LAB</span><strong id="homeLabCount">06</strong></div>
-        <div class="world-index-body">
-          <i></i>
-          <h3 id="homeLabFeatureTitle">Self-hosted AI Agent Stack</h3>
-          <p id="homeLabFeatureCopy">Experiments, prototypes, and Ciel — the personal AI interface.</p>
+    <section class="signal-desk reveal" aria-label="Latest signals">
+      <div class="signal-desk-mast">
+        <div>
+          <span class="signal-desk-wordmark">SIGNALS DESK</span>
+          <span class="signal-desk-sub" data-i18n="home.signalDeskSub">Ideas, takes, and notes from irhamkk.world</span>
         </div>
-        <div class="world-index-foot"><span data-i18n="home.labFoot">Experiments + Ciel</span><b>↗</b></div>
-      </a>
-
-      <a class="world-index-item" href="/signals">
-        <div class="world-index-top"><span>02 / SIGNALS</span><strong id="homeSignalsIndexCount">12</strong></div>
-        <div class="world-index-body">
-          <h3 data-i18n="home.signalsIndexTitle">Takes, notes, theses.</h3>
-          <p data-i18n="home.signalsIndexCopy">A public record of ideas I want to keep, test, or change my mind about later.</p>
+        <div class="signal-desk-issue">
+          <span data-i18n="home.issue">ISSUE</span>
+          <strong>001</strong>
+          <time>30 SEP 2026</time>
         </div>
-        <div class="world-index-foot"><span data-i18n="home.signalsFoot">Thinking in public</span><b>↗</b></div>
-      </a>
-
-      <a class="world-index-item" href="/about">
-        <div class="world-index-top"><span>03 / ABOUT</span><strong>IK</strong></div>
-        <div class="world-index-body">
-          <h3 data-i18n="home.aboutIndexTitle">The context behind the work.</h3>
-          <p data-i18n="home.aboutIndexCopy">Statistics, data, automation, AI systems, experience, and the path connecting them.</p>
-        </div>
-        <div class="world-index-foot"><span data-i18n="home.aboutFoot">Profile + contact</span><b>↗</b></div>
-      </a>
-    </nav>
-
-    <section class="build-strip reveal">
-      <div class="build-strip-head">
-        <span data-i18n="home.selectedProjects">Selected Projects</span>
-        <a href="https://github.com/irhamkk?tab=repositories" target="_blank" rel="noopener"><span data-i18n="home.github">GitHub</span> ↗</a>
       </div>
-      <div class="build-strip-grid">
-        <a href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener"><span>01</span><div><small>AI / AUTOMATION</small><strong>Ciel</strong><em data-i18n="p1.sub">WhatsApp AI Assistant</em></div><b>↗</b></a>
-        <a href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener"><span>02</span><div><small>DATA / OPERATIONS</small><strong>UMKM Analyst</strong><em data-i18n="p2.sub">Ordering &amp; Business Analytics System</em></div><b>↗</b></a>
-        <a href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener"><span>03</span><div><small>AUTOMATION</small><strong>X Automation</strong><em data-i18n="p3.sub">Automated Content Publishing System</em></div><b>↗</b></a>
+
+      <div class="signal-desk-grid">
+        <article class="signal-desk-lead">
+          <div class="signal-desk-sectionline">
+            <span data-i18n="home.latestSignal">Latest Signal</span>
+            <a href="/signals"><span data-i18n="home.allSignals">All Signals</span> ↗</a>
+          </div>
+          <div id="homeSignalLead"></div>
+        </article>
+
+        <aside class="signal-desk-rail">
+          <div class="signal-desk-rail-head">
+            <span data-i18n="home.moreSignals">More from Signals</span>
+            <span id="homeSignalCount">12</span>
+          </div>
+          <div id="homeSignalsSide"></div>
+        </aside>
       </div>
     </section>
+
+    <div class="home-columns">
+      <section class="home-column reveal">
+        <div class="overview-label"><span data-i18n="home.fromLab">From the Lab</span><a href="/lab"><span data-i18n="home.openLab">Open Lab</span> ↗</a></div>
+        <div id="homeLabList" class="home-list"></div>
+      </section>
+
+      <section class="home-column reveal">
+        <div class="overview-label"><span data-i18n="home.selectedProjects">Selected Projects</span><a href="https://github.com/irhamkk?tab=repositories" target="_blank" rel="noopener"><span data-i18n="home.github">GitHub</span> ↗</a></div>
+        <div class="home-list">
+          <a class="home-row" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener"><span><small>AI / AUTOMATION</small><strong>Ciel</strong></span><em data-i18n="p1.sub">WhatsApp AI Assistant</em><b>↗</b></a>
+          <a class="home-row" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener"><span><small>DATA / OPERATIONS</small><strong>UMKM Analyst</strong></span><em data-i18n="p2.sub">Ordering &amp; Business Analytics System</em><b>↗</b></a>
+          <a class="home-row" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener"><span><small>AUTOMATION</small><strong>X Automation</strong></span><em data-i18n="p3.sub">Automated Content Publishing System</em><b>↗</b></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="home-about-strip reveal">
+      <div>
+        <span class="section-kicker">02 / <span data-i18n="nav.about">About</span></span>
+        <h3 data-i18n="home.aboutTitle">Statistics → Data → Automation → AI Systems.</h3>
+      </div>
+      <p data-i18n="home.aboutCopy">I like turning messy operational problems into systems that are easier to understand, run, and improve.</p>
+      <a href="/about"><span data-i18n="home.aboutCta">More about me</span> ↗</a>
+    </div>
   </section>
 </main>
+
 <footer class="site-footer wrap">
   <span>© 2026 IRHAMKK.WORLD</span>
   <span data-i18n="footer.note">A personal space for work, experiments, and ideas.</span>
