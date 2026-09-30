@@ -2,18 +2,21 @@ const T={
   en:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"About","nav.contact":"Contact","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Available for new projects","hero.role":"Data, AI & Automation Builder","hero.copy":"I build practical systems around data, AI, and automation — and document what I learn along the way.","hero.cta":"Enter the world",
-    "home.overview":"Overview","home.statement":"A small map of what I build, test, and think about.","home.statementCopy":"Home is only the surface. Lab holds the experiments, Signals holds the thinking, and About holds the context.",
-    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.fromLab":"From the Lab","home.openLab":"Open Lab","home.selectedProjects":"Selected Projects","home.github":"GitHub",
-    "home.aboutTitle":"Statistics → Data → Automation → AI Systems.","home.aboutCopy":"I like turning messy operational problems into systems that are easier to understand, run, and improve.","home.aboutCta":"More about me",
+    "home.overview":"Overview","home.statement":"What I build. What I test. What I think.","home.statementCopy":"A compact front page for the things that matter right now. The deeper context lives in Lab, Signals, and About.",
+    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.moreSignals":"More from Signals","home.selectedProjects":"Selected Projects","home.github":"GitHub",
+    "home.labFoot":"Experiments + Ciel","home.signalsIndexTitle":"Takes, notes, theses.","home.signalsIndexCopy":"A public record of ideas I want to keep, test, or change my mind about later.","home.signalsFoot":"Thinking in public",
+    "home.aboutIndexTitle":"The context behind the work.","home.aboutIndexCopy":"Statistics, data, automation, AI systems, experience, and the path connecting them.","home.aboutFoot":"Profile + contact",
     "p1.sub":"WhatsApp AI Assistant","p2.sub":"Ordering & Business Analytics System","p3.sub":"Automated Content Publishing System",
     "lab.title":"Lab.","lab.copy":"Experiments, prototypes, and systems I’m testing to understand how things work in practice.","lab.archive":"Other experiments.","lab.archiveCopy":"Things can be shipped, paused, unfinished, or simply useful enough to keep.",
     "signals.title":"Signals.","signals.copy":"Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.","signals.all":"All","signals.take":"Take","signals.thesis":"Thesis","signals.note":"Note","signals.observation":"Observation","signals.essay":"Essay",
     "prototype.note":"Prototype content — these sample takes, notes, and theses are placeholders for now.",
-    "about.title":"About.","about.lead":"I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.",
+    "about.title":"About.","about.lead":"The person, background, and context behind the projects, experiments, and signals.",
+    "about.whoLabel":"Who I am","about.summary":"I’m Irham Khairul Kalam — a Statistics graduate who moved from analyzing data into building systems around automation and AI.","about.summary2":"I’m drawn to practical problems: messy operations, repetitive workflows, and information that should be easier to turn into action. My background crosses data, operations, design, and software, so I tend to look at a problem as a system rather than as a single tool.",
     "about.big":"I’m interested in what happens when data stops being a report and starts becoming a system.",
     "about.story1":"Design taught me to communicate information clearly. Statistics taught me to test assumptions. Building systems taught me that the workflow matters as much as the code.",
     "about.story2":"Today I like working where data, software, automation, and real operational problems meet.",
-    "about.educationLabel":"Education","about.education":"S-1 Statistics (S.Stat.) — Universitas Padjadjaran, 2019–2024","about.focusLabel":"Focus","about.focus":"Data · AI · Automation · Systems","about.toolsLabel":"Working with","about.experience":"Experience",
+    "about.educationLabel":"Education","about.education":"Bachelor’s Degree in Statistics (S.Stat.) — Universitas Padjadjaran, 2019–2024","about.focusLabel":"Focus","about.focus":"Data · AI · Automation · Systems","about.toolsLabel":"Working with","about.experience":"Experience",
+    "about.contactStatus":"Open to projects, collaboration, and good conversations.","about.contactTitle":"If there’s a project, system, or idea worth discussing, send me a message.",
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Let’s make something useful.","contact.pageCopy":"If you have a project, a messy workflow, or just an idea worth discussing, send me a message.",
     "footer.note":"A personal space for work, experiments, and ideas.","footer.home":"Back home ↑",
@@ -24,18 +27,21 @@ const T={
   id:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"Tentang","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Terbuka untuk project baru","hero.role":"Data, AI & Automation Builder","hero.copy":"Saya membangun sistem praktis dengan data, AI, dan automasi — sambil mendokumentasikan apa yang saya pelajari.","hero.cta":"Masuk ke dunia saya",
-    "home.overview":"Ringkasan","home.statement":"Peta kecil tentang apa yang saya bangun, uji, dan pikirkan.","home.statementCopy":"Home hanya permukaan. Lab berisi eksperimen, Signals berisi pemikiran, dan About memberi konteks tentang saya.",
-    "home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.fromLab":"Dari Lab","home.openLab":"Buka Lab","home.selectedProjects":"Project Pilihan","home.github":"GitHub",
-    "home.aboutTitle":"Statistika → Data → Automasi → AI Systems.","home.aboutCopy":"Saya suka mengubah masalah operasional yang berantakan menjadi sistem yang lebih mudah dipahami, dijalankan, dan diperbaiki.","home.aboutCta":"Lebih lanjut tentang saya",
+    "home.overview":"Ringkasan","home.statement":"Apa yang saya bangun. Apa yang saya uji. Apa yang saya pikirkan.","home.statementCopy":"Halaman depan yang ringkas untuk hal-hal yang sedang penting sekarang. Konteks lebih dalam ada di Lab, Signals, dan Tentang.",
+    "home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.moreSignals":"Signal lainnya","home.selectedProjects":"Project Pilihan","home.github":"GitHub",
+    "home.labFoot":"Eksperimen + Ciel","home.signalsIndexTitle":"Pendapat, catatan, tesis.","home.signalsIndexCopy":"Catatan publik untuk ide yang ingin saya simpan, uji, atau mungkin saya ubah pendapatnya nanti.","home.signalsFoot":"Berpikir secara terbuka",
+    "home.aboutIndexTitle":"Konteks di balik karya.","home.aboutIndexCopy":"Statistika, data, automasi, AI systems, pengalaman, dan perjalanan yang menghubungkan semuanya.","home.aboutFoot":"Profil + kontak",
     "p1.sub":"Asisten AI WhatsApp","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis",
     "lab.title":"Lab.","lab.copy":"Eksperimen, prototipe, dan sistem yang sedang saya uji untuk memahami bagaimana semuanya bekerja dalam praktik.","lab.archive":"Eksperimen lainnya.","lab.archiveCopy":"Sesuatu bisa selesai, dijeda, belum jadi, atau sekadar cukup berguna untuk tetap disimpan.",
     "signals.title":"Signals.","signals.copy":"Take, catatan, observasi, dan tesis tentang AI, data, automasi, teknologi, dan sistem di sekitar kita.","signals.all":"Semua","signals.take":"Pendapat","signals.thesis":"Tesis","signals.note":"Catatan","signals.observation":"Observasi","signals.essay":"Esai",
     "prototype.note":"Konten prototipe — take, catatan, dan thesis ini masih contoh sementara.",
-    "about.title":"Tentang.","about.lead":"Saya mulai dari statistika dan analisis data, lalu berkembang lebih jauh ke automasi, AI, dan sistem yang menghubungkan semuanya.",
+    "about.title":"Tentang.","about.lead":"Orang, latar belakang, dan konteks di balik project, eksperimen, dan pemikiran yang ada di website ini.",
+    "about.whoLabel":"Siapa saya","about.summary":"Saya Irham Khairul Kalam — lulusan Statistika yang berkembang dari analisis data ke pembangunan sistem berbasis automasi dan AI.","about.summary2":"Saya tertarik pada masalah praktis: operasional yang berantakan, workflow repetitif, dan informasi yang seharusnya lebih mudah diubah menjadi tindakan. Latar saya bersinggungan dengan data, operasional, desain, dan software, jadi saya cenderung melihat masalah sebagai sebuah sistem, bukan sekadar satu tools.",
     "about.big":"Saya tertarik pada momen ketika data berhenti menjadi laporan dan mulai menjadi sebuah sistem.",
     "about.story1":"Desain mengajarkan saya menyampaikan informasi dengan jelas. Statistika mengajarkan saya menguji asumsi. Membangun sistem mengajarkan bahwa workflow sama pentingnya dengan code.",
     "about.story2":"Sekarang saya suka bekerja di titik temu antara data, software, automasi, dan masalah operasional nyata.",
     "about.educationLabel":"Pendidikan","about.education":"S-1 Statistika (S.Stat.) — Universitas Padjadjaran, 2019–2024","about.focusLabel":"Fokus","about.focus":"Data · AI · Automasi · Sistem","about.toolsLabel":"Bekerja dengan","about.experience":"Pengalaman",
+    "about.contactStatus":"Terbuka untuk project, kolaborasi, dan obrolan yang menarik.","about.contactTitle":"Kalau ada project, sistem, atau ide yang menarik untuk dibahas, kirim pesan.",
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Mari bikin sesuatu yang berguna.","contact.pageCopy":"Kalau punya project, workflow yang masih berantakan, atau sekadar ide yang menarik untuk dibahas, kirim pesan.",
     "footer.note":"Ruang pribadi untuk karya, eksperimen, dan pemikiran.","footer.home":"Kembali ke home ↑",
@@ -48,11 +54,11 @@ const T={
 const CONTENT={
   en:{
     lab:[
-      {id:"LAB / 001",status:"DIBANGUN",title:"Self-hosted AI Agent Stack",copy:"Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
-      {id:"LAB / 002",status:"PROTOTIPE",title:"Personal Publishing System",copy:"A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",tags:["Telegram","GitHub","Vercel","Automation"]},
+      {id:"LAB / 001",status:"BUILDING",title:"Self-hosted AI Agent Stack",copy:"Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
+      {id:"LAB / 002",status:"PROTOTYPE",title:"Personal Publishing System",copy:"A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",tags:["Telegram","GitHub","Vercel","Automation"]},
       {id:"LAB / 003",status:"EXPERIMENT",title:"Ciel as a Personal Interface",copy:"An AI interface that is intentionally narrow: it should know my published work and ideas, but refuse to pretend it knows everything else.",tags:["RAG","LLM","Retrieval","Personal AI"]},
-      {id:"LAB / 004",status:"PENGUJIAN",title:"Browser Workflow Agent",copy:"Testing where browser automation becomes genuinely useful and where a deterministic script is still the better tool.",tags:["Playwright","Agents","Browser","Workflow"]},
-      {id:"LAB / 005",status:"DIJEDA",title:"Tiny Data Products",copy:"Small interactive data pieces that answer one clear question instead of becoming another permanent dashboard.",tags:["Python","Data","Visualization","Web"]},
+      {id:"LAB / 004",status:"TESTING",title:"Browser Workflow Agent",copy:"Testing where browser automation becomes genuinely useful and where a deterministic script is still the better tool.",tags:["Playwright","Agents","Browser","Workflow"]},
+      {id:"LAB / 005",status:"PAUSED",title:"Tiny Data Products",copy:"Small interactive data pieces that answer one clear question instead of becoming another permanent dashboard.",tags:["Python","Data","Visualization","Web"]},
       {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"A search layer across projects, notes, signals, and build logs so the website can behave more like a living knowledge base.",tags:["Search","Embeddings","Indexing","Knowledge"]}
     ],
     signals:[
@@ -72,11 +78,11 @@ const CONTENT={
   },
   id:{
     lab:[
-      {id:"LAB / 001",status:"BUILDING",title:"Self-hosted AI Agent Stack",copy:"Menguji setup agent persisten yang bisa menerima task, memakai tools, membuka browser ketika perlu, lalu mengembalikan hasil lewat workflow pribadi yang ringan.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
-      {id:"LAB / 002",status:"PROTOTYPE",title:"Personal Publishing System",copy:"Flow publishing dari Telegram ke GitHub untuk take, catatan, terjemahan, metadata, dan nantinya konten yang tampil di seluruh website ini.",tags:["Telegram","GitHub","Vercel","Automasi"]},
+      {id:"LAB / 001",status:"DIBANGUN",title:"Self-hosted AI Agent Stack",copy:"Menguji setup agent persisten yang bisa menerima task, memakai tools, membuka browser ketika perlu, lalu mengembalikan hasil lewat workflow pribadi yang ringan.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
+      {id:"LAB / 002",status:"PROTOTIPE",title:"Personal Publishing System",copy:"Flow publishing dari Telegram ke GitHub untuk take, catatan, terjemahan, metadata, dan nantinya konten yang tampil di seluruh website ini.",tags:["Telegram","GitHub","Vercel","Automasi"]},
       {id:"LAB / 003",status:"EKSPERIMEN",title:"Ciel sebagai Personal Interface",copy:"Interface AI yang sengaja dibatasi: ia harus tahu karya dan pemikiran saya yang dipublikasikan, tetapi tidak berpura-pura tahu semua hal lain.",tags:["RAG","LLM","Retrieval","Personal AI"]},
-      {id:"LAB / 004",status:"TESTING",title:"Browser Workflow Agent",copy:"Menguji kapan browser automation benar-benar berguna dan kapan script deterministik tetap menjadi pilihan yang lebih tepat.",tags:["Playwright","Agents","Browser","Workflow"]},
-      {id:"LAB / 005",status:"PAUSED",title:"Tiny Data Products",copy:"Potongan data interaktif kecil yang menjawab satu pertanyaan dengan jelas, bukan menjadi dashboard permanen yang terus bertambah.",tags:["Python","Data","Visualisasi","Web"]},
+      {id:"LAB / 004",status:"PENGUJIAN",title:"Browser Workflow Agent",copy:"Menguji kapan browser automation benar-benar berguna dan kapan script deterministik tetap menjadi pilihan yang lebih tepat.",tags:["Playwright","Agents","Browser","Workflow"]},
+      {id:"LAB / 005",status:"DIJEDA",title:"Tiny Data Products",copy:"Potongan data interaktif kecil yang menjawab satu pertanyaan dengan jelas, bukan menjadi dashboard permanen yang terus bertambah.",tags:["Python","Data","Visualisasi","Web"]},
       {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"Lapisan pencarian untuk project, notes, signals, dan build logs agar website bisa berfungsi seperti knowledge base yang hidup.",tags:["Search","Embeddings","Indexing","Knowledge"]}
     ],
     signals:[
@@ -114,13 +120,13 @@ function typeLabel(type){
   return map[type]||type;
 }
 function signalCard(item){
-  return `<article class="signal-stream-card reveal" data-type="${item.type}"><div class="signal-stream-meta"><span>${item.type}</span><time>${item.date}</time></div><div class="signal-stream-copy"><h3>${item.title}</h3><p>${item.copy}</p><div class="signal-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="signal-arrow">↗</span></article>`;
+  return `<article class="signal-stream-card reveal" data-type="${item.type}"><div class="signal-stream-meta"><span>${typeLabel(item.type)}</span><time>${item.date}</time></div><div class="signal-stream-copy"><h3>${item.title}</h3><p>${item.copy}</p><div class="signal-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="signal-arrow">↗</span></article>`;
 }
 function signalFeature(item){
-  return `<article class="signal-feature"><div class="signal-feature-meta"><span>${item.type}</span><time>${item.date}</time></div><h2>${item.title}</h2><p>${item.copy}</p><div class="signal-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></article>`;
+  return `<article class="signal-feature"><div class="signal-feature-meta"><span>${typeLabel(item.type)}</span><time>${item.date}</time></div><h2>${item.title}</h2><p>${item.copy}</p><div class="signal-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></article>`;
 }
 function signalMini(item){
-  return `<article class="home-signal-mini"><div><span>${item.type}</span><time>${item.date}</time></div><h3>${item.title}</h3><p>${item.copy}</p></article>`;
+  return `<article class="home-signal-mini"><div><span>${typeLabel(item.type)}</span><time>${item.date}</time></div><h3>${item.title}</h3><p>${item.copy}</p></article>`;
 }
 function homeLabRow(item){
   return `<a class="home-row" href="/lab"><span><small>${item.id} · ${item.status}</small><strong>${item.title}</strong></span><em>${item.copy}</em><b>↗</b></a>`;
@@ -130,12 +136,27 @@ function renderDynamic(){
   const data=CONTENT[lang];
   const homeLead=qs("#homeSignalLead");
   if(homeLead) homeLead.innerHTML=signalFeature(data.signals[0]);
+
   const homeSide=qs("#homeSignalsSide");
   if(homeSide) homeSide.innerHTML=data.signals.slice(1,4).map(signalMini).join("");
-  const homeLab=qs("#homeLabList");
-  if(homeLab) homeLab.innerHTML=data.lab.slice(0,3).map(homeLabRow).join("");
+
+  const signalCount=String(data.signals.length).padStart(2,"0");
+  const labCount=String(data.lab.length).padStart(2,"0");
+  const homeSignalCount=qs("#homeSignalCount");
+  const homeSignalsIndexCount=qs("#homeSignalsIndexCount");
+  const homeLabCount=qs("#homeLabCount");
+  if(homeSignalCount) homeSignalCount.textContent=signalCount;
+  if(homeSignalsIndexCount) homeSignalsIndexCount.textContent=signalCount;
+  if(homeLabCount) homeLabCount.textContent=labCount;
+
+  const labTitle=qs("#homeLabFeatureTitle");
+  const labCopy=qs("#homeLabFeatureCopy");
+  if(labTitle) labTitle.textContent=data.lab[0].title;
+  if(labCopy) labCopy.textContent=data.lab[0].copy;
+
   const labGrid=qs("#labGrid");
   if(labGrid) labGrid.innerHTML=data.lab.map(labCard).join("");
+
   renderSignals();
   observeReveals();
 }
