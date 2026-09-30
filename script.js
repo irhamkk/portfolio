@@ -2,10 +2,9 @@ const T={
   en:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"About","nav.contact":"Contact","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Available for new projects","hero.role":"Data, AI & Automation Builder","hero.copy":"I build practical systems around data, AI, and automation — and document what I learn along the way.","hero.cta":"Enter the world",
-    "home.overview":"Overview","home.statement":"What I build. What I test. What I think.","home.statementCopy":"A compact front page for the things that matter right now. The deeper context lives in Lab, Signals, and About.",
-    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.moreSignals":"More from Signals","home.selectedProjects":"Selected Projects","home.github":"GitHub",
-    "home.labFoot":"Experiments + Ciel","home.signalsIndexTitle":"Takes, notes, theses.","home.signalsIndexCopy":"A public record of ideas I want to keep, test, or change my mind about later.","home.signalsFoot":"Thinking in public",
-    "home.aboutIndexTitle":"The context behind the work.","home.aboutIndexCopy":"Statistics, data, automation, AI systems, experience, and the path connecting them.","home.aboutFoot":"Profile + contact",
+    "home.overview":"Overview","home.statement":"A small map of what I build, test, and think about.","home.statementCopy":"Home is only the surface. Lab holds the experiments, Signals holds the thinking, and About holds the context.",
+    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.moreSignals":"More from Signals","home.signalDeskSub":"Ideas, takes, and notes from irhamkk.world","home.issue":"ISSUE","home.fromLab":"From the Lab","home.openLab":"Open Lab","home.selectedProjects":"Selected Projects","home.github":"GitHub",
+    "home.aboutTitle":"Statistics → Data → Automation → AI Systems.","home.aboutCopy":"I like turning messy operational problems into systems that are easier to understand, run, and improve.","home.aboutCta":"More about me",
     "p1.sub":"WhatsApp AI Assistant","p2.sub":"Ordering & Business Analytics System","p3.sub":"Automated Content Publishing System",
     "lab.title":"Lab.","lab.copy":"Experiments, prototypes, and systems I’m testing to understand how things work in practice.","lab.archive":"Other experiments.","lab.archiveCopy":"Things can be shipped, paused, unfinished, or simply useful enough to keep.",
     "signals.title":"Signals.","signals.copy":"Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.","signals.all":"All","signals.take":"Take","signals.thesis":"Thesis","signals.note":"Note","signals.observation":"Observation","signals.essay":"Essay",
@@ -27,10 +26,9 @@ const T={
   id:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"Tentang","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Terbuka untuk project baru","hero.role":"Data, AI & Automation Builder","hero.copy":"Saya membangun sistem praktis dengan data, AI, dan automasi — sambil mendokumentasikan apa yang saya pelajari.","hero.cta":"Masuk ke dunia saya",
-    "home.overview":"Ringkasan","home.statement":"Apa yang saya bangun. Apa yang saya uji. Apa yang saya pikirkan.","home.statementCopy":"Halaman depan yang ringkas untuk hal-hal yang sedang penting sekarang. Konteks lebih dalam ada di Lab, Signals, dan Tentang.",
-    "home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.moreSignals":"Signal lainnya","home.selectedProjects":"Project Pilihan","home.github":"GitHub",
-    "home.labFoot":"Eksperimen + Ciel","home.signalsIndexTitle":"Pendapat, catatan, tesis.","home.signalsIndexCopy":"Catatan publik untuk ide yang ingin saya simpan, uji, atau mungkin saya ubah pendapatnya nanti.","home.signalsFoot":"Berpikir secara terbuka",
-    "home.aboutIndexTitle":"Konteks di balik karya.","home.aboutIndexCopy":"Statistika, data, automasi, AI systems, pengalaman, dan perjalanan yang menghubungkan semuanya.","home.aboutFoot":"Profil + kontak",
+    "home.overview":"Ringkasan","home.statement":"Peta kecil tentang apa yang saya bangun, uji, dan pikirkan.","home.statementCopy":"Home hanya permukaan. Lab berisi eksperimen, Signals berisi pemikiran, dan Tentang memberi konteks tentang saya.",
+    "home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.moreSignals":"Signal lainnya","home.signalDeskSub":"Ide, pendapat, dan catatan dari irhamkk.world","home.issue":"EDISI","home.fromLab":"Dari Lab","home.openLab":"Buka Lab","home.selectedProjects":"Project Pilihan","home.github":"GitHub",
+    "home.aboutTitle":"Statistika → Data → Automasi → AI Systems.","home.aboutCopy":"Saya suka mengubah masalah operasional yang berantakan menjadi sistem yang lebih mudah dipahami, dijalankan, dan diperbaiki.","home.aboutCta":"Lebih lanjut tentang saya",
     "p1.sub":"Asisten AI WhatsApp","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis",
     "lab.title":"Lab.","lab.copy":"Eksperimen, prototipe, dan sistem yang sedang saya uji untuk memahami bagaimana semuanya bekerja dalam praktik.","lab.archive":"Eksperimen lainnya.","lab.archiveCopy":"Sesuatu bisa selesai, dijeda, belum jadi, atau sekadar cukup berguna untuk tetap disimpan.",
     "signals.title":"Signals.","signals.copy":"Take, catatan, observasi, dan tesis tentang AI, data, automasi, teknologi, dan sistem di sekitar kita.","signals.all":"Semua","signals.take":"Pendapat","signals.thesis":"Tesis","signals.note":"Catatan","signals.observation":"Observasi","signals.essay":"Esai",
@@ -153,6 +151,9 @@ function renderDynamic(){
   const labCopy=qs("#homeLabFeatureCopy");
   if(labTitle) labTitle.textContent=data.lab[0].title;
   if(labCopy) labCopy.textContent=data.lab[0].copy;
+
+  const homeLabList=qs("#homeLabList");
+  if(homeLabList) homeLabList.innerHTML=data.lab.slice(0,3).map(homeLabRow).join("");
 
   const labGrid=qs("#labGrid");
   if(labGrid) labGrid.innerHTML=data.lab.map(labCard).join("");
