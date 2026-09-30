@@ -2143,3 +2143,58 @@ body[data-page="home"] .home-overview-v4 .reveal{
   opacity:1 !important;
   transform:none !important;
 }
+
+
+/* Mobile polish — portrait position + explicit navigation affordance */
+.menu-toggle{
+  align-items:center;
+  gap:9px;
+}
+.menu-icon{
+  width:18px;
+  height:14px;
+  display:inline-flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.menu-icon i{
+  display:block;
+  width:100%;
+  height:1.5px;
+  background:#151515;
+  border-radius:999px;
+  transition:transform .25s var(--ease),opacity .2s ease,width .25s var(--ease);
+}
+.menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(1){
+  transform:translateY(6.2px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(2){
+  opacity:0;
+  width:0;
+}
+.menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(3){
+  transform:translateY(-6.2px) rotate(-45deg);
+}
+
+@media(max-width:1050px){
+  .menu-toggle{
+    display:inline-flex;
+  }
+}
+
+@media(max-width:760px){
+  .hero-photo{
+    bottom:clamp(30px,7vw,44px);
+  }
+  .menu-toggle{
+    padding:8px 0 8px 8px;
+    font-size:12px;
+    font-weight:600;
+  }
+}
+
+@media(max-width:480px){
+  .hero-photo{
+    bottom:40px;
+  }
+}
