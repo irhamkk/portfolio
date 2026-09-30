@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Signals — Irham Khairul Kalam</title>
+  <meta name="description" content="Takes, notes, observations, and theses from Irham Khairul Kalam.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='8' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23111111'%3Eik.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head><body data-page="signals">
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Home">ik<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/" data-page-link="home" data-i18n="nav.home">Home</a>
+      <a href="/lab" data-page-link="lab" data-i18n="nav.lab">Lab</a>
+      <a href="/signals" data-page-link="signals" data-i18n="nav.signals">Signals</a>
+      <a href="/about" data-page-link="about" data-i18n="nav.about">About</a>
+      <a href="/contact" data-page-link="contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-expanded="false"><span id="langFlag">🇬🇧</span><span id="langLabel">English</span><span>⌄</span></button>
+        <div class="lang-menu">
+          <button class="lang-option" data-language="en" aria-pressed="true">🇬🇧 English</button>
+          <button class="lang-option" data-language="id" aria-pressed="false">🇮🇩 Indonesia</button>
+        </div>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" data-i18n="ui.menu">Menu</button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" data-i18n="nav.home">Home</a>
+  <a href="/lab" data-i18n="nav.lab">Lab</a>
+  <a href="/signals" data-i18n="nav.signals">Signals</a>
+  <a href="/about" data-i18n="nav.about">About</a>
+  <a href="/contact" data-i18n="nav.contact">Contact</a>
+</div>
+<main class="subpage">
+  <section class="page-hero wrap signals-hero reveal">
+    <div class="section-kicker">IRHAMKK.WORLD / SIGNALS</div>
+    <div class="page-hero-grid">
+      <h1 data-i18n="signals.title">Signals.</h1>
+      <p data-i18n="signals.copy">Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.</p>
+    </div>
+  </section>
+
+  <section class="wrap signals-desk">
+    <div class="signals-toolbar reveal">
+      <div class="signals-filters" id="signalFilters">
+        <button class="is-active" data-filter="all" data-i18n="signals.all">All</button>
+        <button data-filter="TAKE">Take</button>
+        <button data-filter="THESIS">Thesis</button>
+        <button data-filter="NOTE">Note</button>
+        <button data-filter="OBSERVATION">Observation</button>
+        <button data-filter="ESSAY">Essay</button>
+      </div>
+      <span class="signals-count" id="signalsCount"></span>
+    </div>
+
+    <div class="signals-featured reveal" id="signalsFeatured"></div>
+    <div class="signals-stream" id="signalsGrid"></div>
+    <div class="prototype-note reveal" data-i18n="prototype.note">Prototype content — these sample takes and theses are placeholders for now.</div>
+  </section>
+</main>
+<footer class="site-footer wrap">
+  <span>© 2026 IRHAMKK.WORLD</span>
+  <span data-i18n="footer.note">A personal space for work, experiments, and ideas.</span>
+  <a href="/" data-i18n="footer.home">Back home ↑</a>
+</footer>
+<script src="/script.js" defer></script></body></html>
