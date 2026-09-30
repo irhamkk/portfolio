@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head><body data-page="lab">
+<div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="/#home" aria-label="Home">ik<span class="dot">.</span></a>
@@ -55,7 +56,7 @@
     <div class="ciel-app">
       <div class="ciel-app-top">
         <div class="ciel-brand"><span class="ciel-symbol">C</span><div><strong>Ciel</strong><small data-i18n="ciel.scope">Personal knowledge interface</small></div></div>
-        <label class="ciel-model"><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select><span>⌄</span></label>
+        <div class="ciel-status-pill"><i></i><span>AI Prototype</span></div>
       </div>
       <div class="ciel-chat-stage">
         <div class="ciel-empty" id="cielEmpty">
@@ -73,7 +74,10 @@
       <form class="ciel-composer ciel-composer-large" id="cielForm">
         <textarea id="cielInput" rows="1" data-i18n-placeholder="ciel.placeholder" placeholder="Ask Ciel about Irham..."></textarea>
         <div class="ciel-composer-bottom">
-          <span class="ciel-scope-note" data-i18n="ciel.note">Ciel will only answer from Irham’s published knowledge.</span>
+          <div class="ciel-composer-left">
+            <label class="ciel-model"><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select><span>⌄</span></label>
+            <span class="ciel-scope-note" data-i18n="ciel.note">Ciel will only answer from Irham’s published knowledge.</span>
+          </div>
           <button class="ciel-send" type="submit" aria-label="Send">↑</button>
         </div>
       </form>
