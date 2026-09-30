@@ -1,263 +1,108 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!doctype html><html lang="en"><head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <title>Irham Khairul Kalam — Data, AI & Automation Builder</title>
+  <title>Irham Khairul Kalam — irhamkk.world</title>
   <meta name="description" content="Personal website of Irham Khairul Kalam — projects, experiments, signals, and notes around data, AI, and automation.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23ffffff'/%3E%3Ctext x='8' y='44' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23111111'%3Eik.%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a class="brand" href="#home" aria-label="Back to home">ik<span class="dot">.</span></a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#home" data-nav="home" data-i18n="nav.home">Home</a>
-        <a href="#lab" data-nav="lab" data-i18n="nav.lab">Lab</a>
-        <a href="#signals" data-nav="signals" data-i18n="nav.signals">Signals</a>
-        <a href="#about" data-nav="about" data-i18n="nav.about">About</a>
-        <a href="#contact" data-nav="contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <div class="nav-right">
-        <div class="lang" id="lang">
-          <button class="lang-btn" id="langBtn" aria-expanded="false">
-            <span id="langFlag">🇬🇧</span><span id="langLabel">English</span><span>⌄</span>
-          </button>
-          <div class="lang-menu">
-            <button class="lang-option" data-language="en" aria-pressed="true">🇬🇧 English</button>
-            <button class="lang-option" data-language="id" aria-pressed="false">🇮🇩 Indonesia</button>
-          </div>
+  <link rel="stylesheet" href="/style.css">
+</head><body data-page="home">
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/" aria-label="Home">ik<span class="dot">.</span></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/" data-page-link="home" data-i18n="nav.home">Home</a>
+      <a href="/lab" data-page-link="lab" data-i18n="nav.lab">Lab</a>
+      <a href="/signals" data-page-link="signals" data-i18n="nav.signals">Signals</a>
+      <a href="/about" data-page-link="about" data-i18n="nav.about">About</a>
+      <a href="/contact" data-page-link="contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" id="lang">
+        <button class="lang-btn" id="langBtn" aria-expanded="false"><span id="langFlag">🇬🇧</span><span id="langLabel">English</span><span>⌄</span></button>
+        <div class="lang-menu">
+          <button class="lang-option" data-language="en" aria-pressed="true">🇬🇧 English</button>
+          <button class="lang-option" data-language="id" aria-pressed="false">🇮🇩 Indonesia</button>
         </div>
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" data-i18n="ui.menu">Menu</button>
       </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" data-i18n="ui.menu">Menu</button>
     </div>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" data-i18n="nav.home">Home</a>
-    <a href="#lab" data-i18n="nav.lab">Lab</a>
-    <a href="#signals" data-i18n="nav.signals">Signals</a>
-    <a href="#about" data-i18n="nav.about">About</a>
-    <a href="#contact" data-i18n="nav.contact">Contact</a>
   </div>
-
-  <main>
-    <section class="hero wrap" id="home">
-      <div class="hero-topline reveal">
-        <div class="availability"><i></i><span data-i18n="hero.available">Available for new projects</span></div>
-        <div class="hero-year">IRHAMKK.WORLD / 2026</div>
-      </div>
-
-      <div class="hero-stage">
-        <h1 class="hero-name" aria-label="Irham Khairul Kalam"><span class="outline">IRHAM KHAIRUL</span> <span class="solid">KALAM</span></h1>
-        <div class="hero-photo" id="heroPhoto">
-          <img src="https://res.cloudinary.com/y2f2lidm/image/upload/v1790666576/Foto_Irhamkk_11.png" alt="Irham Khairul Kalam">
-        </div>
-        <div class="hero-left reveal">
-          <h2 class="hero-role" data-i18n="hero.role">Data, AI &amp; Automation Builder</h2>
-          <p class="hero-copy" data-i18n="hero.copy">I build practical systems around data, AI, and automation — and document what I learn along the way.</p>
-          <a class="hero-cta" href="#projects"><span data-i18n="hero.cta">Explore the site</span> ↗</a>
-        </div>
-        <div class="hero-right reveal">
-          <a class="social-pill" href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub <span>↗</span></a>
-          <a class="social-pill" href="https://x.com/parsialverse" target="_blank" rel="noopener">X <span>↗</span></a>
-          <a class="social-pill" href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium <span>↗</span></a>
-        </div>
-        <a class="scroll-indicator" href="#intro"><span data-i18n="ui.scroll">Scroll</span><span class="scroll-line"></span></a>
-      </div>
-    </section>
-
-    <section class="section wrap personal-intro" id="intro">
-      <div class="profile-intro reveal">
-        <div class="section-kicker">01 / <span data-i18n="home.introLabel">Intro</span></div>
-        <p class="profile-copy" data-i18n="home.intro">Statistics got me into data. Automation made me want to build systems. AI made the space even more interesting.</p>
-      </div>
-      <div class="intro-foot reveal">
-        <p data-i18n="home.introCopy">This is my corner of the internet — part portfolio, part lab, and part public notebook.</p>
-        <div class="intro-links">
-          <a href="#lab"><span data-i18n="nav.lab">Lab</span> ↗</a>
-          <a href="#signals"><span data-i18n="nav.signals">Signals</span> ↗</a>
-          <a href="#about"><span data-i18n="nav.about">About</span> ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section wrap" id="projects">
-      <div class="section-head-simple reveal">
-        <div>
-          <div class="section-kicker">02 / <span data-i18n="projects.label">Projects</span></div>
-          <h2 class="section-title medium" data-i18n="projects.title">Selected projects.</h2>
-        </div>
-        <p class="aside-copy" data-i18n="projects.copy">A few practical systems I’ve built across AI, automation, data, and operations.</p>
-      </div>
-
-      <div class="project-grid home-project-grid">
-        <article class="project work-card reveal">
-          <div class="work-card-visual">
-            <a class="project-thumb-link" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener" aria-label="Open Ciel project">
-              <div class="project-media visual-ciel"><div class="project-media-inner"><span class="label">WhatsApp / AI</span><div class="phone"><div class="phone-bar"></div><div class="bubble mid"></div><div class="bubble dark"></div><div class="bubble short"></div><div class="bubble dark" style="width:58%"></div><div class="bubble mid"></div></div><div class="big">CIEL</div></div></div>
-              <span class="project-open">↗</span>
-            </a>
-          </div>
-          <div class="work-card-body"><h3 class="project-title">Ciel</h3><p class="project-sub" data-i18n="p1.sub">WhatsApp AI Assistant</p><div class="work-tags"><span>WhatsApp</span><span>Node.js</span><span>LLM API</span></div></div>
-        </article>
-
-        <article class="project work-card reveal">
-          <div class="work-card-visual">
-            <a class="project-thumb-link" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener" aria-label="Open UMKM Analyst project">
-              <div class="project-media visual-umkm"><div class="project-media-inner"><div class="gridlines"></div><div class="umkm-card a"><h4>ORDER / TODAY</h4><div class="line-sm dark"></div><div class="line-sm"></div><div class="line-sm s"></div></div><div class="umkm-card b"><h4>SALES / REPORT</h4><div class="line-sm"></div><div class="line-sm dark"></div><div class="line-sm s"></div></div><div class="big">UMKM</div></div></div>
-              <span class="project-open">↗</span>
-            </a>
-          </div>
-          <div class="work-card-body"><h3 class="project-title">UMKM Analyst</h3><p class="project-sub" data-i18n="p2.sub">Ordering &amp; Business Analytics System</p><div class="work-tags"><span>Python</span><span>Telegram</span><span data-i18n="p2.cat">Business Automation</span></div></div>
-        </article>
-
-        <article class="project work-card reveal">
-          <div class="work-card-visual">
-            <a class="project-thumb-link" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener" aria-label="Open X Automation project">
-              <div class="project-media visual-x"><div class="project-media-inner"><div class="corner">Scheduled Publishing System</div><div class="xmark">X</div><div class="schedule"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div>
-              <span class="project-open project-open-light">↗</span>
-            </a>
-          </div>
-          <div class="work-card-body"><h3 class="project-title">X Automation</h3><p class="project-sub" data-i18n="p3.sub">Automated Content Publishing System</p><div class="work-tags"><span>Python</span><span>Playwright</span><span data-i18n="p3.cat">Browser Automation</span></div></div>
-        </article>
-
-        <article class="project work-card reveal">
-          <div class="work-card-visual">
-            <a class="project-thumb-link" href="https://github.com/irhamkk/fed-gold-btc" target="_blank" rel="noopener" aria-label="Open Fed Gold BTC project">
-              <div class="project-media visual-fed"><div class="project-media-inner"><div class="chart"><svg viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,220 60,205 120,214 170,171 220,185 270,126 330,145 380,98 440,117 500,64 600,84" fill="none" stroke="#111" stroke-width="3"/><polyline points="0,245 60,235 120,240 170,220 220,205 270,215 330,175 380,187 440,145 500,154 600,110" fill="none" stroke="#888" stroke-width="2"/></svg></div><div class="chart-label a">365 DAY WINDOW</div><div class="chart-label b">FED / GOLD / BTC</div><div class="big">EVENT STUDY</div></div></div>
-              <span class="project-open">↗</span>
-            </a>
-          </div>
-          <div class="work-card-body"><h3 class="project-title">Fed · Gold · BTC</h3><p class="project-sub" data-i18n="p4.sub">Market Event Study</p><div class="work-tags"><span>Python</span><span>FRED</span><span data-i18n="p4.cat">Data Analysis</span></div></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section wrap" id="lab-preview">
-      <div class="section-head-simple reveal">
-        <div><div class="section-kicker">03 / <span data-i18n="home.fromLab">From the Lab</span></div><h2 class="section-title medium" data-i18n="home.labTitle">Things I’m testing.</h2></div>
-        <a class="section-link" href="#lab"><span data-i18n="home.viewLab">View the Lab</span> ↗</a>
-      </div>
-      <div class="lab-grid lab-preview-grid" id="labPreview"></div>
-    </section>
-
-    <section class="section wrap" id="signals-preview">
-      <div class="section-head-simple reveal">
-        <div><div class="section-kicker">04 / <span data-i18n="home.latestSignals">Latest Signals</span></div><h2 class="section-title medium" data-i18n="home.signalsTitle">Ideas worth keeping.</h2></div>
-        <a class="section-link" href="#signals"><span data-i18n="home.viewSignals">View all signals</span> ↗</a>
-      </div>
-      <div class="signal-preview-grid" id="signalsPreview"></div>
-      <div class="prototype-note reveal" data-i18n="prototype.note">Prototype content — these sample takes and theses are placeholders for now.</div>
-    </section>
-
-    <section class="section wrap currently" id="currently">
-      <div class="currently-head reveal">
-        <div class="section-kicker">05 / <span data-i18n="currently.label">Currently</span></div>
-        <h2 data-i18n="currently.title">What I’m exploring right now.</h2>
-      </div>
-      <div class="currently-grid reveal">
-        <div><span data-i18n="currently.buildLabel">Building</span><strong data-i18n="currently.build">A personal publishing system and self-hosted AI workflows.</strong></div>
-        <div><span data-i18n="currently.learnLabel">Learning</span><strong data-i18n="currently.learn">Better agent architecture, retrieval, and system design.</strong></div>
-        <div><span data-i18n="currently.exploreLabel">Exploring</span><strong data-i18n="currently.explore">How AI can become part of a workflow without becoming the whole product.</strong></div>
-      </div>
-    </section>
-
-    <section class="section wrap about-preview">
-      <div class="about-preview-grid reveal">
-        <div><div class="section-kicker">06 / <span data-i18n="nav.about">About</span></div><h2 class="section-title medium" data-i18n="about.previewTitle">A statistics background, a builder’s mindset.</h2></div>
-        <div><p data-i18n="about.lead">I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.</p><a class="section-link" href="#about"><span data-i18n="about.more">More about me</span> ↗</a></div>
-      </div>
-    </section>
-
-    <section class="section wrap page-section" id="lab">
-      <div class="page-head reveal">
-        <div class="section-kicker">LAB / 001—</div>
-        <h2 data-i18n="lab.title">Lab.</h2>
-        <p data-i18n="lab.copy">Experiments, prototypes, and systems I’m building to understand how things work in practice.</p>
-      </div>
-      <div class="lab-grid" id="labGrid"></div>
-    </section>
-
-    <section class="section signals-section" id="signals">
-      <div class="wrap">
-        <div class="page-head reveal">
-          <div class="section-kicker">SIGNALS / 001—</div>
-          <h2 data-i18n="signals.title">Signals.</h2>
-          <p data-i18n="signals.copy">Takes, notes, observations, and theses about AI, data, automation, and the systems around them.</p>
-        </div>
-        <div class="signals-list" id="signalsGrid"></div>
-        <div class="prototype-note reveal" data-i18n="prototype.note">Prototype content — these sample takes and theses are placeholders for now.</div>
-      </div>
-    </section>
-
-    <section class="section personal-about" id="about">
-      <div class="wrap">
-        <div class="about-full-head reveal">
-          <div class="section-kicker">ABOUT / IRHAM</div>
-          <h2 data-i18n="about.title">About me.</h2>
-          <p data-i18n="about.lead">I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.</p>
-        </div>
-
-        <div class="about-story reveal">
-          <p data-i18n="about.story1">Design taught me to communicate information clearly. Statistics taught me to test assumptions. Building systems taught me that the workflow matters as much as the code.</p>
-          <p data-i18n="about.story2">Today I like working where data, software, automation, and real operational problems meet.</p>
-        </div>
-
-        <div class="about-facts reveal">
-          <div><span data-i18n="about.educationLabel">Education</span><strong data-i18n="about.education">S-1 Statistika (S.Stat.) — Universitas Padjadjaran, 2019–2024</strong></div>
-          <div><span data-i18n="about.focusLabel">Focus</span><strong data-i18n="about.focus">Data · AI · Automation · Systems</strong></div>
-          <div><span data-i18n="about.toolsLabel">Working with</span><strong>Python · SQL · JavaScript · Node.js · LLM APIs · Playwright · Supabase · Linux</strong></div>
-        </div>
-
-        <div class="experience-mini reveal">
-          <div class="exp-mini-row"><span>2024—2026</span><strong>Dumpling Warehousing Project</strong><em data-i18n="exp.0.role">Manager &amp; Automation Lead</em></div>
-          <div class="exp-mini-row"><span>2022</span><strong>DISKOMINFO Kota Cimahi</strong><em data-i18n="exp.2.role">Data &amp; Statistics Intern</em></div>
-          <div class="exp-mini-row"><span>2021</span><strong>Gradient Studio</strong><em data-i18n="exp.3.role">Graphic Designer</em></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section wrap" id="contact">
-      <div class="contact-head reveal"><div class="section-kicker">CONTACT</div><h2 class="contact-title" data-i18n="contact.title">LET'S BUILD SOMETHING USEFUL.</h2></div>
-      <div class="contact-bottom reveal"><a class="email" href="mailto:irham.kk16@gmail.com">irham.kk16@gmail.com ↗</a><p class="contact-copy" data-i18n="contact.copy">Have a workflow that’s too manual, or a system that could work better? Let’s talk.</p><div class="contact-socials"><a href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub ↗</a><a href="https://x.com/parsialverse" target="_blank" rel="noopener">X ↗</a><a href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium ↗</a></div></div>
-      <footer class="footer"><span>© 2026 IRHAMKK.WORLD</span><span data-i18n="footer.note">Designed &amp; built by Irham Khairul Kalam.</span><a href="#home" data-i18n="footer.top">Back to top ↑</a></footer>
-    </section>
-  </main>
-
-  <button class="ciel-launcher" id="cielLauncher" type="button" aria-expanded="false" aria-controls="cielPanel">
-    <span class="ciel-orb">C</span>
-    <span class="ciel-launcher-copy"><strong>Ciel 3.2</strong><small data-i18n="ciel.launcher">Ask Ciel about Irham</small></span>
-    <span class="ciel-launcher-arrow">↑</span>
-  </button>
-
-  <aside class="ciel-panel" id="cielPanel" aria-hidden="true">
-    <div class="ciel-panel-head">
-      <div><span class="ciel-eyebrow">CIEL / PERSONAL AI</span><h3 data-i18n="ciel.title">Ask Ciel about Irham.</h3></div>
-      <button id="cielClose" type="button" aria-label="Close Ciel">×</button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/" data-i18n="nav.home">Home</a>
+  <a href="/lab" data-i18n="nav.lab">Lab</a>
+  <a href="/signals" data-i18n="nav.signals">Signals</a>
+  <a href="/about" data-i18n="nav.about">About</a>
+  <a href="/contact" data-i18n="nav.contact">Contact</a>
+</div>
+<main>
+  <section class="hero wrap home-hero" id="home">
+    <div class="hero-topline reveal">
+      <div class="availability"><i></i><span data-i18n="hero.available">Available for new projects</span></div>
+      <div class="hero-year">IRHAMKK.WORLD / 2026</div>
     </div>
-    <p class="ciel-intro" data-i18n="ciel.copy">A prototype AI interface for exploring Irham’s projects, experiments, notes, and published ideas.</p>
-    <div class="ciel-status"><i></i><span data-i18n="ciel.offline">Prototype mode · API not connected</span></div>
-    <div class="ciel-suggestions">
-      <button type="button" data-prompt="projects" data-i18n="ciel.prompt.projects">What kind of projects does Irham build?</button>
-      <button type="button" data-prompt="agents" data-i18n="ciel.prompt.agents">What does Irham think about AI agents?</button>
-      <button type="button" data-prompt="now" data-i18n="ciel.prompt.now">What is Irham exploring right now?</button>
-    </div>
-    <div class="ciel-thread" id="cielThread" aria-live="polite"></div>
-    <form class="ciel-composer" id="cielForm">
-      <textarea id="cielInput" rows="1" data-i18n-placeholder="ciel.placeholder" placeholder="Ask about Irham, his projects, notes, or ideas..."></textarea>
-      <div class="ciel-composer-bottom">
-        <label class="ciel-model"><span data-i18n="ciel.model">Model</span><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select></label>
-        <button class="ciel-send" type="submit" aria-label="Send">↑</button>
+    <div class="hero-stage">
+      <h1 class="hero-name" aria-label="Irham Khairul Kalam"><span class="outline">IRHAM KHAIRUL</span> <span class="solid">KALAM</span></h1>
+      <div class="hero-photo" id="heroPhoto"><img src="https://res.cloudinary.com/y2f2lidm/image/upload/v1790666576/Foto_Irhamkk_11.png" alt="Irham Khairul Kalam"></div>
+      <div class="hero-left reveal">
+        <h2 class="hero-role" data-i18n="hero.role">Data, AI &amp; Automation Builder</h2>
+        <p class="hero-copy" data-i18n="hero.copy">I build practical systems around data, AI, and automation — and document what I learn along the way.</p>
+        <a class="hero-cta" href="#overview"><span data-i18n="hero.cta">Enter the world</span> ↗</a>
       </div>
-    </form>
-  </aside>
+      <div class="hero-right reveal">
+        <a class="social-pill" href="https://github.com/irhamkk" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+        <a class="social-pill" href="https://x.com/parsialverse" target="_blank" rel="noopener">X <span>↗</span></a>
+        <a class="social-pill" href="https://medium.com/@parsial" target="_blank" rel="noopener">Medium <span>↗</span></a>
+      </div>
+      <a class="scroll-indicator" href="#overview"><span data-i18n="ui.scroll">Scroll</span><span class="scroll-line"></span></a>
+    </div>
+  </section>
 
-  <script src="script.js" defer></script>
-</body>
-</html>
+  <section class="home-overview wrap" id="overview">
+    <div class="overview-intro reveal">
+      <div class="section-kicker">01 / <span data-i18n="home.overview">Overview</span></div>
+      <h2 data-i18n="home.statement">A small map of what I build, test, and think about.</h2>
+      <p data-i18n="home.statementCopy">Home is only the surface. Lab holds the experiments, Signals holds the thinking, and About holds the context.</p>
+    </div>
+
+    <div class="home-news-layout reveal">
+      <div class="home-news-main">
+        <div class="overview-label"><span data-i18n="home.latestSignal">Latest Signal</span><a href="/signals"><span data-i18n="home.allSignals">All Signals</span> ↗</a></div>
+        <div id="homeSignalLead"></div>
+      </div>
+      <div class="home-news-side" id="homeSignalsSide"></div>
+    </div>
+
+    <div class="home-columns">
+      <section class="home-column reveal">
+        <div class="overview-label"><span data-i18n="home.fromLab">From the Lab</span><a href="/lab"><span data-i18n="home.openLab">Open Lab</span> ↗</a></div>
+        <div id="homeLabList" class="home-list"></div>
+      </section>
+
+      <section class="home-column reveal">
+        <div class="overview-label"><span data-i18n="home.selectedProjects">Selected Projects</span><a href="https://github.com/irhamkk?tab=repositories" target="_blank" rel="noopener"><span data-i18n="home.github">GitHub</span> ↗</a></div>
+        <div class="home-list">
+          <a class="home-row" href="https://github.com/irhamkk/wa-bot-assistant" target="_blank" rel="noopener"><span><small>AI / AUTOMATION</small><strong>Ciel</strong></span><em data-i18n="p1.sub">WhatsApp AI Assistant</em><b>↗</b></a>
+          <a class="home-row" href="https://github.com/irhamkk/UMKM-Analyst-bot" target="_blank" rel="noopener"><span><small>DATA / OPERATIONS</small><strong>UMKM Analyst</strong></span><em data-i18n="p2.sub">Ordering &amp; Business Analytics System</em><b>↗</b></a>
+          <a class="home-row" href="https://github.com/irhamkk/x-auto-poster" target="_blank" rel="noopener"><span><small>AUTOMATION</small><strong>X Automation</strong></span><em data-i18n="p3.sub">Automated Content Publishing System</em><b>↗</b></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="home-about-strip reveal">
+      <div><span class="section-kicker">02 / <span data-i18n="nav.about">About</span></span><h3 data-i18n="home.aboutTitle">Statistics → Data → Automation → AI Systems.</h3></div>
+      <p data-i18n="home.aboutCopy">I like turning messy operational problems into systems that are easier to understand, run, and improve.</p>
+      <a href="/about"><span data-i18n="home.aboutCta">More about me</span> ↗</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer wrap">
+  <span>© 2026 IRHAMKK.WORLD</span>
+  <span data-i18n="footer.note">A personal space for work, experiments, and ideas.</span>
+  <a href="/" data-i18n="footer.home">Back home ↑</a>
+</footer>
+<script src="/script.js" defer></script></body></html>
