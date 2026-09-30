@@ -3,10 +3,10 @@ const T={
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"About","nav.contact":"Contact","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Available for new projects","hero.role":"Data, AI & Automation Builder","hero.copy":"I build practical systems around data, AI, and automation — and document what I learn along the way.","hero.cta":"Explore my work",
     "home.overview":"Overview","home.statement":"A curated map of what I build, test, and think about.","home.statementCopy":"Home is only the front door. Lab holds the experiments, Signals captures the thinking, and About provides the complete context.",
-    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.moreSignals":"More from Signals","home.signalDeskSub":"Ideas, perspectives, and notes from irhamkk.world","home.issue":"ISSUE","home.fromLab":"From the Lab","home.openLab":"Open Lab","home.selectedProjects":"Selected Projects","home.github":"GitHub",
+    "home.latestSignal":"Latest Signal","home.allSignals":"All Signals","home.moreSignals":"More from Signals","home.signalDeskSub":"Ideas, perspectives, and notes from irhamkk.world","home.issue":"ISSUE","home.fromLab":"From the Lab","home.openLab":"Open Lab","home.selectedProjects":"Selected Projects","home.github":"GitHub","home.seeInLab":"See in Lab",
     "home.aboutTitle":"Statistics → Data → Automation → AI Systems.","home.aboutCopy":"I specialize in turning messy operational problems into systems that are intuitive to understand, reliable to run, and easy to improve.","home.aboutCta":"More about me","home.readSignal":"Read full signal in /signals",
-    "p1.sub":"WhatsApp AI Assistant","p2.sub":"Ordering & Business Analytics System","p3.sub":"Automated Content Publishing System",
-    "lab.title":"Lab.","lab.copy":"Experiments, prototypes, and systems I’m actively testing to understand how things work in practice.","lab.archive":"Other experiments.","lab.archiveCopy":"Projects that are shipped, paused, unfinished, or simply useful enough to preserve.",
+    "p0.sub":"Hermes 2 Pro + 9Router + Telegram","p1.sub":"WhatsApp AI Assistant","p2.sub":"Ordering & Business Analytics System","p3.sub":"Automated Content Publishing System",
+    "lab.title":"Lab.","lab.copy":"Experiments, prototypes, and systems I’m actively testing to understand how things work in practice.","lab.archive":"Other experiments.","lab.archiveCopy":"Projects that are shipped, paused, unfinished, or simply useful enough to preserve.","lab.shippedTitle":"Selected Works.","lab.shippedCopy":"Real-world systems, automated pipelines, and functional agents built for production and practical workflows.",
     "signals.title":"Signals.","signals.copy":"Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.","signals.all":"All","signals.take":"Take","signals.thesis":"Thesis","signals.note":"Note","signals.observation":"Observation","signals.essay":"Essay",
     "prototype.note":"Prototype content — sample takes, notes, and theses are placeholders for now.",
     "about.title":"About.","about.lead":"The person, background, and context behind the projects, experiments, and signals.",
@@ -28,10 +28,10 @@ const T={
   id:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"Tentang","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
     "hero.available":"Terbuka untuk project baru","hero.role":"Data, AI & Automation Builder","hero.copy":"Saya merancang dan membangun sistem praktis seputar data, AI, dan automasi — sambil mendokumentasikan proses belajarnya.","hero.cta":"Jelajahi karya saya",
-    "home.overview":"Ringkasan","home.statement":"Peta ringkas tentang apa yang saya bangun, uji, dan eksplorasi.","home.statementCopy":"Home hanyalah pintu masuk. Lab memuat eksperimen langsung, Signals mendokumentasikan pemikiran, dan Tentang merangkum latar belakang serta konteksnya.","home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.moreSignals":"Signal Lainnya","home.signalDeskSub":"Ide, perspektif, dan catatan teknis dari irhamkk.world","home.issue":"EDISI","home.fromLab":"Dari Lab","home.openLab":"Buka Lab","home.selectedProjects":"Project Pilihan","home.github":"GitHub",
+    "home.overview":"Ringkasan","home.statement":"Peta ringkas tentang apa yang saya bangun, uji, dan eksplorasi.","home.statementCopy":"Home hanyalah pintu masuk. Lab memuat eksperimen langsung, Signals mendokumentasikan pemikiran, dan Tentang merangkum latar belakang serta konteksnya.","home.latestSignal":"Signal Terbaru","home.allSignals":"Semua Signals","home.moreSignals":"Signal Lainnya","home.signalDeskSub":"Ide, perspektif, dan catatan teknis dari irhamkk.world","home.issue":"EDISI","home.fromLab":"Dari Lab","home.openLab":"Buka Lab","home.selectedProjects":"Project Pilihan","home.github":"GitHub","home.seeInLab":"Lihat di Lab",
     "home.aboutTitle":"Statistika → Data → Automasi → AI Systems.","home.aboutCopy":"Saya terbiasa mengubah alur kerja dan masalah operasional yang rumit menjadi sistem yang lebih mudah dipahami, dijalankan, dan dikembangkan.","home.aboutCta":"Selengkapnya tentang saya","home.readSignal":"Baca selengkapnya di /signals",
-    "p1.sub":"Asisten AI WhatsApp","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis",
-    "lab.title":"Lab.","lab.copy":"Koleksi eksperimen, prototipe, dan sistem yang sedang saya uji untuk memahami implementasi nyatanya di lapangan.","lab.archive":"Eksperimen lainnya.","lab.archiveCopy":"Proyek yang telah dirilis, sedang dijeda, maupun ide fungsional yang layak didokumentasikan.",
+    "p0.sub":"Hermes 2 Pro + 9Router + Telegram","p1.sub":"Asisten AI WhatsApp","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis",
+    "lab.title":"Lab.","lab.copy":"Koleksi eksperimen, prototipe, dan sistem yang sedang saya uji untuk memahami implementasi nyatanya di lapangan.","lab.archive":"Eksperimen lainnya.","lab.archiveCopy":"Proyek yang telah dirilis, sedang dijeda, maupun ide fungsional yang layak didokumentasikan.","lab.shippedTitle":"Karya Pilihan.","lab.shippedCopy":"Sistem teruji, pipeline automasi, dan agent fungsional yang dibangun untuk operasional dan alur kerja nyata.",
     "signals.title":"Signals.","signals.copy":"Kumpulan opini, catatan teknis, observasi, dan tesis seputar AI, data, automasi, serta teknologi di sekitar kita.","signals.all":"Semua","signals.take":"Opini","signals.thesis":"Tesis","signals.note":"Catatan","signals.observation":"Observasi","signals.essay":"Esai",
     "prototype.note":"Konten prototipe — contoh catatan, opini, dan tesis ini adalah data sementara.",
     "about.title":"Tentang.","about.lead":"Profil, latar belakang, dan konteks di balik ragam project, eksperimen, dan gagasan yang saya bagikan.",
@@ -48,6 +48,48 @@ const T={
 
 const CONTENT={
   en:{
+    shipped:[
+      {
+        id:"STACK / 001",
+        category:"AI SYSTEMS / INFRASTRUCTURE",
+        status:"PRODUCTION",
+        title:"Self-hosted AI Agent Stack",
+        copy:"A persistent self-hosted AI agent stack on Ubuntu VPS orchestrated with Hermes 2 Pro and 9Router. Handles task routing, Telegram command triggers, and headless browser automation.",
+        img:"/assets/diagram-hermes.svg",
+        tags:["Hermes 2 Pro","9Router","Ubuntu VPS","Telegram Bot"],
+        url:"https://github.com/irhamkk"
+      },
+      {
+        id:"AGENT / 002",
+        category:"AI / LOCAL LLM",
+        status:"PRODUCTION",
+        title:"Ciel — WhatsApp AI Assistant",
+        copy:"Personal AI assistant running on local LLM connected directly to WhatsApp via whatsapp-web.js and an OpenAI-compatible inference server with session persistence.",
+        img:"/assets/diagram-ciel.svg",
+        tags:["whatsapp-web.js","Local LLM","Node.js","AI UX"],
+        url:"https://github.com/irhamkk/wa-bot-assistant"
+      },
+      {
+        id:"OPS / 003",
+        category:"DATA / OPERATIONS",
+        status:"PRODUCTION",
+        title:"UMKM Analyst Bot",
+        copy:"Warehouse operations and business intelligence bot on Telegram for small businesses, managing order pipelines, inventory tracking, and low-stock alerts.",
+        img:"/assets/diagram-umkm.svg",
+        tags:["Python","Telegram Bot","SQLite","Operations"],
+        url:"https://github.com/irhamkk/UMKM-Analyst-bot"
+      },
+      {
+        id:"AUTOMATION / 004",
+        category:"BROWSER AUTOMATION",
+        status:"PRODUCTION",
+        title:"X Auto-Poster Pipeline",
+        copy:"Headless content publishing automation pipeline for X (Twitter) utilizing Playwright and encrypted session cookies to publish scheduled posts without paid APIs.",
+        img:"/assets/diagram-x-poster.svg",
+        tags:["Playwright","Python","Automation","Headless"],
+        url:"https://github.com/irhamkk/x-auto-poster"
+      }
+    ],
     lab:[
       {id:"LAB / 001",status:"BUILDING",title:"Self-hosted AI Agent Stack",copy:"Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
       {id:"LAB / 002",status:"PROTOTYPE",title:"Personal Publishing System",copy:"A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",tags:["Telegram","GitHub","Vercel","Automation"]},
@@ -59,6 +101,7 @@ const CONTENT={
     signals:[
       {type:"TAKE",date:"SEP 30, 2026",title:"AI doesn’t fix a bad workflow.",copy:"It usually makes the bad workflow run faster. Mapping the process still comes first.",tags:["AI","Automation"]},
       {type:"THESIS",date:"SEP 30, 2026",title:"Useful agents will own narrow workflows.",copy:"The agent that matters may not be the one that knows everything, but the one that can reliably own one specific workflow from trigger to result.",tags:["AI Agents","Systems"]},
+      {type:"ESSAY",date:"SEP 28, 2026",title:"Fed Rate, Gold & Bitcoin: An Econometric Regime Study",copy:"Analyzing multi-decade macroeconomic regimes: how Federal Reserve interest rate shocks propagate to Gold spot prices and Bitcoin returns using SQL, Python, and event study models.",tags:["Econometrics","Data Analysis","Macro"]},
       {type:"NOTE",date:"SEP 29, 2026",title:"Data should end in a decision.",copy:"A dashboard is not automatically useful. The useful part is knowing what decision becomes clearer after the data is visible.",tags:["Data","Decision Making"]},
       {type:"OBSERVATION",date:"SEP 29, 2026",title:"Automation exposes messy operations.",copy:"When a process is hard to automate, the problem is often not the tool. The process itself may still be undefined.",tags:["Operations","Automation"]},
       {type:"TAKE",date:"SEP 28, 2026",title:"Not every AI feature needs a chat box.",copy:"Chat is useful when the task is conversational. For many workflows, the best AI experience may be invisible and event-driven.",tags:["Product","AI UX"]},
@@ -72,6 +115,48 @@ const CONTENT={
     ]
   },
   id:{
+    shipped:[
+      {
+        id:"STACK / 001",
+        category:"AI SYSTEMS / INFRASTRUCTURE",
+        status:"PRODUKSI",
+        title:"Self-hosted AI Agent Stack",
+        copy:"Arsitektur agent AI persisten mandiri di Ubuntu VPS dengan orkestrasi Hermes 2 Pro dan 9Router. Menangani routing tugas, trigger via Telegram, dan otomatisasi browser tanpa henti.",
+        img:"/assets/diagram-hermes.svg",
+        tags:["Hermes 2 Pro","9Router","Ubuntu VPS","Telegram Bot"],
+        url:"https://github.com/irhamkk"
+      },
+      {
+        id:"AGENT / 002",
+        category:"AI / LOCAL LLM",
+        status:"PRODUKSI",
+        title:"Ciel — WhatsApp AI Assistant",
+        copy:"Asisten AI personal berbasis Local LLM yang terhubung langsung ke WhatsApp via whatsapp-web.js dan inference server OpenAI-compatible dengan persistensi sesi.",
+        img:"/assets/diagram-ciel.svg",
+        tags:["whatsapp-web.js","Local LLM","Node.js","AI UX"],
+        url:"https://github.com/irhamkk/wa-bot-assistant"
+      },
+      {
+        id:"OPS / 003",
+        category:"DATA / OPERASIONAL",
+        status:"PRODUKSI",
+        title:"UMKM Analyst Bot",
+        copy:"Bot Telegram operasional gudang dan intelijen bisnis UMKM untuk mengelola alur pesanan, pemantauan stok real-time, serta notifikasi batas persediaan minimum.",
+        img:"/assets/diagram-umkm.svg",
+        tags:["Python","Telegram Bot","SQLite","Operasional"],
+        url:"https://github.com/irhamkk/UMKM-Analyst-bot"
+      },
+      {
+        id:"AUTOMATION / 004",
+        category:"AUTOMATION",
+        status:"PRODUKSI",
+        title:"X Auto-Poster Pipeline",
+        copy:"Pipeline publikasi konten otomatis ke X/Twitter berbasis headless browser Playwright dengan injeksi sesi cookie terenkripsi tanpa bergantung pada API berbayar.",
+        img:"/assets/diagram-x-poster.svg",
+        tags:["Playwright","Python","Automasi","Headless"],
+        url:"https://github.com/irhamkk/x-auto-poster"
+      }
+    ],
     lab:[
       {id:"LAB / 001",status:"DIBANGUN",title:"Self-hosted AI Agent Stack",copy:"Menguji arsitektur agent persisten mandiri yang mampu menerima task, mengeksekusi tools, browsing secara otonom saat diperlukan, lalu menyajikan hasil melalui workflow pribadi yang ringan.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
       {id:"LAB / 002",status:"PROTOTIPE",title:"Personal Publishing System",copy:"Pipeline publikasi terintegrasi dari Telegram ke GitHub untuk draft opini, catatan teknis, lokalisasi bahasa, metadata, hingga distribusi langsung ke situs ini.",tags:["Telegram","GitHub","Vercel","Automasi"]},
@@ -83,6 +168,7 @@ const CONTENT={
     signals:[
       {type:"TAKE",date:"30 SEP 2026",title:"AI tidak memperbaiki workflow yang buruk.",copy:"Biasanya AI hanya membuat workflow yang berantakan berjalan lebih cepat. Memetakan proses kerja tetap merupakan fondasi utama.",tags:["AI","Automasi"]},
       {type:"THESIS",date:"30 SEP 2026",title:"Agent yang efektif berfokus pada workflow spesifik.",copy:"Kekuatan AI agent bukan terletak pada kemampuannya mengetahui segalanya, melainkan pada kemampuannya mengawal satu alur kerja spesifik secara andal dari trigger hingga tuntas.",tags:["AI Agents","Sistem"]},
+      {type:"ESSAY",date:"28 SEP 2026",title:"Fed Rate, Emas & Bitcoin: Analisis Ekonometrika Multi-Rezim",copy:"Analisis kuantitatif lintas dekade: bagaimana guncangan suku bunga The Fed memengaruhi dinamika harga emas dan volatilitas Bitcoin dengan pemodelan event study berbasis SQL & Python.",tags:["Ekonometrika","Analisis Data","Makro"]},
       {type:"NOTE",date:"29 SEP 2026",title:"Data seharusnya berujung pada keputusan nyata.",copy:"Dashboard tidak otomatis memberikan nilai tambah. Kegunaan sejatinya terletak pada kejelasan keputusan yang bisa diambil setelah data tersebut terlihat.",tags:["Data","Pengambilan Keputusan"]},
       {type:"OBSERVATION",date:"29 SEP 2026",title:"Automasi menyingkap alur operasional yang belum tertata.",copy:"Ketika suatu proses sulit diotomatisasi, masalahnya sering kali bukan pada tools yang digunakan, melainkan alur kerjanya yang belum terdefinisi secara matang.",tags:["Operasional","Automasi"]},
       {type:"TAKE",date:"28 SEP 2026",title:"Tidak semua fitur AI membutuhkan kolom chat.",copy:"Interface chat ideal untuk interaksi dialogis. Namun untuk banyak skenario operasional, pengalaman AI terbaik justru bekerja di balik layar (event-driven) secara hening.",tags:["Produk","AI UX"]},
@@ -184,6 +270,30 @@ function bindHomeSignalClicks(){
   };
 }
 
+function shippedCard(item){
+  const linkLabel=lang==="id"?"Buka Repository":"View Repository";
+  return `<article class="shipped-card reveal">
+    <a class="shipped-media" href="${item.url}" target="_blank" rel="noopener" aria-label="${item.title}">
+      <img src="${item.img}" alt="${item.title}" loading="lazy" width="960" height="540">
+      <span class="shipped-arrow">↗</span>
+    </a>
+    <div class="shipped-body">
+      <div>
+        <div class="shipped-meta">
+          <span class="shipped-tag">${item.category}</span>
+          <span class="shipped-status"><i></i>${item.status}</span>
+        </div>
+        <h3 class="shipped-title"><a href="${item.url}" target="_blank" rel="noopener">${item.title} ↗</a></h3>
+        <p class="shipped-copy">${item.copy}</p>
+      </div>
+      <div class="shipped-footer">
+        <div class="shipped-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div>
+        <a class="shipped-link" href="${item.url}" target="_blank" rel="noopener">${linkLabel} ↗</a>
+      </div>
+    </div>
+  </article>`;
+}
+
 function renderDynamic(){
   const data=CONTENT[lang];
   const homeLead=qs("#homeSignalLead");
@@ -215,6 +325,11 @@ function renderDynamic(){
 
   const homeLabList=qs("#homeLabList");
   if(homeLabList) homeLabList.innerHTML=data.lab.slice(0,3).map(homeLabRow).join("");
+
+  const shippedGrid=qs("#shippedGrid");
+  if(shippedGrid && data.shipped) {
+    shippedGrid.innerHTML=data.shipped.map(shippedCard).join("");
+  }
 
   const labGrid=qs("#labGrid");
   if(labGrid) labGrid.innerHTML=data.lab.map(labCard).join("");

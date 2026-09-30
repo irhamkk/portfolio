@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181816"/>
+      <stop offset="100%" stop-color="#0f0f0e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" rx="14" fill="url(#bgGrad2)"/>
+  <rect width="958" height="538" x="1" y="1" rx="13" fill="none" stroke="#2e2e2a" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <g transform="translate(36, 32)">
+    <circle cx="6" cy="6" r="5" fill="#e06c75"/>
+    <circle cx="24" cy="6" r="5" fill="#e5c07b"/>
+    <circle cx="42" cy="6" r="5" fill="#98c379"/>
+    <text x="64" y="10" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#888880" letter-spacing="1">PROJECT: CIEL — WHATSAPP AI ASSISTANT (LOCAL LLM)</text>
+    <rect x="735" y="-3" width="155" height="20" rx="10" fill="rgba(37, 211, 102, 0.15)" stroke="#25D366" stroke-width="1"/>
+    <circle cx="747" cy="7" r="3" fill="#25D366"/>
+    <text x="757" y="11" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#5ce88e">WHATSAPP-WEB.JS</text>
+  </g>
+
+  <line x1="36" y1="64" x2="924" y2="64" stroke="#282824" stroke-width="1"/>
+
+  <!-- Flow Nodes -->
+  <g transform="translate(36, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#25D366" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#25D366">01 / CLIENT</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">WhatsApp Web</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Session listener</text>
+  </g>
+
+  <g transform="translate(226, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#25D366" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#25D366"/>
+  </g>
+
+  <g transform="translate(278, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#e5c07b" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#e5c07b">02 / PARSER</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Context Buffer</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Chat history &amp; auth</text>
+  </g>
+
+  <g transform="translate(468, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#25D366" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#25D366"/>
+  </g>
+
+  <g transform="translate(520, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#61afef" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#61afef">03 / LLM RUNNER</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Local LLM API</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">OpenAI spec worker</text>
+  </g>
+
+  <g transform="translate(710, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#25D366" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#25D366"/>
+  </g>
+
+  <g transform="translate(762, 92)">
+    <rect width="162" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="162" height="3" fill="#9cb833" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#9cb833">04 / DISPATCH</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Instant Reply</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Streaming response</text>
+  </g>
+
+  <!-- Code Snippet Window -->
+  <g transform="translate(36, 214)">
+    <rect width="888" height="286" rx="10" fill="#131311" stroke="#2a2a26" stroke-width="1"/>
+    
+    <rect width="888" height="34" rx="10" fill="#1a1a17"/>
+    <text x="20" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#787870">javascript — server.js (wa-bot-assistant) — Node.js</text>
+    <rect x="736" y="7" width="132" height="20" rx="4" fill="#252520"/>
+    <text x="746" y="21" font-family="'JetBrains Mono', monospace" font-size="10" fill="#25D366">STATUS: LISTENING</text>
+
+    <g transform="translate(24, 60)" font-family="'JetBrains Mono', monospace" font-size="12" line-height="1.7">
+      <text y="0" fill="#e06c75">const <tspan fill="#e5c07b">{ Client, LocalAuth }</tspan> = require('whatsapp-web.js');</text>
+      <text y="24" fill="#e06c75">const <tspan fill="#e5c07b">client</tspan> = new Client({ authStrategy: new LocalAuth() });</text>
+      <text y="48" fill="#5c6370">// Listen to incoming messages and query private local LLM engine</text>
+      <text y="72" fill="#61afef">client.on<tspan fill="#abb2bf">('message', </tspan><tspan fill="#c678dd">async</tspan><tspan fill="#abb2bf"> (msg) => {</tspan></text>
+      <text y="96" fill="#abb2bf">  if (!isValidUser(msg.from)) return;</text>
+      <text y="120" fill="#abb2bf">  const reply = <tspan fill="#c678dd">await</tspan> queryLocalLLM({ prompt: msg.body, model: 'ciel-v3.2' });</text>
+      <text y="144" fill="#61afef">  await <tspan fill="#abb2bf">client.sendMessage(msg.from, reply.text);</tspan></text>
+      <text y="168" fill="#98c379">  console.log(`[CIEL] Dispatched response to ${msg.from} in ${reply.duration}ms`);</text>
+      <text y="192" fill="#abb2bf">});</text>
+      <text y="216" fill="#61afef">client.initialize(); <tspan fill="#5c6370">// WhatsApp Web ready &amp; authenticated</tspan></text>
+    </g>
+  </g>
+</svg>

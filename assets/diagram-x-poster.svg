@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181816"/>
+      <stop offset="100%" stop-color="#0f0f0e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="540" rx="14" fill="url(#bgGrad4)"/>
+  <rect width="958" height="538" x="1" y="1" rx="13" fill="none" stroke="#2e2e2a" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <g transform="translate(36, 32)">
+    <circle cx="6" cy="6" r="5" fill="#e06c75"/>
+    <circle cx="24" cy="6" r="5" fill="#e5c07b"/>
+    <circle cx="42" cy="6" r="5" fill="#98c379"/>
+    <text x="64" y="10" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#888880" letter-spacing="1">PROJECT: X AUTO-POSTER — PLAYWRIGHT HEADLESS BROWSER</text>
+    <rect x="735" y="-3" width="155" height="20" rx="10" fill="rgba(69, 186, 75, 0.15)" stroke="#45ba4b" stroke-width="1"/>
+    <circle cx="747" cy="7" r="3" fill="#45ba4b"/>
+    <text x="757" y="11" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#6be372">COOKIE PERSISTENCE</text>
+  </g>
+
+  <line x1="36" y1="64" x2="924" y2="64" stroke="#282824" stroke-width="1"/>
+
+  <!-- Flow Nodes -->
+  <g transform="translate(36, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#61afef" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#61afef">01 / QUEUE</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Content Queue</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Markdown + media</text>
+  </g>
+
+  <g transform="translate(226, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#98c379" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#98c379"/>
+  </g>
+
+  <g transform="translate(278, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#e5c07b" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#e5c07b">02 / HEADLESS</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Playwright Engine</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Chromium runner</text>
+  </g>
+
+  <g transform="translate(468, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#98c379" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#98c379"/>
+  </g>
+
+  <g transform="translate(520, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#98c379" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#98c379">03 / INJECTOR</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Session State</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Authenticated cookie</text>
+  </g>
+
+  <g transform="translate(710, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#98c379" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#98c379"/>
+  </g>
+
+  <g transform="translate(762, 92)">
+    <rect width="162" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="162" height="3" fill="#000000" stroke="#ffffff" stroke-width="0.5" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#ffffff">04 / PUBLISH</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">X Timeline</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Post live without API</text>
+  </g>
+
+  <!-- Code Snippet Window -->
+  <g transform="translate(36, 214)">
+    <rect width="888" height="286" rx="10" fill="#131311" stroke="#2a2a26" stroke-width="1"/>
+    
+    <rect width="888" height="34" rx="10" fill="#1a1a17"/>
+    <text x="20" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#787870">python — auto_poster.py (x-auto-poster) — Playwright Async</text>
+    <rect x="745" y="7" width="123" height="20" rx="4" fill="#252520"/>
+    <text x="758" y="21" font-family="'JetBrains Mono', monospace" font-size="10" fill="#98c379">CRON ACTIVE</text>
+
+    <g transform="translate(24, 60)" font-family="'JetBrains Mono', monospace" font-size="12" line-height="1.7">
+      <text y="0" fill="#c678dd">async with <tspan fill="#61afef">async_playwright</tspan><tspan fill="#abb2bf">() </tspan><tspan fill="#c678dd">as</tspan><tspan fill="#abb2bf"> p:</tspan></text>
+      <text y="24" fill="#abb2bf">    browser = <tspan fill="#c678dd">await</tspan> p.chromium.launch(headless=True, args=[<tspan fill="#98c379">'--disable-blink-features=AutomationControlled'</tspan>])</text>
+      <text y="48" fill="#abb2bf">    context = <tspan fill="#c678dd">await</tspan> browser.new_context(storage_state=<tspan fill="#98c379">"session/x_cookies.json"</tspan>)</text>
+      <text y="72" fill="#abb2bf">    page = <tspan fill="#c678dd">await</tspan> context.new_page()</text>
+      <text y="96" fill="#abb2bf">    <tspan fill="#c678dd">await</tspan> page.goto(<tspan fill="#98c379">"https://x.com/compose/post"</tspan>, wait_until=<tspan fill="#98c379">"domcontentloaded"</tspan>)</text>
+      <text y="120" fill="#5c6370">    # Human-like typing delay to prevent anti-bot detection</text>
+      <text y="144" fill="#abb2bf">    <tspan fill="#c678dd">await</tspan> page.locator(<tspan fill="#98c379">'div[data-testid="tweetTextarea_0"]'</tspan>).type(post.content, delay=35)</text>
+      <text y="168" fill="#abb2bf">    <tspan fill="#c678dd">await</tspan> page.locator(<tspan fill="#98c379">'button[data-testid="tweetButton"]'</tspan>).click()</text>
+      <text y="192" fill="#98c379">    logger.info(f"Successfully posted to @parsialverse: {post.id}")</text>
+      <text y="216" fill="#61afef">    <tspan fill="#c678dd">await</tspan> browser.close()</text>
+    </g>
+  </g>
+</svg>

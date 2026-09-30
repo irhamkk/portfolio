@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181816"/>
+      <stop offset="100%" stop-color="#0f0f0e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6d8a22"/>
+      <stop offset="100%" stop-color="#9cb833"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="960" height="540" rx="14" fill="url(#bgGrad)"/>
+  <rect width="958" height="538" x="1" y="1" rx="13" fill="none" stroke="#2e2e2a" stroke-width="1.5"/>
+
+  <!-- Top Bar -->
+  <g transform="translate(36, 32)">
+    <circle cx="6" cy="6" r="5" fill="#e06c75"/>
+    <circle cx="24" cy="6" r="5" fill="#e5c07b"/>
+    <circle cx="42" cy="6" r="5" fill="#98c379"/>
+    <text x="64" y="10" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#888880" letter-spacing="1">STACK: HERMES 2 PRO + 9ROUTER + TELEGRAM BOT</text>
+    <rect x="740" y="-3" width="148" height="20" rx="10" fill="rgba(109, 138, 34, 0.2)" stroke="#6d8a22" stroke-width="1"/>
+    <circle cx="752" cy="7" r="3" fill="#9cb833"/>
+    <text x="762" y="11" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#b9dd3b">PERSISTENT AGENT</text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="36" y1="64" x2="924" y2="64" stroke="#282824" stroke-width="1"/>
+
+  <!-- Architecture Flow Nodes -->
+  <!-- Node 1: Telegram Trigger -->
+  <g transform="translate(36, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#0088cc" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#00aaff">01 / TRIGGER</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Telegram Bot</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">@irhamkk: /task</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(226, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#6d8a22" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#6d8a22"/>
+  </g>
+
+  <!-- Node 2: 9Router -->
+  <g transform="translate(278, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#e5c07b" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#e5c07b">02 / GATEWAY</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">9Router Core</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Load balancing &amp; auth</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(468, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#6d8a22" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#6d8a22"/>
+  </g>
+
+  <!-- Node 3: Hermes Model -->
+  <g transform="translate(520, 92)">
+    <rect width="180" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="180" height="3" fill="#9cb833" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#9cb833">03 / INFERENCE</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Hermes Agent</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Tool call decision</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <g transform="translate(710, 134)">
+    <line x1="0" y1="6" x2="34" y2="6" stroke="#6d8a22" stroke-width="2" stroke-dasharray="3,3"/>
+    <polygon points="34,1 42,6 34,11" fill="#6d8a22"/>
+  </g>
+
+  <!-- Node 4: Ubuntu VPS Tools -->
+  <g transform="translate(762, 92)">
+    <rect width="162" height="96" rx="8" fill="#1f1f1c" stroke="#383832" stroke-width="1.2"/>
+    <rect width="162" height="3" fill="#e06c75" rx="1.5"/>
+    <text x="16" y="28" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#e06c75">04 / EXECUTION</text>
+    <text x="16" y="52" font-family="'Inter', sans-serif" font-size="15" font-weight="700" fill="#ffffff">Ubuntu Server</text>
+    <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8c8c85">Browser / Bash tools</text>
+  </g>
+
+  <!-- Terminal Output Window -->
+  <g transform="translate(36, 214)">
+    <rect width="888" height="286" rx="10" fill="#131311" stroke="#2a2a26" stroke-width="1"/>
+    
+    <!-- Terminal Header -->
+    <rect width="888" height="34" rx="10" fill="#1a1a17"/>
+    <text x="20" y="22" font-family="'JetBrains Mono', monospace" font-size="11" fill="#787870">bash — hermes-agent-daemon.log — 80x24</text>
+    <rect x="760" y="7" width="108" height="20" rx="4" fill="#252520"/>
+    <text x="774" y="21" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a0a095">VPS: ONLINE</text>
+
+    <!-- Terminal Lines -->
+    <g transform="translate(24, 60)" font-family="'JetBrains Mono', monospace" font-size="12" line-height="1.7">
+      <text y="0" fill="#6d8a22">$ systemctl status hermes-daemon --no-pager</text>
+      <text y="24" fill="#a0a098">● hermes-agent.service - Self-Hosted Agent Orchestrator</text>
+      <text y="48" fill="#98c379">   Active: active (running) since Wed 2026-09-30 08:00:00 WIB; uptime: 14h 22m</text>
+      <text y="72" fill="#61afef">[router:9router] Forwarding incoming Telegram payload from user @irhamkk</text>
+      <text y="96" fill="#e5c07b">[agent:hermes] Task: "Scrape workflow docs, execute sanity check and reply summary"</text>
+      <text y="120" fill="#a0a098">[tools:playwright] Launching Chromium headless session (session_id=89a71)...</text>
+      <text y="144" fill="#98c379">[tools:playwright] Page extracted 4 key endpoints, response status 200 OK</text>
+      <text y="168" fill="#e5c07b">[agent:hermes] Synthesized 3 actionable steps into markdown response</text>
+      <text y="192" fill="#61afef">[telegram:bot] Message successfully delivered to @irhamkk (latency: 1.42s)</text>
+      <text y="216" fill="#6d8a22">hermes@ubuntu-vps:~$ <tspan fill="#ffffff">_</tspan></text>
+    </g>
+  </g>
+</svg>
