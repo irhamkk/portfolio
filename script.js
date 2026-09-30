@@ -7,7 +7,7 @@ const T={
     "home.aboutTitle":"Statistics → Data → Automation → AI Systems.","home.aboutCopy":"I like turning messy operational problems into systems that are easier to understand, run, and improve.","home.aboutCta":"More about me",
     "p1.sub":"WhatsApp AI Assistant","p2.sub":"Ordering & Business Analytics System","p3.sub":"Automated Content Publishing System",
     "lab.title":"Lab.","lab.copy":"Experiments, prototypes, and systems I’m testing to understand how things work in practice.","lab.archive":"Other experiments.","lab.archiveCopy":"Things can be shipped, paused, unfinished, or simply useful enough to keep.",
-    "signals.title":"Signals.","signals.copy":"Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.","signals.all":"All",
+    "signals.title":"Signals.","signals.copy":"Takes, notes, observations, and theses about AI, data, automation, technology, and the systems around us.","signals.all":"All","signals.take":"Take","signals.thesis":"Thesis","signals.note":"Note","signals.observation":"Observation","signals.essay":"Essay",
     "prototype.note":"Prototype content — these sample takes, notes, and theses are placeholders for now.",
     "about.title":"About.","about.lead":"I started with statistics and data analysis, then moved deeper into automation, AI, and the systems connecting them.",
     "about.big":"I’m interested in what happens when data stops being a report and starts becoming a system.",
@@ -29,7 +29,7 @@ const T={
     "home.aboutTitle":"Statistika → Data → Automasi → AI Systems.","home.aboutCopy":"Saya suka mengubah masalah operasional yang berantakan menjadi sistem yang lebih mudah dipahami, dijalankan, dan diperbaiki.","home.aboutCta":"Lebih lanjut tentang saya",
     "p1.sub":"Asisten AI WhatsApp","p2.sub":"Sistem Pemesanan & Analitik Bisnis","p3.sub":"Sistem Publikasi Konten Otomatis",
     "lab.title":"Lab.","lab.copy":"Eksperimen, prototipe, dan sistem yang sedang saya uji untuk memahami bagaimana semuanya bekerja dalam praktik.","lab.archive":"Eksperimen lainnya.","lab.archiveCopy":"Sesuatu bisa selesai, dijeda, belum jadi, atau sekadar cukup berguna untuk tetap disimpan.",
-    "signals.title":"Signals.","signals.copy":"Take, catatan, observasi, dan thesis tentang AI, data, automasi, teknologi, dan sistem di sekitar kita.","signals.all":"Semua",
+    "signals.title":"Signals.","signals.copy":"Take, catatan, observasi, dan tesis tentang AI, data, automasi, teknologi, dan sistem di sekitar kita.","signals.all":"Semua","signals.take":"Pendapat","signals.thesis":"Tesis","signals.note":"Catatan","signals.observation":"Observasi","signals.essay":"Esai",
     "prototype.note":"Konten prototipe — take, catatan, dan thesis ini masih contoh sementara.",
     "about.title":"Tentang.","about.lead":"Saya mulai dari statistika dan analisis data, lalu berkembang lebih jauh ke automasi, AI, dan sistem yang menghubungkan semuanya.",
     "about.big":"Saya tertarik pada momen ketika data berhenti menjadi laporan dan mulai menjadi sebuah sistem.",
@@ -48,11 +48,11 @@ const T={
 const CONTENT={
   en:{
     lab:[
-      {id:"LAB / 001",status:"BUILDING",title:"Self-hosted AI Agent Stack",copy:"Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
-      {id:"LAB / 002",status:"PROTOTYPE",title:"Personal Publishing System",copy:"A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",tags:["Telegram","GitHub","Vercel","Automation"]},
+      {id:"LAB / 001",status:"DIBANGUN",title:"Self-hosted AI Agent Stack",copy:"Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
+      {id:"LAB / 002",status:"PROTOTIPE",title:"Personal Publishing System",copy:"A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",tags:["Telegram","GitHub","Vercel","Automation"]},
       {id:"LAB / 003",status:"EXPERIMENT",title:"Ciel as a Personal Interface",copy:"An AI interface that is intentionally narrow: it should know my published work and ideas, but refuse to pretend it knows everything else.",tags:["RAG","LLM","Retrieval","Personal AI"]},
-      {id:"LAB / 004",status:"TESTING",title:"Browser Workflow Agent",copy:"Testing where browser automation becomes genuinely useful and where a deterministic script is still the better tool.",tags:["Playwright","Agents","Browser","Workflow"]},
-      {id:"LAB / 005",status:"PAUSED",title:"Tiny Data Products",copy:"Small interactive data pieces that answer one clear question instead of becoming another permanent dashboard.",tags:["Python","Data","Visualization","Web"]},
+      {id:"LAB / 004",status:"PENGUJIAN",title:"Browser Workflow Agent",copy:"Testing where browser automation becomes genuinely useful and where a deterministic script is still the better tool.",tags:["Playwright","Agents","Browser","Workflow"]},
+      {id:"LAB / 005",status:"DIJEDA",title:"Tiny Data Products",copy:"Small interactive data pieces that answer one clear question instead of becoming another permanent dashboard.",tags:["Python","Data","Visualization","Web"]},
       {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"A search layer across projects, notes, signals, and build logs so the website can behave more like a living knowledge base.",tags:["Search","Embeddings","Indexing","Knowledge"]}
     ],
     signals:[
@@ -74,7 +74,7 @@ const CONTENT={
     lab:[
       {id:"LAB / 001",status:"BUILDING",title:"Self-hosted AI Agent Stack",copy:"Menguji setup agent persisten yang bisa menerima task, memakai tools, membuka browser ketika perlu, lalu mengembalikan hasil lewat workflow pribadi yang ringan.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
       {id:"LAB / 002",status:"PROTOTYPE",title:"Personal Publishing System",copy:"Flow publishing dari Telegram ke GitHub untuk take, catatan, terjemahan, metadata, dan nantinya konten yang tampil di seluruh website ini.",tags:["Telegram","GitHub","Vercel","Automasi"]},
-      {id:"LAB / 003",status:"EXPERIMENT",title:"Ciel sebagai Personal Interface",copy:"Interface AI yang sengaja dibatasi: ia harus tahu karya dan pemikiran saya yang dipublikasikan, tetapi tidak berpura-pura tahu semua hal lain.",tags:["RAG","LLM","Retrieval","Personal AI"]},
+      {id:"LAB / 003",status:"EKSPERIMEN",title:"Ciel sebagai Personal Interface",copy:"Interface AI yang sengaja dibatasi: ia harus tahu karya dan pemikiran saya yang dipublikasikan, tetapi tidak berpura-pura tahu semua hal lain.",tags:["RAG","LLM","Retrieval","Personal AI"]},
       {id:"LAB / 004",status:"TESTING",title:"Browser Workflow Agent",copy:"Menguji kapan browser automation benar-benar berguna dan kapan script deterministik tetap menjadi pilihan yang lebih tepat.",tags:["Playwright","Agents","Browser","Workflow"]},
       {id:"LAB / 005",status:"PAUSED",title:"Tiny Data Products",copy:"Potongan data interaktif kecil yang menjawab satu pertanyaan dengan jelas, bukan menjadi dashboard permanen yang terus bertambah.",tags:["Python","Data","Visualisasi","Web"]},
       {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"Lapisan pencarian untuk project, notes, signals, dan build logs agar website bisa berfungsi seperti knowledge base yang hidup.",tags:["Search","Embeddings","Indexing","Knowledge"]}
@@ -108,6 +108,10 @@ function observeReveals(){
 
 function labCard(item){
   return `<article class="lab-card reveal"><div class="lab-card-top"><span>${item.id}</span><span class="lab-status"><i></i>${item.status}</span></div><div><h3>${item.title}</h3><p>${item.copy}</p></div><div class="lab-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></article>`;
+}
+function typeLabel(type){
+  const map=lang==="id"?{TAKE:"PENDAPAT",THESIS:"TESIS",NOTE:"CATATAN",OBSERVATION:"OBSERVASI",ESSAY:"ESAI"}:{TAKE:"TAKE",THESIS:"THESIS",NOTE:"NOTE",OBSERVATION:"OBSERVATION",ESSAY:"ESSAY"};
+  return map[type]||type;
 }
 function signalCard(item){
   return `<article class="signal-stream-card reveal" data-type="${item.type}"><div class="signal-stream-meta"><span>${item.type}</span><time>${item.date}</time></div><div class="signal-stream-copy"><h3>${item.title}</h3><p>${item.copy}</p><div class="signal-tags">${item.tags.map(t=>`<span>${t}</span>`).join("")}</div></div><span class="signal-arrow">↗</span></article>`;
