@@ -221,8 +221,18 @@ module.exports = async function handler(req, res) {
     // Retrieve relevant context from repository knowledge
     const { contextText, sources } = retrieveContext(message, language);
 
-    // Check for GEMINI_API_KEY
-    const apiKey = process.env.GEMINI_API_KEY;
+    // Check for GEMINI_API_KEY from environment or local key file
+    let apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      try {
+        const fs = require('fs');
+        const path = require('path');
+        const localKeyPath = path.join(__dirname, 'gemini_key.txt');
+        if (fs.existsSync(localKeyPath)) {
+          apiKey = fs.readFileSync(localKeyPath, 'utf8').trim();
+        }
+      } catch (_) {}
+    }
 
     if (!apiKey) {
       // Graceful local fallback when API key is not yet set
@@ -260,12 +270,12 @@ ATURAN KETAT:
       ],
       generationConfig: {
         temperature: isConcise ? 0.2 : 0.35,
-        maxOutputTokens: isConcise ? 250 : 600,
+        maxOutputTokens: isConcise ? 350 : 750,
       },
     };
 
-    // Google Gemini 2.5 Flash / 1.5 Flash endpoint
-    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    // Google Gemini API endpoint (fast and stable 3.5 Flash Lite)
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${apiKey}`;
 
     const geminiRes = await httpsPost(geminiUrl, geminiPayload);
 
