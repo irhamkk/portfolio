@@ -16,7 +16,6 @@ function parseFrontmatter(content) {
     const key = line.slice(0, colonIdx).trim();
     let val = line.slice(colonIdx + 1).trim();
 
-    // Check array [a, b, c]
     if (val.startsWith('[') && val.endsWith(']')) {
       try {
         val = val
@@ -28,7 +27,6 @@ function parseFrontmatter(content) {
         val = [];
       }
     } else {
-      // Remove wrapping quotes
       if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
         val = val.slice(1, -1).replace(/\\"/g, '"');
       }
@@ -46,9 +44,7 @@ function buildContent() {
     return;
   }
 
-  const files = fs.readdirSync(signalsDir).filter((f) => f.endsWith('.md'));
-  // Sort files descending so newest are on top
-  files.sort().reverse();
+  const files = fs.readdirSync(signalsDir).filter((f) => f.endsWith('.md')).sort().reverse();
 
   const signalsEN = [];
   const signalsID = [];
@@ -127,15 +123,14 @@ function buildContent() {
     const knowledge = JSON.parse(fs.readFileSync(knowledgePath, 'utf8'));
     knowledge.signals = knowledgeSignals;
     fs.writeFileSync(knowledgePath, JSON.stringify(knowledge, null, 2), 'utf8');
-    console.log(`Updated api/_knowledge.json with ${knowledgeSignals.length} rich signals (including full bodies for Ciel)!`);
+    console.log(`Updated api/_knowledge.json with ${knowledgeSignals.length} rich signals!`);
   }
 
-  // 2. Update script.js
+  // 2. Update script.js with strict marker replacement
   const scriptPath = path.join(__dirname, '..', 'script.js');
   if (fs.existsSync(scriptPath)) {
     let scriptCode = fs.readFileSync(scriptPath, 'utf8');
 
-    // Replace signals in EN
     const enSignalsJson = JSON.stringify(signalsEN, null, 6)
       .split('\n')
       .map((l, i) => (i === 0 ? l : '    ' + l))
@@ -147,17 +142,17 @@ function buildContent() {
       .join('\n');
 
     scriptCode = scriptCode.replace(
-      /(en:\s*\{[\s\S]*?signals:\s*)\[[\s\S]*?\](?=\s*\},?\s*id:)/,
-      `$1${enSignalsJson}`
+      /\/\* SIGNALS_EN_START \*\/[\s\S]*?\/\* SIGNALS_EN_END \*\//,
+      `/* SIGNALS_EN_START */\n    ${enSignalsJson}\n    /* SIGNALS_EN_END */`
     );
 
     scriptCode = scriptCode.replace(
-      /(id:\s*\{[\s\S]*?signals:\s*)\[[\s\S]*?\](?=\s*\}\s*\};)/,
-      `$1${idSignalsJson}`
+      /\/\* SIGNALS_ID_START \*\/[\s\S]*?\/\* SIGNALS_ID_END \*\//,
+      `/* SIGNALS_ID_START */\n    ${idSignalsJson}\n    /* SIGNALS_ID_END */`
     );
 
     fs.writeFileSync(scriptPath, scriptCode, 'utf8');
-    console.log(`Updated script.js CONTENT.en and CONTENT.id signals list!`);
+    console.log(`Updated script.js CONTENT.en and CONTENT.id signals list with 100% precision!`);
   }
 
   console.log('--- Content build & sync complete! ---');

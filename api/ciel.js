@@ -191,6 +191,20 @@ function localFallbackResponse(query, lang = 'id') {
     : 'Irham Khairul Kalam is a Statistics graduate from Universitas Padjadjaran specializing in workflow automation, data systems, and persistent self-hosted AI agents.';
 }
 
+// Detect language from the question itself
+function detectMessageLanguage(text, defaultLang = 'id') {
+  const t = text.toLowerCase();
+  const idRegex = /\b(siapa|apa|kenapa|mengapa|bagaimana|kapan|apakah|bisa|tolong|tolongin|lu|kamu|anda|gua|gue|saya|dia|ini|itu|ada|gak|nggak|tidak|ya|udah|sudah|belum|mau|akan|dengan|untuk|tentang|soal|proyek|karya|pemikiran|pendapat|catatan|esai|kuliah|studi)\b/i;
+  const enRegex = /\b(who|what|why|how|when|where|which|can|could|would|please|you|your|yours|i|my|me|mine|he|she|they|this|that|there|is|are|was|were|not|already|want|will|with|for|about|project|work|works|thought|thoughts|opinion|note|essay|study|university)\b/i;
+
+  const idMatches = (t.match(new RegExp(idRegex, 'gi')) || []).length;
+  const enMatches = (t.match(new RegExp(enRegex, 'gi')) || []).length;
+
+  if (idMatches > enMatches) return 'id';
+  if (enMatches > idMatches) return 'en';
+  return defaultLang === 'en' ? 'en' : 'id';
+}
+
 module.exports = async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -208,7 +222,8 @@ module.exports = async function handler(req, res) {
   try {
     const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body || {};
     const message = (body.message || '').trim();
-    const language = body.language === 'en' ? 'en' : 'id';
+    const clientLang = body.language === 'en' ? 'en' : 'id';
+    const language = detectMessageLanguage(message, clientLang);
     const model = body.model || 'Ciel 3.2';
     const isConcise = model.includes('3.1');
 
@@ -248,7 +263,7 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    // System prompt with strict scoping
+    // System prompt with strict scoping & language matching
     const systemPrompt = `Kamu adalah Ciel, asisten kecerdasan personal untuk Irham Khairul Kalam dan website resminya irhamkk.world.
 Tugas utamamu: menjawab pertanyaan pengunjung seputar profil, latar belakang, pendidikan, proyek, eksperimen di Lab, serta pemikiran/opini (Signals) Irham berdasarkan KNOWLEDGE CONTEXT di bawah ini.
 
@@ -256,7 +271,11 @@ ATURAN KETAT & FORMAT JAWABAN:
 1. Ruang lingkup faktualmu TERBATAS hanya pada informasi resmi yang dipublikasikan tentang Irham.
 2. Jika pengguna menanyakan hal umum di luar Irham (misalnya pertanyaan matematika umum, resep masakan, tokoh politik, gosip), tolak secara sopan dan jelaskan bahwa Ciel hanya dirancang untuk menjawab seputar karya, proyek, dan pemikiran Irham.
 3. Jangan mengarang atau berhalusinasi informasi pribadi yang tidak ada dalam konteks.
-4. Jawab secara alami dan ramah dalam bahasa yang sama dengan pertanyaan pengguna (${language === 'en' ? 'English' : 'Bahasa Indonesia'}).
+4. ATURAN BAHASA JAWABAN (MUTLAK):
+   - Bahasa pertanyaan terdeteksi: ${language === 'en' ? 'ENGLISH' : 'BAHASA INDONESIA'}.
+   - Jika pengunjung bertanya dalam Bahasa Indonesia (meski website berbahasa Inggris), WAJIB menjawab 100% dalam Bahasa Indonesia yang ramah, sopan, dan jelas.
+   - Jika pengunjung bertanya dalam Bahasa Inggris (English), WAJIB menjawab 100% dalam Bahasa Inggris (English).
+   - Jangan mencampuradukkan bahasa dalam satu jawaban.
 5. FORMAT LAYOUT HARUS RAPI:
    - Gunakan paragraf pendek (2-3 kalimat) agar tidak bertumpuk padat.
    - Gunakan daftar bernomor (1., 2., 3.) atau bullet points (- ) saat menguraikan beberapa poin atau proyek.
