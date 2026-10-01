@@ -514,6 +514,84 @@ qsa(".ciel-prompts button").forEach(btn=>btn.addEventListener("click",()=>{
     cielForm.dispatchEvent(new Event("submit",{cancelable:true}));
   }
 }));
+function formatCielMarkdown(text) {
+  if (!text) return "";
+  let html = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // Bold & Italic
+  html = html.replace(/\*\*\*(.*?)\*\*\*/g, "<strong><em>$1</em></strong>");
+  html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  html = html.replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+  html = html.replace(/`([^`\n]+)`/g, "<code>$1</code>");
+
+  const lines = html.split(/\n/);
+  let inList = false;
+  let listType = "ul";
+  let output = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const rawLine = lines[i];
+    const trimmed = rawLine.trim();
+    if (!trimmed) {
+      if (inList) {
+        output.push(`</${listType}>`);
+        inList = false;
+      }
+      continue;
+    }
+
+    // Numbered list: 1. Item
+    const numMatch = trimmed.match(/^(\d+)\.\s+(.+)$/);
+    if (numMatch) {
+      if (!inList || listType !== "ol") {
+        if (inList) output.push(`</${listType}>`);
+        output.push("<ol>");
+        inList = true;
+        listType = "ol";
+      }
+      output.push(`<li>${numMatch[2]}</li>`);
+      continue;
+    }
+
+    // Bullet list: - Item or * Item or • Item
+    const bulletMatch = trimmed.match(/^[-*•]\s+(.+)$/);
+    if (bulletMatch) {
+      if (!inList || listType !== "ul") {
+        if (inList) output.push(`</${listType}>`);
+        output.push("<ul>");
+        inList = true;
+        listType = "ul";
+      }
+      output.push(`<li>${bulletMatch[1]}</li>`);
+      continue;
+    }
+
+    // Blockquote
+    if (trimmed.startsWith("&gt;")) {
+      if (inList) {
+        output.push(`</${listType}>`);
+        inList = false;
+      }
+      const quoteText = trimmed.replace(/^&gt;\s*/, "");
+      output.push(`<blockquote>${quoteText}</blockquote>`);
+      continue;
+    }
+
+    // Regular paragraph
+    if (inList) {
+      output.push(`</${listType}>`);
+      inList = false;
+    }
+    output.push(`<p>${trimmed}</p>`);
+  }
+
+  if (inList) output.push(`</${listType}>`);
+  return output.join("");
+}
+
 if(cielForm&&cielInput&&cielThread){
   cielForm.addEventListener("submit", async e => {
     e.preventDefault();
@@ -550,7 +628,7 @@ if(cielForm&&cielInput&&cielThread){
       const data = await response.json();
 
       typingBubble.classList.remove("typing-bubble");
-      typingBubble.textContent = data.answer || getCielReply(text, lang);
+      typingBubble.innerHTML = formatCielMarkdown(data.answer || getCielReply(text, lang));
 
       // Render sources if available
       if (data.sources && data.sources.length > 0) {
@@ -563,7 +641,7 @@ if(cielForm&&cielInput&&cielThread){
     } catch (err) {
       // Graceful fallback if network/API fails
       typingBubble.classList.remove("typing-bubble");
-      typingBubble.textContent = getCielReply(text, lang);
+      typingBubble.innerHTML = formatCielMarkdown(getCielReply(text, lang));
     }
     cielThread.scrollTop = cielThread.scrollHeight;
   });

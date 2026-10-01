@@ -1348,6 +1348,49 @@ img {
   border: 1px solid var(--line);
   color: var(--ink);
   border-bottom-left-radius: 4px;
+  line-height: 1.6;
+}
+
+.ciel-message.assistant p {
+  margin: 0 0 10px;
+}
+
+.ciel-message.assistant p:last-child {
+  margin-bottom: 0;
+}
+
+.ciel-message.assistant ul,
+.ciel-message.assistant ol {
+  margin: 8px 0 12px;
+  padding-left: 20px;
+}
+
+.ciel-message.assistant li {
+  margin-bottom: 5px;
+  line-height: 1.55;
+}
+
+.ciel-message.assistant strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.ciel-message.assistant blockquote {
+  margin: 10px 0;
+  padding: 8px 14px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+}
+
+.ciel-message.assistant code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.5px 5px;
+  border-radius: 4px;
 }
 
 .ciel-sources {
