@@ -20,9 +20,9 @@ const T={
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Let’s build something useful.","contact.pageCopy":"If you have an upcoming project, a messy workflow to untangle, or an idea to discuss, my inbox is open.",
     "footer.note":"A personal space for work, experiments, and ideas.","footer.home":"Back to top ↑",
-    "ciel.scope":"Personal knowledge interface","ciel.offline":"Prototype mode · API not connected","ciel.start":"Where should we start?","ciel.intro":"Ask about Irham’s projects, experiments, notes, background, or published ideas.","ciel.placeholder":"Ask anything about Irham...","ciel.note":"Ciel answers directly from Irham’s published knowledge base.",
+    "ciel.scope":"Personal knowledge interface","ciel.status":"AI Online","ciel.offline":"Online · Knowledge API Connected","ciel.start":"Where should we start?","ciel.intro":"Ask about Irham’s projects, experiments, notes, background, or published ideas.","ciel.placeholder":"Ask anything about Irham...","ciel.note":"Ciel answers directly from Irham’s published knowledge base.",
     "ciel.prompt.projects":"What kind of projects does Irham build?","ciel.prompt.agents":"What does Irham think about AI agents?","ciel.prompt.now":"What is Irham exploring right now?",
-    "ciel.offlineReply":"Ciel is currently in prototype mode. The chat interface is live, while the AI API and personal knowledge layer are being wired up."
+    "ciel.offlineReply":"Ciel is temporarily unable to connect to the knowledge service. Please check your connection or try again in a moment."
   },
   id:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"Tentang","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
@@ -38,9 +38,9 @@ const T={
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Mari membangun sesuatu yang berdampak.","contact.pageCopy":"Jika Anda memiliki proyek baru, workflow yang butuh dioptimalkan, atau sekadar ingin bertukar pikiran, pintu diskusi selalu terbuka.",
     "footer.note":"Ruang digital mandiri untuk portofolio, eksperimen, dan gagasan.","footer.home":"Kembali ke atas ↑",
-    "ciel.scope":"Asisten Pengetahuan Pribadi","ciel.offline":"Mode Prototipe · API Belum Terhubung","ciel.start":"Ada yang ingin Anda ketahui?","ciel.intro":"Ajukan pertanyaan seputar project, eksperimen, catatan teknis, latar belakang, atau pemikiran Irham.","ciel.placeholder":"Tanyakan apa saja tentang Irham...","ciel.note":"Ciel merujuk langsung pada basis pengetahuan dan tulisan resmi Irham.",
+    "ciel.scope":"Asisten Pengetahuan Pribadi","ciel.status":"AI Online","ciel.offline":"Online · Knowledge API Terhubung","ciel.start":"Ada yang ingin Anda ketahui?","ciel.intro":"Ajukan pertanyaan seputar project, eksperimen, catatan teknis, latar belakang, atau pemikiran Irham.","ciel.placeholder":"Tanyakan apa saja tentang Irham...","ciel.note":"Ciel merujuk langsung pada basis pengetahuan dan tulisan resmi Irham.",
     "ciel.prompt.projects":"Project seperti apa yang dibangun oleh Irham?","ciel.prompt.agents":"Bagaimana pandangan Irham terkait AI agent?","ciel.prompt.now":"Apa yang sedang dieksplorasi Irham saat ini?",
-    "ciel.offlineReply":"Ciel saat ini masih dalam tahap prototipe antarmuka. Ruang obrolan telah aktif, namun integrasi API LLM dan lapisan knowledge base sedang dalam proses penyempurnaan."
+    "ciel.offlineReply":"Ciel saat ini sedang tidak dapat terhubung ke Knowledge API. Silakan periksa koneksi Anda atau coba sesaat lagi."
   }
 };
 
