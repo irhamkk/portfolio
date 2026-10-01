@@ -20,7 +20,7 @@ const T={
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Let’s build something useful.","contact.pageCopy":"If you have an upcoming project, a messy workflow to untangle, or an idea to discuss, my inbox is open.",
     "footer.note":"A personal space for work, experiments, and ideas.","footer.home":"Back to top ↑",
-    "ciel.scope":"Personal knowledge interface","ciel.offline":"Prototype mode · API not connected","ciel.start":"Where should we start?","ciel.intro":"Ask about Irham’s projects, experiments, notes, background, or published ideas.","ciel.placeholder":"Ask Ciel about Irham...","ciel.note":"Ciel answers directly from Irham’s published knowledge base.",
+    "ciel.scope":"Personal knowledge interface","ciel.offline":"Prototype mode · API not connected","ciel.start":"Where should we start?","ciel.intro":"Ask about Irham’s projects, experiments, notes, background, or published ideas.","ciel.placeholder":"Ask anything about Irham...","ciel.note":"Ciel answers directly from Irham’s published knowledge base.",
     "ciel.prompt.projects":"What kind of projects does Irham build?","ciel.prompt.agents":"What does Irham think about AI agents?","ciel.prompt.now":"What is Irham exploring right now?",
     "ciel.offlineReply":"Ciel is currently in prototype mode. The chat interface is live, while the AI API and personal knowledge layer are being wired up."
   },
@@ -38,7 +38,7 @@ const T={
     "exp.0.role":"Manager & Automation Lead","exp.2.role":"Data & Statistics Intern","exp.3.role":"Graphic Designer",
     "contact.pageTitle":"Mari membangun sesuatu yang berdampak.","contact.pageCopy":"Jika Anda memiliki proyek baru, workflow yang butuh dioptimalkan, atau sekadar ingin bertukar pikiran, pintu diskusi selalu terbuka.",
     "footer.note":"Ruang digital mandiri untuk portofolio, eksperimen, dan gagasan.","footer.home":"Kembali ke atas ↑",
-    "ciel.scope":"Asisten Pengetahuan Pribadi","ciel.offline":"Mode Prototipe · API Belum Terhubung","ciel.start":"Ada yang ingin Anda ketahui?","ciel.intro":"Ajukan pertanyaan seputar project, eksperimen, catatan teknis, latar belakang, atau pemikiran Irham.","ciel.placeholder":"Tanyakan sesuatu tentang Irham kepada Ciel...","ciel.note":"Ciel merujuk langsung pada basis pengetahuan dan tulisan resmi Irham.",
+    "ciel.scope":"Asisten Pengetahuan Pribadi","ciel.offline":"Mode Prototipe · API Belum Terhubung","ciel.start":"Ada yang ingin Anda ketahui?","ciel.intro":"Ajukan pertanyaan seputar project, eksperimen, catatan teknis, latar belakang, atau pemikiran Irham.","ciel.placeholder":"Tanyakan apa saja tentang Irham...","ciel.note":"Ciel merujuk langsung pada basis pengetahuan dan tulisan resmi Irham.",
     "ciel.prompt.projects":"Project seperti apa yang dibangun oleh Irham?","ciel.prompt.agents":"Bagaimana pandangan Irham terkait AI agent?","ciel.prompt.now":"Apa yang sedang dieksplorasi Irham saat ini?",
     "ciel.offlineReply":"Ciel saat ini masih dalam tahap prototipe antarmuka. Ruang obrolan telah aktif, namun integrasi API LLM dan lapisan knowledge base sedang dalam proses penyempurnaan."
   }
@@ -55,7 +55,7 @@ const CONTENT={
         copy:"A persistent self-hosted AI agent stack on Ubuntu VPS orchestrated with Hermes 2 Pro and 9Router. Handles task routing, Telegram command triggers, and headless browser automation.",
         img:"/assets/diagram-hermes.svg",
         tags:["Hermes 2 Pro","9Router","Ubuntu VPS","Telegram Bot"],
-        url:"https://github.com/irhamkk"
+        url:"https://github.com/irhamkk/hermes-9router-telegram"
       },
       {
         id:"AGENT / 002",
@@ -122,7 +122,7 @@ const CONTENT={
         copy:"Arsitektur agent AI persisten mandiri di Ubuntu VPS dengan orkestrasi Hermes 2 Pro dan 9Router. Menangani routing tugas, trigger via Telegram, dan otomatisasi browser tanpa henti.",
         img:"/assets/diagram-hermes.svg",
         tags:["Hermes 2 Pro","9Router","Ubuntu VPS","Telegram Bot"],
-        url:"https://github.com/irhamkk"
+        url:"https://github.com/irhamkk/hermes-9router-telegram"
       },
       {
         id:"AGENT / 002",
@@ -495,6 +495,19 @@ function getCielReply(q, currentLang){
 
 // Ciel Chat with Interactive AI Typing Bubble
 const cielForm=qs("#cielForm"),cielInput=qs("#cielInput"),cielThread=qs("#cielThread"),cielEmpty=qs("#cielEmpty");
+if(cielInput){
+  const autoExpand = () => {
+    cielInput.style.height = "auto";
+    cielInput.style.height = Math.min(cielInput.scrollHeight, 120) + "px";
+  };
+  cielInput.addEventListener("input", autoExpand);
+  cielInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      cielForm && cielForm.dispatchEvent(new Event("submit", { cancelable: true }));
+    }
+  });
+}
 qsa(".ciel-prompts button").forEach(btn=>btn.addEventListener("click",()=>{
   if(cielInput){
     cielInput.value=btn.textContent.trim();
@@ -509,6 +522,7 @@ if(cielForm&&cielInput&&cielThread){
     const u=document.createElement("div");u.className="ciel-message user";u.textContent=text;
     cielThread.append(u);
     cielInput.value="";
+    cielInput.style.height="auto";
     cielThread.scrollTop=cielThread.scrollHeight;
 
     const replyMsg=getCielReply(text,lang);

@@ -72,13 +72,17 @@
         <div class="ciel-thread ciel-thread-large" id="cielThread" aria-live="polite"></div>
       </div>
       <form class="ciel-composer ciel-composer-large" id="cielForm">
-        <textarea id="cielInput" rows="1" data-i18n-placeholder="ciel.placeholder" placeholder="Ask Ciel about Irham..."></textarea>
-        <div class="ciel-composer-bottom">
-          <div class="ciel-composer-left">
-            <label class="ciel-model"><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select><span>⌄</span></label>
-            <span class="ciel-scope-note" data-i18n="ciel.note">Ciel will only answer from Irham’s published knowledge.</span>
+        <div class="ciel-input-box">
+          <textarea id="cielInput" rows="1" data-i18n-placeholder="ciel.placeholder" placeholder="Ask anything about Irham..."></textarea>
+          <div class="ciel-composer-actions">
+            <div class="ciel-composer-left">
+              <label class="ciel-model"><select id="cielModel"><option>Ciel 3.2</option><option>Ciel 3.1</option></select><span>⌄</span></label>
+            </div>
+            <button class="ciel-send" type="submit" aria-label="Send">↑</button>
           </div>
-          <button class="ciel-send" type="submit" aria-label="Send">↑</button>
+        </div>
+        <div class="ciel-composer-footnote">
+          <span class="ciel-scope-note" data-i18n="ciel.note">Ciel answers directly from Irham’s published knowledge base.</span>
         </div>
       </form>
     </div>
