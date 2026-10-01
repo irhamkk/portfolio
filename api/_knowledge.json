@@ -1,0 +1,213 @@
+{
+  "profile": {
+    "name": "Irham Khairul Kalam",
+    "headline": "Data, AI & Automation Builder",
+    "website": "https://irhamkk.world",
+    "location": "Indonesia",
+    "summary_id": "Irham Khairul Kalam adalah lulusan Statistika Universitas Padjadjaran (S.Stat., 2019–2024) yang bertransformasi dari analisis data kuantitatif ke rekayasa arsitektur sistem berbasis automasi dan AI. Fokus utamanya adalah memecahkan problem operasional nyata: alur kerja yang berantakan, proses repetitif, serta data yang seharusnya memicu aksi otomatis.",
+    "summary_en": "Irham Khairul Kalam is a Statistics graduate from Universitas Padjadjaran (B.Stat., 2019–2024) who transitioned from quantitative data analysis to AI systems engineering and workflow automation. His focus is on solving real operational problems: untangling messy workflows, eliminating repetitive friction, and turning data into actionable systems.",
+    "focus": ["Data Systems", "AI Agents", "Workflow Automation", "Systems Architecture"],
+    "education": {
+      "degree": "Bachelor of Statistics (S.Stat.)",
+      "university": "Universitas Padjadjaran (UNPAD)",
+      "period": "2019–2024"
+    },
+    "links": {
+      "github": "https://github.com/irhamkk",
+      "x": "https://x.com/irhamkk",
+      "medium": "https://medium.com/@irhamkk"
+    }
+  },
+  "experience": [
+    {
+      "role": "Manager & Automation Lead",
+      "organization": "Dumpling Warehousing Project",
+      "period": "2024–2026",
+      "description_id": "Memimpin operasional gudang dan perancangan pipeline automasi menggunakan bot Telegram terhubung ke database inventaris real-time, menyederhanakan alur pesanan dan peringatan stok minimum.",
+      "description_en": "Led warehouse operations and built automated Telegram bot pipelines connected to real-time inventory databases, streamlining order dispatch and low-stock alerts."
+    },
+    {
+      "role": "Data & Statistics Intern",
+      "organization": "DISKOMINFO Kota Cimahi",
+      "period": "2023",
+      "description_id": "Mengolah dan menganalisis dataset sektoral pemerintah daerah, menyusun agregasi data statistik, serta menyiapkan visualisasi data untuk evaluasi program kerja daerah.",
+      "description_en": "Processed and analyzed regional government sectoral datasets, prepared statistical data aggregations, and developed data dashboards for program evaluation."
+    },
+    {
+      "role": "Data Analytics Trainee",
+      "organization": "Ruangguru (MSIB)",
+      "period": "2022",
+      "description_id": "Studi independen analitik data intensif: data cleaning, exploratory data analysis (EDA), visualisasi dashboard, dan pemodelan prediktif berbasis Python dan SQL.",
+      "description_en": "Intensive independent study in data analytics: exploratory data analysis (EDA), automated dashboard reporting, and predictive modeling using Python and SQL."
+    },
+    {
+      "role": "Graphic Designer",
+      "organization": "Gradient Studio",
+      "period": "2020–2022",
+      "description_id": "Merancang identitas visual, editorial layout, dan infografis hierarki informasi yang jernih dan berempati terhadap pembaca.",
+      "description_en": "Designed visual identities, editorial layouts, and high-clarity informational infographics with strong visual empathy."
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-hermes",
+      "title": "Self-hosted AI Agent Stack",
+      "category": "AI Systems / Infrastructure",
+      "status": "Production",
+      "url": "/lab#selected-projects",
+      "github": "https://github.com/irhamkk/hermes-9router-telegram",
+      "tags": ["Hermes 2 Pro", "9Router", "Ubuntu VPS", "Telegram Bot", "Playwright"],
+      "summary_id": "Arsitektur agent AI persisten mandiri di Ubuntu VPS dengan orkestrasi Hermes 2 Pro dan 9Router. Menangani routing tugas, trigger via Telegram, dan otomatisasi browser tanpa henti.",
+      "summary_en": "A persistent self-hosted AI agent stack on Ubuntu VPS orchestrated with Hermes 2 Pro and 9Router. Handles task routing, Telegram command triggers, and headless browser automation."
+    },
+    {
+      "id": "project-ciel-wa",
+      "title": "Ciel — WhatsApp AI Assistant",
+      "category": "AI / Local LLM",
+      "status": "Production",
+      "url": "/lab#selected-projects",
+      "github": "https://github.com/irhamkk/wa-bot-assistant",
+      "tags": ["whatsapp-web.js", "Local LLM", "Node.js", "AI UX"],
+      "summary_id": "Asisten AI personal berbasis Local LLM yang terhubung langsung ke WhatsApp via whatsapp-web.js dan inference server OpenAI-compatible dengan persistensi sesi.",
+      "summary_en": "Personal AI assistant running on local LLM connected directly to WhatsApp via whatsapp-web.js and an OpenAI-compatible inference server with session persistence."
+    },
+    {
+      "id": "project-umkm",
+      "title": "UMKM Analyst Bot",
+      "category": "Data / Operations",
+      "status": "Production",
+      "url": "/lab#selected-projects",
+      "github": "https://github.com/irhamkk/UMKM-Analyst-bot",
+      "tags": ["Python", "Telegram Bot", "SQLite", "Operations"],
+      "summary_id": "Bot Telegram operasional gudang dan intelijen bisnis UMKM untuk mengelola alur pesanan, pemantauan stok real-time, serta notifikasi batas persediaan minimum.",
+      "summary_en": "Warehouse operations and business intelligence bot on Telegram for small businesses, managing order pipelines, inventory tracking, and low-stock alerts."
+    },
+    {
+      "id": "project-x-poster",
+      "title": "X Auto-Poster & Content Pipeline",
+      "category": "Automation / Content",
+      "status": "Production",
+      "url": "/lab#selected-projects",
+      "github": "https://github.com/irhamkk/x-auto-poster",
+      "tags": ["Python", "X API v2", "Cron Automation", "Content Pipeline"],
+      "summary_id": "Pipeline penerbitan terjadwal otomatis ke X (Twitter) berbasis Python dan API v2 dengan verifikasi payload, pengelolaan draft, dan rotasi thread terencana.",
+      "summary_en": "Scheduled automated publishing pipeline to X (Twitter) built with Python and API v2 featuring payload validation, draft management, and thread rotation."
+    },
+    {
+      "id": "project-fed-gold-btc",
+      "title": "Fed Rate, Gold & Bitcoin Econometric Study",
+      "category": "Data Analysis / Macro",
+      "status": "Research",
+      "url": "/signals",
+      "tags": ["Econometrics", "Python", "SQL", "Macro"],
+      "summary_id": "Riset ekonometrika multi-dekade menganalisis bagaimana kejutan suku bunga Federal Reserve merambat ke harga spot Emas dan return Bitcoin.",
+      "summary_en": "Multi-decade econometric regime study analyzing how Federal Reserve interest rate shocks propagate to Gold spot prices and Bitcoin returns using Python and event study models."
+    }
+  ],
+  "lab": [
+    {
+      "id": "LAB / 001",
+      "title": "Self-hosted AI Agent Stack",
+      "status": "Building",
+      "url": "/lab",
+      "summary_id": "Menguji arsitektur agent persisten mandiri yang mampu menerima task, mengeksekusi tools, browsing secara otonom saat diperlukan, lalu menyajikan hasil melalui workflow pribadi yang ringan.",
+      "summary_en": "Testing a persistent agent setup that can receive tasks, use tools, browse when needed, and return results through a lightweight personal workflow.",
+      "tags": ["Hermes", "9Router", "Ubuntu", "Telegram"]
+    },
+    {
+      "id": "LAB / 002",
+      "title": "Personal Publishing System",
+      "status": "Prototype",
+      "url": "/lab",
+      "summary_id": "Alur penerbitan otomatis Telegram-ke-GitHub untuk opini, catatan teknis, terjemahan, metadata, yang langsung terdeploy ke website irhamkk.world.",
+      "summary_en": "A Telegram-to-GitHub publishing flow for takes, notes, translation, metadata, and eventually the content that appears across this site.",
+      "tags": ["Telegram", "GitHub", "Vercel", "Automation"]
+    },
+    {
+      "id": "LAB / 003",
+      "title": "Ciel as a Personal Interface",
+      "status": "Experiment",
+      "url": "/lab",
+      "summary_id": "Antarmuka AI yang sengaja dibuat sempit: memahami karya dan gagasan publik Irham secara mendalam tanpa berpura-pura tahu hal di luar itu.",
+      "summary_en": "An AI interface that is intentionally narrow: it understands Irham's published work and ideas thoroughly without pretending to know everything else.",
+      "tags": ["RAG", "LLM", "Retrieval", "Personal AI"]
+    },
+    {
+      "id": "LAB / 004",
+      "title": "Browser Workflow Agent",
+      "status": "Testing",
+      "url": "/lab",
+      "summary_id": "Menguji di mana automasi browser (Playwright) benar-benar memberikan nilai tambah dibanding script deterministik biasa.",
+      "summary_en": "Testing where browser automation becomes genuinely useful and where a deterministic script is still the better tool.",
+      "tags": ["Playwright", "Agents", "Browser", "Workflow"]
+    },
+    {
+      "id": "LAB / 005",
+      "title": "Tiny Data Products",
+      "status": "Paused",
+      "url": "/lab",
+      "summary_id": "Modul data interaktif ringkas yang menjawab satu pertanyaan analitik spesifik daripada menjadi dashboard raksasa yang membingungkan.",
+      "summary_en": "Small interactive data modules that answer one clear analytical question instead of becoming another bloated dashboard.",
+      "tags": ["Python", "Data", "Visualization", "Web"]
+    },
+    {
+      "id": "LAB / 006",
+      "title": "Personal Search Layer",
+      "status": "Idea",
+      "url": "/lab",
+      "summary_id": "Lapisan pencarian semantik terpadu di seluruh proyek, catatan, dan build log agar website berfungsi sebagai knowledge base hidup.",
+      "summary_en": "A unified semantic search layer across projects, notes, signals, and build logs so the website acts like a living knowledge base.",
+      "tags": ["Search", "Embeddings", "Indexing", "Knowledge"]
+    }
+  ],
+  "signals": [
+    {
+      "type": "TAKE",
+      "title": "AI doesn’t fix a bad workflow.",
+      "url": "/signals",
+      "content_id": "AI tidak memperbaiki alur kerja yang buruk. AI biasanya hanya membuat proses yang berantakan berjalan lebih cepat. Pemetaan dan perbaikan alur kerja proses tetap harus menjadi langkah pertama.",
+      "content_en": "AI doesn't fix a bad workflow. It usually makes the bad workflow run faster. Mapping the process and cleaning the workflow still comes first.",
+      "tags": ["AI", "Automation", "Workflow"]
+    },
+    {
+      "type": "THESIS",
+      "title": "Useful agents will own narrow workflows.",
+      "url": "/signals",
+      "content_id": "Agent AI yang benar-benar bernilai bukanlah yang mengaku serba tahu segala hal, melainkan agent yang dapat dipercaya memegang satu alur kerja spesifik dari pemicu awal (trigger) hingga hasil akhir.",
+      "content_en": "The agent that matters may not be the one that knows everything, but the one that can reliably own one specific workflow from trigger to result.",
+      "tags": ["AI Agents", "Systems", "Automation"]
+    },
+    {
+      "type": "NOTE",
+      "title": "Data should end in a decision.",
+      "url": "/signals",
+      "content_id": "Dashboard tidak otomatis bermanfaat hanya karena ada grafik indah. Bagian yang bernilai adalah mengetahui keputusan bisnis apa yang menjadi lebih jelas setelah data tersebut divisualisasikan.",
+      "content_en": "A dashboard is not automatically useful. The useful part is knowing what decision becomes clearer after the data is visible.",
+      "tags": ["Data", "Decision Making", "Analytics"]
+    },
+    {
+      "type": "OBSERVATION",
+      "title": "Automation exposes messy operations.",
+      "url": "/signals",
+      "content_id": "Ketika suatu proses sulit diotomatisasi, masalahnya sering kali bukan pada tool atau kodenya. Proses manualnya sendiri yang memang belum terdefinisi dengan jelas.",
+      "content_en": "When a process is hard to automate, the problem is often not the tool. The process itself may still be undefined.",
+      "tags": ["Operations", "Automation"]
+    },
+    {
+      "type": "TAKE",
+      "title": "Not every AI feature needs a chat box.",
+      "url": "/signals",
+      "content_id": "Chatbot hanya relevan jika interaksinya memang bersifat percakapan. Untuk banyak workflow bisnis, pengalaman AI terbaik justru tak terlihat (invisible) dan digerakkan oleh event.",
+      "content_en": "Chat is useful when the task is conversational. For many workflows, the best AI experience may be invisible and event-driven.",
+      "tags": ["Product", "AI UX", "Design"]
+    },
+    {
+      "type": "ESSAY",
+      "title": "Fed Rate, Gold & Bitcoin: An Econometric Regime Study",
+      "url": "/signals",
+      "content_id": "Menganalisis rezim makroekonomi multi-dekade: bagaimana kejutan suku bunga The Fed merambat ke harga Emas dan return Bitcoin menggunakan SQL, Python, dan model studi peristiwa.",
+      "content_en": "Analyzing multi-decade macroeconomic regimes: how Federal Reserve interest rate shocks propagate to Gold spot prices and Bitcoin returns using SQL, Python, and event study models.",
+      "tags": ["Econometrics", "Data Analysis", "Macro"]
+    }
+  ]
+}

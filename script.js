@@ -515,31 +515,57 @@ qsa(".ciel-prompts button").forEach(btn=>btn.addEventListener("click",()=>{
   }
 }));
 if(cielForm&&cielInput&&cielThread){
-  cielForm.addEventListener("submit",e=>{
+  cielForm.addEventListener("submit", async e => {
     e.preventDefault();
-    const text=cielInput.value.trim();if(!text)return;
-    if(cielEmpty)cielEmpty.hidden=true;
-    const u=document.createElement("div");u.className="ciel-message user";u.textContent=text;
+    const text = cielInput.value.trim();
+    if(!text) return;
+    if(cielEmpty) cielEmpty.hidden = true;
+
+    // User message
+    const u = document.createElement("div");
+    u.className = "ciel-message user";
+    u.textContent = text;
     cielThread.append(u);
-    cielInput.value="";
-    cielInput.style.height="auto";
-    cielThread.scrollTop=cielThread.scrollHeight;
+    cielInput.value = "";
+    cielInput.style.height = "auto";
+    cielThread.scrollTop = cielThread.scrollHeight;
 
-    const replyMsg=getCielReply(text,lang);
-    
-    // AI Chatbot typing indicator with 3 pulsing dots
-    const typingBubble=document.createElement("div");
-    typingBubble.className="ciel-message assistant typing-bubble";
-    typingBubble.innerHTML=`<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>`;
+    // Typing bubble indicator
+    const typingBubble = document.createElement("div");
+    typingBubble.className = "ciel-message assistant typing-bubble";
+    typingBubble.innerHTML = `<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>`;
     cielThread.append(typingBubble);
-    cielThread.scrollTop=cielThread.scrollHeight;
+    cielThread.scrollTop = cielThread.scrollHeight;
 
-    // Realistic typing delay (850ms)
-    setTimeout(()=>{
+    const selectedModel = qs("#cielModel") ? qs("#cielModel").value : "Ciel 3.2";
+
+    try {
+      const response = await fetch("/api/ciel", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, language: lang, model: selectedModel })
+      });
+
+      if(!response.ok) throw new Error("API response error");
+      const data = await response.json();
+
       typingBubble.classList.remove("typing-bubble");
-      typingBubble.textContent=replyMsg;
-      cielThread.scrollTop=cielThread.scrollHeight;
-    },850);
+      typingBubble.textContent = data.answer || getCielReply(text, lang);
+
+      // Render sources if available
+      if (data.sources && data.sources.length > 0) {
+        const sourcesContainer = document.createElement("div");
+        sourcesContainer.className = "ciel-sources";
+        const sourcesLabel = lang === "id" ? "Sumber:" : "Sources:";
+        sourcesContainer.innerHTML = `<span>${sourcesLabel}</span>` + data.sources.map(s => `<a href="${s.url}" class="ciel-source-pill">${s.title} ↗</a>`).join("");
+        typingBubble.append(sourcesContainer);
+      }
+    } catch (err) {
+      // Graceful fallback if network/API fails
+      typingBubble.classList.remove("typing-bubble");
+      typingBubble.textContent = getCielReply(text, lang);
+    }
+    cielThread.scrollTop = cielThread.scrollHeight;
   });
 }
 
