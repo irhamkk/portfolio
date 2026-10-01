@@ -97,86 +97,137 @@ const CONTENT={
       {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"A unified semantic search layer across projects, notes, signals, and build logs so the website acts like a living knowledge base.",tags:["Search","Embeddings","Indexing","Knowledge"]}
     ],
     signals:[
-      {type:"TAKE",date:"SEP 30, 2026",title:"AI doesn’t fix a bad workflow.",copy:"It usually makes the bad workflow run faster. Mapping the process still comes first.",tags:["AI","Automation"]},
-      {type:"THESIS",date:"SEP 30, 2026",title:"Useful agents will own narrow workflows.",copy:"The agent that matters may not be the one that knows everything, but the one that can reliably own one specific workflow from trigger to result.",tags:["AI Agents","Systems"]},
-      {type:"ESSAY",date:"SEP 28, 2026",title:"Fed Rate, Gold & Bitcoin: An Econometric Regime Study",copy:"Analyzing multi-decade macroeconomic regimes: how Federal Reserve interest rate shocks propagate to Gold spot prices and Bitcoin returns using SQL, Python, and event study models.",tags:["Econometrics","Data Analysis","Macro"]},
-      {type:"NOTE",date:"SEP 29, 2026",title:"Data should end in a decision.",copy:"A dashboard is not automatically useful. The useful part is knowing what decision becomes clearer after the data is visible.",tags:["Data","Decision Making"]},
-      {type:"OBSERVATION",date:"SEP 29, 2026",title:"Automation exposes messy operations.",copy:"When a process is hard to automate, the problem is often not the tool. The process itself may still be undefined.",tags:["Operations","Automation"]},
-      {type:"TAKE",date:"SEP 28, 2026",title:"Not every AI feature needs a chat box.",copy:"Chat is useful when the task is conversational. For many workflows, the best AI experience may be invisible and event-driven.",tags:["Product","AI UX"]},
-      {type:"THESIS",date:"SEP 27, 2026",title:"The interface becomes less important when intent can travel.",copy:"If software can understand intent and safely act across tools, the value shifts from clicking interfaces to defining permissions, context, and outcomes.",tags:["Interfaces","Agents"]},
-      {type:"NOTE",date:"SEP 26, 2026",title:"A small business does not need enterprise complexity.",copy:"The right system is often the smallest one that creates reliable records, clear ownership, and fewer repeated manual steps.",tags:["Small Business","Systems"]},
-      {type:"OBSERVATION",date:"SEP 25, 2026",title:"People collect dashboards because decisions are harder than charts.",copy:"More visibility feels productive, but a metric without an owner, threshold, or response can become decoration.",tags:["Analytics","Operations"]},
-      {type:"ESSAY",date:"SEP 24, 2026",title:"What should remain manual?",copy:"Automation is usually framed as removing human work. A better question is which moments deserve judgment, context, or deliberate friction.",tags:["Automation","Human Judgment"]},
-      {type:"TAKE",date:"SEP 23, 2026",title:"Speed is not the same as leverage.",copy:"Doing the same task faster saves time. Removing the task from the workflow changes the system.",tags:["Productivity","Systems"]},
-      {type:"NOTE",date:"SEP 22, 2026",title:"Personal websites should have memory.",copy:"A website becomes more interesting when old projects, changed opinions, experiments, and abandoned ideas remain connected instead of disappearing after every redesign.",tags:["Web","Digital Garden"]},
-      {type:"OBSERVATION",date:"SEP 21, 2026",title:"The internet is becoming easier to generate and harder to trust.",copy:"When production becomes cheap, provenance, taste, and a visible history of thought become more valuable.",tags:["Internet","AI"]}
-    ]
-  },
-  id:{
-    shipped:[
-      {
-        id:"STACK / 001",
-        category:"AI SYSTEMS / INFRASTRUCTURE",
-        status:"PRODUKSI",
-        title:"Self-hosted AI Agent Stack",
-        copy:"Arsitektur agent AI persisten mandiri di Ubuntu VPS dengan orkestrasi Hermes 2 Pro dan 9Router. Menangani routing tugas, trigger via Telegram, dan otomatisasi browser tanpa henti.",
-        img:"/assets/diagram-hermes.svg",
-        tags:["Hermes 2 Pro","9Router","Ubuntu VPS","Telegram Bot"],
-        url:"https://github.com/irhamkk/hermes-9router-telegram"
-      },
-      {
-        id:"AGENT / 002",
-        category:"AI / LOCAL LLM",
-        status:"PRODUKSI",
-        title:"Ciel — WhatsApp AI Assistant",
-        copy:"Asisten AI personal berbasis Local LLM yang terhubung langsung ke WhatsApp via whatsapp-web.js dan inference server OpenAI-compatible dengan persistensi sesi.",
-        img:"/assets/diagram-ciel.svg",
-        tags:["whatsapp-web.js","Local LLM","Node.js","AI UX"],
-        url:"https://github.com/irhamkk/wa-bot-assistant"
-      },
-      {
-        id:"OPS / 003",
-        category:"DATA / OPERASIONAL",
-        status:"PRODUKSI",
-        title:"UMKM Analyst Bot",
-        copy:"Bot Telegram operasional gudang dan intelijen bisnis UMKM untuk mengelola alur pesanan, pemantauan stok real-time, serta notifikasi batas persediaan minimum.",
-        img:"/assets/diagram-umkm.svg",
-        tags:["Python","Telegram Bot","SQLite","Operasional"],
-        url:"https://github.com/irhamkk/UMKM-Analyst-bot"
-      },
-      {
-        id:"AUTOMATION / 004",
-        category:"AUTOMATION",
-        status:"PRODUKSI",
-        title:"X Auto-Poster Pipeline",
-        copy:"Pipeline publikasi konten otomatis ke X/Twitter berbasis headless browser Playwright dengan injeksi sesi cookie terenkripsi tanpa bergantung pada API berbayar.",
-        img:"/assets/diagram-x-poster.svg",
-        tags:["Playwright","Python","Automasi","Headless"],
-        url:"https://github.com/irhamkk/x-auto-poster"
-      }
-    ],
-    lab:[
-      {id:"LAB / 001",status:"DIBANGUN",title:"Self-hosted AI Agent Stack",copy:"Menguji arsitektur agent persisten mandiri yang mampu menerima task, mengeksekusi tools, browsing secara otonom saat diperlukan, lalu menyajikan hasil melalui workflow pribadi yang ringan.",tags:["Hermes","9Router","Ubuntu","Telegram"]},
-      {id:"LAB / 002",status:"PROTOTIPE",title:"Personal Publishing System",copy:"Pipeline publikasi terintegrasi dari Telegram ke GitHub untuk draft opini, catatan teknis, lokalisasi bahasa, metadata, hingga distribusi langsung ke situs ini.",tags:["Telegram","GitHub","Vercel","Automasi"]},
-      {id:"LAB / 003",status:"EKSPERIMEN",title:"Ciel sebagai Personal Interface",copy:"Antarmuka AI yang dirancang terfokus: memahami secara mendalam karya dan tulisan terpublikasi saya, tanpa memberikan halusinasi pada hal di luar konteks.",tags:["RAG","LLM","Retrieval","Personal AI"]},
-      {id:"LAB / 004",status:"PENGUJIAN",title:"Browser Workflow Agent",copy:"Eksperimen komparatif untuk menguji kapan browser automation berbasis agent benar-benar unggul dibanding script deterministik konvensional.",tags:["Playwright","Agents","Browser","Workflow"]},
-      {id:"LAB / 005",status:"DIJEDA",title:"Tiny Data Products",copy:"Modul data interaktif ringkas yang menjawab satu pertanyaan analitik spesifik secara presisi, alih-alih membangun dashboard raksasa yang jarang digunakan.",tags:["Python","Data","Visualisasi","Web"]},
-      {id:"LAB / 006",status:"IDEA",title:"Personal Search Layer",copy:"Lapisan pencarian semantik terpadu untuk project, catatan teknis, signals, dan log pengembangan agar website bertindak sebagai basis pengetahuan yang dinamis.",tags:["Search","Embeddings","Indexing","Knowledge"]}
-    ],
-    signals:[
-      {type:"TAKE",date:"30 SEP 2026",title:"AI tidak memperbaiki workflow yang buruk.",copy:"Biasanya AI hanya membuat workflow yang berantakan berjalan lebih cepat. Memetakan proses kerja tetap merupakan fondasi utama.",tags:["AI","Automasi"]},
-      {type:"THESIS",date:"30 SEP 2026",title:"Agent yang efektif berfokus pada workflow spesifik.",copy:"Kekuatan AI agent bukan terletak pada kemampuannya mengetahui segalanya, melainkan pada kemampuannya mengawal satu alur kerja spesifik secara andal dari trigger hingga tuntas.",tags:["AI Agents","Sistem"]},
-      {type:"ESSAY",date:"28 SEP 2026",title:"Fed Rate, Emas & Bitcoin: Analisis Ekonometrika Multi-Rezim",copy:"Analisis kuantitatif lintas dekade: bagaimana guncangan suku bunga The Fed memengaruhi dinamika harga emas dan volatilitas Bitcoin dengan pemodelan event study berbasis SQL & Python.",tags:["Ekonometrika","Analisis Data","Makro"]},
-      {type:"NOTE",date:"29 SEP 2026",title:"Data seharusnya berujung pada keputusan nyata.",copy:"Dashboard tidak otomatis memberikan nilai tambah. Kegunaan sejatinya terletak pada kejelasan keputusan yang bisa diambil setelah data tersebut terlihat.",tags:["Data","Pengambilan Keputusan"]},
-      {type:"OBSERVATION",date:"29 SEP 2026",title:"Automasi menyingkap alur operasional yang belum tertata.",copy:"Ketika suatu proses sulit diotomatisasi, masalahnya sering kali bukan pada tools yang digunakan, melainkan alur kerjanya yang belum terdefinisi secara matang.",tags:["Operasional","Automasi"]},
-      {type:"TAKE",date:"28 SEP 2026",title:"Tidak semua fitur AI membutuhkan kolom chat.",copy:"Interface chat ideal untuk interaksi dialogis. Namun untuk banyak skenario operasional, pengalaman AI terbaik justru bekerja di balik layar (event-driven) secara hening.",tags:["Produk","AI UX"]},
-      {type:"THESIS",date:"27 SEP 2026",title:"Antarmuka menjadi sekunder saat intent sistem dapat berpindah secara mulus.",copy:"Ketika software mampu membaca maksud (intent) dan bertindak aman lintas platform, fokus bergeser dari sekadar klik antarmuka menuju penentuan permission, context, dan outcome.",tags:["Interface","Agents"]},
-      {type:"NOTE",date:"26 SEP 2026",title:"Bisnis skala menengah tidak membutuhkan kompleksitas enterprise.",copy:"Sistem yang ideal sering kali merupakan arsitektur paling ramping yang mampu menjamin pencatatan terpercaya, kepemilikan tugas yang jelas, dan minim proses manual.",tags:["Bisnis Kecil","Sistem"]},
-      {type:"OBSERVATION",date:"25 SEP 2026",title:"Banyak pihak menumpuk dashboard karena mengambil keputusan jauh lebih sulit.",copy:"Menambah visualisasi sering kali memberi ilusi produktivitas. Namun metrik tanpa penanggung jawab, batas ambang, atau rencana aksi hanya akan berakhir sebagai pajangan.",tags:["Analitik","Operasional"]},
-      {type:"ESSAY",date:"24 SEP 2026",title:"Bagian mana yang sebaiknya tetap manual?",copy:"Automasi kerap dipandang semata-mata untuk memangkas pekerjaan manusia. Pertanyaan yang lebih bijak: titik mana yang mutlak membutuhkan pertimbangan matang, konteks manusiawi, atau deliberate friction?",tags:["Automasi","Human Judgment"]},
-      {type:"TAKE",date:"23 SEP 2026",title:"Kecepatan tidak serta-merta identik dengan leverage.",copy:"Menyelesaikan pekerjaan manual lebih cepat hanya menghemat beberapa menit. Namun mengeliminasi pekerjaan tersebut dari alur sistem adalah perubahan yang menciptakan skala.",tags:["Produktivitas","Sistem"]},
-      {type:"NOTE",date:"22 SEP 2026",title:"Website personal selayaknya memiliki memori.",copy:"Ruang digital pribadi menjadi hidup ketika rekam jejak project lama, perubahan pandangan, serta dokumentasi eksperimen tetap terhubung rapi, bukan lenyap setiap kali berganti desain.",tags:["Web","Digital Garden"]},
-      {type:"OBSERVATION",date:"21 SEP 2026",title:"Konten digital makin mudah diproduksi namun makin sulit dipercaya.",copy:"Ketika biaya generasi konten mendekati nol, rekam jejak orisinal (provenance), selera estetika (taste), serta riwayat berpikir yang transparan menjadi pembeda paling berharga.",tags:["Internet","AI"]}
+          {
+                "type": "THESIS",
+                "date": "30 SEP 2026",
+                "title": "Agent yang efektif berfokus pada workflow spesifik.",
+                "copy": "Kekuatan AI agent bukan terletak pada kemampuannya mengetahui segalanya, melainkan pada kemampuannya mengawal satu alur kerja spesifik secara andal dari trigger hingga tuntas.",
+                "tags": [
+                      "AI Agents",
+                      "Sistem"
+                ]
+          },
+          {
+                "type": "TAKE",
+                "date": "30 SEP 2026",
+                "title": "AI tidak memperbaiki workflow yang buruk.",
+                "copy": "Biasanya AI hanya membuat workflow yang berantakan berjalan lebih cepat. Memetakan proses kerja tetap merupakan fondasi utama.",
+                "tags": [
+                      "AI",
+                      "Automasi"
+                ]
+          },
+          {
+                "type": "NOTE",
+                "date": "29 SEP 2026",
+                "title": "Data seharusnya berujung pada keputusan nyata.",
+                "copy": "Dashboard tidak otomatis memberikan nilai tambah. Kegunaan sejatinya terletak pada kejelasan keputusan yang bisa diambil setelah data tersebut terlihat.",
+                "tags": [
+                      "Data",
+                      "Pengambilan Keputusan"
+                ]
+          },
+          {
+                "type": "OBSERVATION",
+                "date": "29 SEP 2026",
+                "title": "Automasi menyingkap alur operasional yang belum tertata.",
+                "copy": "Ketika suatu proses sulit diotomatisasi, masalahnya sering kali bukan pada tools yang digunakan, melainkan alur kerjanya yang belum terdefinisi secara matang.",
+                "tags": [
+                      "Operasional",
+                      "Automasi"
+                ]
+          },
+          {
+                "type": "TAKE",
+                "date": "28 SEP 2026",
+                "title": "Tidak semua fitur AI membutuhkan kolom chat.",
+                "copy": "Interface chat ideal untuk interaksi dialogis. Namun untuk banyak skenario operasional, pengalaman AI terbaik justru bekerja di balik layar (event-driven) secara hening.",
+                "tags": [
+                      "Produk",
+                      "AI UX"
+                ]
+          },
+          {
+                "type": "ESSAY",
+                "date": "28 SEP 2026",
+                "title": "Fed Rate, Emas & Bitcoin: Analisis Ekonometrika Multi-Rezim",
+                "copy": "Analisis kuantitatif lintas dekade: bagaimana guncangan suku bunga The Fed memengaruhi dinamika harga emas dan volatilitas Bitcoin dengan pemodelan event study berbasis SQL & Python.",
+                "tags": [
+                      "Ekonometrika",
+                      "Analisis Data",
+                      "Makro"
+                ]
+          },
+          {
+                "type": "THESIS",
+                "date": "27 SEP 2026",
+                "title": "Antarmuka menjadi sekunder saat intent sistem dapat berpindah secara mulus.",
+                "copy": "Ketika software mampu membaca maksud (intent) dan bertindak aman lintas platform, fokus bergeser dari sekadar klik antarmuka menuju penentuan permission, context, dan outcome.",
+                "tags": [
+                      "Interface",
+                      "Agents"
+                ]
+          },
+          {
+                "type": "NOTE",
+                "date": "26 SEP 2026",
+                "title": "Bisnis skala menengah tidak membutuhkan kompleksitas enterprise.",
+                "copy": "Sistem yang ideal sering kali merupakan arsitektur paling ramping yang mampu menjamin pencatatan terpercaya, kepemilikan tugas yang jelas, dan minim proses manual.",
+                "tags": [
+                      "Bisnis Kecil",
+                      "Sistem"
+                ]
+          },
+          {
+                "type": "OBSERVATION",
+                "date": "25 SEP 2026",
+                "title": "Banyak pihak menumpuk dashboard karena mengambil keputusan jauh lebih sulit.",
+                "copy": "Menambah visualisasi sering kali memberi ilusi produktivitas. Namun metrik tanpa penanggung jawab, batas ambang, atau rencana aksi hanya akan berakhir sebagai pajangan.",
+                "tags": [
+                      "Analitik",
+                      "Operasional"
+                ]
+          },
+          {
+                "type": "ESSAY",
+                "date": "24 SEP 2026",
+                "title": "Bagian mana yang sebaiknya tetap manual?",
+                "copy": "Automasi kerap dipandang semata-mata untuk memangkas pekerjaan manusia. Pertanyaan yang lebih bijak: titik mana yang mutlak membutuhkan pertimbangan matang, konteks manusiawi, atau deliberate friction?",
+                "tags": [
+                      "Automasi",
+                      "Human Judgment"
+                ]
+          },
+          {
+                "type": "TAKE",
+                "date": "23 SEP 2026",
+                "title": "Kecepatan tidak serta-merta identik dengan leverage.",
+                "copy": "Menyelesaikan pekerjaan manual lebih cepat hanya menghemat beberapa menit. Namun mengeliminasi pekerjaan tersebut dari alur sistem adalah perubahan yang menciptakan skala.",
+                "tags": [
+                      "Produktivitas",
+                      "Sistem"
+                ]
+          },
+          {
+                "type": "NOTE",
+                "date": "22 SEP 2026",
+                "title": "Website personal selayaknya memiliki memori.",
+                "copy": "Ruang digital pribadi menjadi hidup ketika rekam jejak project lama, perubahan pandangan, serta dokumentasi eksperimen tetap terhubung rapi, bukan lenyap setiap kali berganti desain.",
+                "tags": [
+                      "Web",
+                      "Digital Garden"
+                ]
+          },
+          {
+                "type": "OBSERVATION",
+                "date": "21 SEP 2026",
+                "title": "Konten digital makin mudah diproduksi namun makin sulit dipercaya.",
+                "copy": "Ketika biaya generasi konten mendekati nol, rekam jejak orisinal (provenance), selera estetika (taste), serta riwayat berpikir yang transparan menjadi pembeda paling berharga.",
+                "tags": [
+                      "Internet",
+                      "AI"
+                ]
+          }
     ]
   }
 };

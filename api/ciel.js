@@ -109,23 +109,25 @@ function retrieveContext(query, lang = 'id') {
     });
   });
 
-  // 4. Check Signals
+  // 4. Check Signals & Essays (from Markdown content)
   knowledge.signals.forEach((s) => {
     let score = 0;
-    const combined = `${s.type} ${s.title} ${s.tags.join(' ')} ${s.content_id} ${s.content_en}`.toLowerCase();
+    const bodyContent = s.body || '';
+    const combined = `${s.type} ${s.title} ${(s.tags || []).join(' ')} ${s.content_id || ''} ${s.content_en || ''} ${bodyContent}`.toLowerCase();
     terms.forEach((t) => {
-      if (s.title.toLowerCase().includes(t)) score += 6;
-      if (s.tags.some((tag) => tag.toLowerCase().includes(t))) score += 4;
+      if (s.title && s.title.toLowerCase().includes(t)) score += 6;
+      if (s.title_en && s.title_en.toLowerCase().includes(t)) score += 6;
+      if (s.tags && s.tags.some((tag) => tag.toLowerCase().includes(t))) score += 4;
       if (combined.includes(t)) score += 2;
     });
-    if (/pendapat|opini|thesis|tesis|tulisan|pikiran|view|think|signal|workflow|dashboard|data/i.test(query)) score += 3;
+    if (/pendapat|opini|thesis|tesis|tulisan|pikiran|view|think|signal|workflow|dashboard|data|esai|essay|artikel|hottake|take|note|catatan/i.test(query)) score += 3;
     matchedItems.push({
       item: {
-        type: 'Signal',
-        title: `${s.type}: ${s.title}`,
-        url: s.url,
-        text: lang === 'id' ? s.content_id : s.content_en,
-        extra: `Tags: ${s.tags.join(', ')}`,
+        type: `Signal (${s.type})`,
+        title: lang === 'id' ? s.title : (s.title_en || s.title),
+        url: s.url || '/signals',
+        text: (s.body && s.body.trim()) ? s.body : (lang === 'id' ? s.content_id : (s.content_en || s.content_id)),
+        extra: `Kategori: ${s.type} · Tags: ${(s.tags || []).join(', ')} · Tanggal: ${s.date || ''}`,
       },
       score,
     });
