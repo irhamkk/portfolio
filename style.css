@@ -1011,6 +1011,134 @@ img {
   margin: 0;
 }
 
+/* =========================================================
+   HOME: CORE AI & SYSTEMS COMPETENCIES MATRIX
+   ========================================================= */
+.home-competencies {
+  margin-bottom: 72px;
+}
+
+.competencies-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.competencies-title {
+  font-family: var(--display);
+  font-size: clamp(26px, 3.4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  margin: 8px 0 0;
+  color: var(--ink);
+}
+
+.competencies-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  max-width: 480px;
+  margin: 0;
+}
+
+.competencies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.comp-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.24s var(--ease), border-color 0.24s ease, box-shadow 0.24s ease;
+  position: relative;
+}
+
+.comp-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-hover);
+}
+
+.comp-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.comp-card-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: var(--surface-soft);
+  color: var(--ink);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--line);
+}
+
+.comp-card-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.comp-card h3 {
+  font-family: var(--display);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.22;
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.comp-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-secondary);
+  margin: 0 0 20px;
+  flex-grow: 1;
+}
+
+.comp-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.comp-pills span {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  line-height: 1.4;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.comp-card:hover .comp-pills span {
+  border-color: var(--line-strong);
+  background: #ffffff;
+}
+
 /* Home About Strip */
 .home-about-strip {
   background: var(--surface);
@@ -2340,6 +2468,429 @@ img {
 }
 
 /* =========================================================
+   CIEL FLOATING INTERACTIVE LAUNCHER / DOCK WIDGET
+   ========================================================= */
+.ciel-dock-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 890;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.ciel-dock-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ciel-dock {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+}
+
+.ciel-dock-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.24s var(--ease);
+}
+
+.ciel-dock-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: var(--accent);
+}
+
+.ciel-dock-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #141412, #333330);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ciel-dock-avatar::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #fff;
+  box-shadow: 0 0 6px rgba(109, 138, 34, 0.6);
+  animation: cielPulse 2s infinite ease-in-out;
+}
+
+@keyframes cielPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.ciel-dock-label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.ciel-dock-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.ciel-dock-sub {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+/* Floating Chat Panel */
+.ciel-floating-panel {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  width: min(410px, calc(100vw - 32px));
+  height: 540px;
+  max-height: calc(100vh - 110px);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14), 0 4px 14px rgba(0, 0, 0, 0.06);
+  z-index: 910;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.24s var(--ease), transform 0.24s var(--ease);
+}
+
+.ciel-floating-panel.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Panel Header */
+.ciel-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.ciel-panel-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ciel-panel-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--display);
+}
+
+.ciel-panel-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.ciel-panel-name {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.ciel-panel-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.ciel-panel-status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+.ciel-panel-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ciel-panel-link {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  transition: color 0.18s ease;
+}
+
+.ciel-panel-link:hover {
+  color: var(--ink);
+}
+
+.ciel-panel-close {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.ciel-panel-close:hover {
+  background: var(--surface-hover);
+  color: var(--ink);
+}
+
+/* Panel Body & Chat Stream */
+.ciel-panel-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+}
+
+.ciel-panel-intro {
+  padding: 12px 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 4px;
+}
+
+.ciel-panel-intro p {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-secondary);
+  margin: 0 0 10px;
+}
+
+.ciel-panel-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ciel-panel-chip {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 7px 11px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+  line-height: 1.35;
+}
+
+.ciel-panel-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateX(2px);
+}
+
+/* Messages in Panel */
+.ciel-panel-msg {
+  max-width: 88%;
+  font-size: 12.5px;
+  line-height: 1.55;
+  padding: 10px 13px;
+  border-radius: var(--radius-md);
+  word-break: break-word;
+}
+
+.ciel-panel-msg.user {
+  align-self: flex-end;
+  background: var(--ink);
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.ciel-panel-msg.assistant {
+  align-self: flex-start;
+  background: var(--surface-soft);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-bottom-left-radius: 4px;
+}
+
+.ciel-panel-msg p {
+  margin: 0 0 6px;
+}
+
+.ciel-panel-msg p:last-child {
+  margin-bottom: 0;
+}
+
+.ciel-panel-msg strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.ciel-panel-msg code {
+  font-family: var(--mono);
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.ciel-panel-msg ul, .ciel-panel-msg ol {
+  margin: 4px 0 6px 18px;
+  padding: 0;
+}
+
+.ciel-panel-msg li {
+  margin-bottom: 3px;
+}
+
+/* Typing Dots */
+.ciel-panel-typing {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.ciel-panel-typing .typing-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: typingBounce 1.2s infinite ease-in-out;
+}
+
+.ciel-panel-typing .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.ciel-panel-typing .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Panel Composer */
+.ciel-panel-composer {
+  padding: 12px 14px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+.ciel-panel-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  padding: 4px 6px 4px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ciel-panel-form:focus-within {
+  border-color: var(--accent);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.ciel-panel-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 12.5px;
+  color: var(--ink);
+  outline: none;
+  font-family: var(--sans);
+}
+
+.ciel-panel-send {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+  flex-shrink: 0;
+}
+
+.ciel-panel-send:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.ciel-panel-footnote {
+  display: block;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* =========================================================
    MOBILE & RESPONSIVE BEHAVIOR
    ========================================================= */
 @media (max-width: 1024px) {
@@ -2365,6 +2916,14 @@ img {
   .home-columns {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  .competencies-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .competencies-grid {
+    grid-template-columns: 1fr;
   }
   .signal-desk-grid {
     grid-template-columns: 1fr;
@@ -2901,6 +3460,40 @@ img {
   }
   .about-contact-inner {
     gap: 20px;
+  }
+
+  /* COMPETENCIES & CIEL DOCK (MOBILE) */
+  .home-competencies {
+    margin-bottom: 48px;
+  }
+  .comp-card {
+    padding: 22px 18px;
+  }
+  .comp-card h3 {
+    font-size: 18px;
+  }
+  .comp-card p {
+    font-size: 13px;
+  }
+  .ciel-dock {
+    bottom: 18px;
+    right: 16px;
+  }
+  .ciel-dock-btn {
+    padding: 8px 14px 8px 10px;
+  }
+  .ciel-dock-title {
+    font-size: 12px;
+  }
+  .ciel-floating-panel {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-height: 84vh;
+    height: 84vh;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
   }
 
   /* FOOTER */

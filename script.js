@@ -22,7 +22,13 @@ const T={
     "footer.note":"A personal space for work, experiments, and ideas.","footer.home":"Back to top ↑",
     "ciel.scope":"Personal knowledge interface","ciel.status":"AI Online","ciel.offline":"Online · Knowledge API Connected","ciel.start":"Where should we start?","ciel.intro":"Ask about Irham’s projects, experiments, notes, background, or published ideas.","ciel.placeholder":"Ask anything about Irham...","ciel.note":"Ciel answers directly from Irham’s published knowledge base.",
     "ciel.prompt.projects":"What kind of projects does Irham build?","ciel.prompt.agents":"What does Irham think about AI agents?","ciel.prompt.now":"What is Irham exploring right now?",
-    "ciel.offlineReply":"Ciel is temporarily unable to connect to the knowledge service. Please check your connection or try again in a moment."
+    "ciel.offlineReply":"Ciel is temporarily unable to connect to the knowledge service. Please check your connection or try again in a moment.",
+    "comp.kicker":"TECHNICAL COMPETENCIES","comp.title":"Core AI & Systems Architecture.","comp.copy":"Four engineering pillars spanning model inference, autonomous agent orchestration, retrieval layers, and production infrastructure.",
+    "comp.p1.title":"LLM & Inference Engineering","comp.p1.sub":"MODELS & OPTIMIZATION","comp.p1.copy":"Model routing across open-weights and frontier LLMs, function calling with strict schemas, token economics, and local quantized inference.",
+    "comp.p2.title":"Autonomous Agents & Workflows","comp.p2.sub":"MULTI-STEP WORKFLOWS","comp.p2.copy":"Persistent agent orchestration, multi-turn state management, session recovery across edge failures, and deterministic guardrails.",
+    "comp.p3.title":"Data & Retrieval (RAG)","comp.p3.sub":"KNOWLEDGE & ANALYTICS","comp.p3.copy":"Hybrid semantic and keyword retrieval pipelines, document indexing and chunking, statistical data validation, and quantitative econometric modeling.",
+    "comp.p4.title":"Automation & Production Infra","comp.p4.sub":"EXECUTION & UPTIME","comp.p4.copy":"Deploying unattended background runners on Linux VPS, headless browser automation without paid APIs, webhook bridges, and CI/CD git flows.",
+    "ciel.dockTitle":"Ciel 3.2","ciel.dockStatus":"AI Online","ciel.dockHint":"Ask about Irham’s AI systems","ciel.dockCta":"Chat ↗","ciel.dockFull":"Open in Lab ↗","ciel.dockClose":"Close","ciel.dockAskPlaceholder":"Ask anything about Irham...","ciel.dockPrompt1":"What AI systems has Irham built?","ciel.dockPrompt2":"What is Irham’s thesis on AI agents?","ciel.dockPrompt3":"What is Irham’s core tech stack?"
   },
   id:{
     "nav.home":"Home","nav.lab":"Lab","nav.signals":"Signals","nav.about":"Tentang","nav.contact":"Kontak","ui.menu":"Menu","ui.scroll":"Scroll",
@@ -40,7 +46,13 @@ const T={
     "footer.note":"Ruang digital mandiri untuk portofolio, eksperimen, dan gagasan.","footer.home":"Kembali ke atas ↑",
     "ciel.scope":"Asisten Pengetahuan Pribadi","ciel.status":"AI Online","ciel.offline":"Online · Knowledge API Terhubung","ciel.start":"Ada yang ingin Anda ketahui?","ciel.intro":"Ajukan pertanyaan seputar project, eksperimen, catatan teknis, latar belakang, atau pemikiran Irham.","ciel.placeholder":"Tanyakan apa saja tentang Irham...","ciel.note":"Ciel merujuk langsung pada basis pengetahuan dan tulisan resmi Irham.",
     "ciel.prompt.projects":"Project seperti apa yang dibangun oleh Irham?","ciel.prompt.agents":"Bagaimana pandangan Irham terkait AI agent?","ciel.prompt.now":"Apa yang sedang dieksplorasi Irham saat ini?",
-    "ciel.offlineReply":"Ciel saat ini sedang tidak dapat terhubung ke Knowledge API. Silakan periksa koneksi Anda atau coba sesaat lagi."
+    "ciel.offlineReply":"Ciel saat ini sedang tidak dapat terhubung ke Knowledge API. Silakan periksa koneksi Anda atau coba sesaat lagi.",
+    "comp.kicker":"KOMPETENSI TEKNIS","comp.title":"Arsitektur AI & Rekayasa Sistem.","comp.copy":"Empat pilar keahlian teknis mencakup inferensi model, orkestrasi agent otonom, lapisan temu-balik (RAG), dan infrastruktur produksi.",
+    "comp.p1.title":"LLM & Inference Engineering","comp.p1.sub":"MODEL & OPTIMISASI","comp.p1.copy":"Routing model lintas open-weights dan frontier LLM, function calling berskema JSON ketat, efisiensi token, dan inferensi lokal.",
+    "comp.p2.title":"Autonomous Agents & Workflows","comp.p2.sub":"ALUR KERJA MULTI-TAHAP","comp.p2.copy":"Orkestrasi agent persisten, manajemen status multi-turn, pemulihan sesi saat terjadi kendala, serta guardrails deterministik.",
+    "comp.p3.title":"Data & Retrieval (RAG)","comp.p3.sub":"KNOWLEDGE & ANALITIK","comp.p3.copy":"Pipeline pencarian hibrida semantik & kata kunci, indeks chunking dokumen, validasi statistik data, dan pemodelan ekonometrika.",
+    "comp.p4.title":"Automasi & Infrastruktur Produksi","comp.p4.sub":"EKSEKUSI & UPTIME","comp.p4.copy":"Menjalankan runner background tanpa henti di VPS Linux, automasi headless browser tanpa API berbayar, webhook, dan alur CI/CD git.",
+    "ciel.dockTitle":"Ciel 3.2","ciel.dockStatus":"AI Aktif","ciel.dockHint":"Tanyakan sistem AI & karya Irham","ciel.dockCta":"Tanya ↗","ciel.dockFull":"Buka di Lab ↗","ciel.dockClose":"Tutup","ciel.dockAskPlaceholder":"Tanyakan apa saja tentang Irham...","ciel.dockPrompt1":"Proyek AI apa saja yang dibangun Irham?","ciel.dockPrompt2":"Bagaimana pandangan Irham soal AI Agent?","ciel.dockPrompt3":"Apa saja tech stack & keahlian utama Irham?"
   }
 };
 
@@ -967,10 +979,192 @@ if(finePointer&&!reduceMotion){
   })();
 }
 
+/* =========================================================
+   CIEL FLOATING INTERACTIVE LAUNCHER
+   ========================================================= */
+function initCielFloatingDock() {
+  if (document.body.dataset.page === "lab") return;
+  if (qs("#cielDock")) return;
+
+  const backdrop = document.createElement("div");
+  backdrop.className = "ciel-dock-backdrop";
+  backdrop.id = "cielDockBackdrop";
+
+  const dock = document.createElement("div");
+  dock.className = "ciel-dock";
+  dock.id = "cielDock";
+  dock.innerHTML = `
+    <button class="ciel-dock-btn" id="cielDockBtn" aria-label="Open Ciel AI Assistant" aria-expanded="false">
+      <span class="ciel-dock-avatar">C</span>
+      <span class="ciel-dock-label">
+        <span class="ciel-dock-title" data-i18n="ciel.dockBtn">Ask Ciel AI</span>
+        <span class="ciel-dock-sub" data-i18n="ciel.dockStatus">Online Agent</span>
+      </span>
+    </button>
+  `;
+
+  const panel = document.createElement("aside");
+  panel.className = "ciel-floating-panel";
+  panel.id = "cielFloatingPanel";
+  panel.setAttribute("role", "dialog");
+  panel.setAttribute("aria-modal", "true");
+  panel.setAttribute("aria-label", "Ciel AI Chat");
+  panel.innerHTML = `
+    <div class="ciel-panel-head">
+      <div class="ciel-panel-meta">
+        <div class="ciel-panel-avatar">C</div>
+        <div class="ciel-panel-info">
+          <strong class="ciel-panel-name">Ciel</strong>
+          <span class="ciel-panel-status"><i></i> <span data-i18n="ciel.dockStatus">Online Agent</span></span>
+        </div>
+      </div>
+      <div class="ciel-panel-actions">
+        <a href="/lab" class="ciel-panel-link" data-i18n="ciel.dockFullLab">Open Full Lab ↗</a>
+        <button class="ciel-panel-close" id="cielPanelClose" aria-label="Close Chat">✕</button>
+      </div>
+    </div>
+
+    <div class="ciel-panel-body" id="cielPanelBody">
+      <div class="ciel-panel-intro" id="cielPanelIntro">
+        <p data-i18n="ciel.dockSubtitle">Ask anything about Irham's projects, stack, or experience</p>
+        <div class="ciel-panel-chips">
+          <button type="button" class="ciel-panel-chip" data-i18n="ciel.dockPrompt1">What AI projects has Irham built?</button>
+          <button type="button" class="ciel-panel-chip" data-i18n="ciel.dockPrompt2">Explain his agent architecture</button>
+          <button type="button" class="ciel-panel-chip" data-i18n="ciel.dockPrompt3">How does he optimize LLM inference?</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ciel-panel-composer">
+      <form class="ciel-panel-form" id="cielPanelForm">
+        <input type="text" class="ciel-panel-input" id="cielPanelInput" data-i18n-placeholder="ciel.dockPlaceholder" placeholder="Ask Ciel a question..." autocomplete="off">
+        <button type="submit" class="ciel-panel-send" aria-label="Send message">↑</button>
+      </form>
+      <small class="ciel-panel-footnote">Irham's Personal AI • Multi-model RAG</small>
+    </div>
+  `;
+
+  document.body.append(backdrop, dock, panel);
+
+  const dockBtn = qs("#cielDockBtn");
+  const closeBtn = qs("#cielPanelClose");
+  const panelForm = qs("#cielPanelForm");
+  const panelInput = qs("#cielPanelInput");
+  const panelBody = qs("#cielPanelBody");
+
+  function openPanel() {
+    panel.classList.add("is-open");
+    backdrop.classList.add("is-visible");
+    dockBtn.setAttribute("aria-expanded", "true");
+    setTimeout(() => { panelInput && panelInput.focus(); }, 120);
+  }
+
+  function closePanel() {
+    panel.classList.remove("is-open");
+    backdrop.classList.remove("is-visible");
+    dockBtn.setAttribute("aria-expanded", "false");
+  }
+
+  dockBtn.addEventListener("click", () => {
+    if (panel.classList.contains("is-open")) {
+      closePanel();
+    } else {
+      openPanel();
+    }
+  });
+
+  closeBtn.addEventListener("click", closePanel);
+  backdrop.addEventListener("click", closePanel);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && panel.classList.contains("is-open")) {
+      closePanel();
+    }
+  });
+
+  async function sendFloatingMessage(text) {
+    if (!text || !panelBody) return;
+
+    // User message
+    const u = document.createElement("div");
+    u.className = "ciel-panel-msg user";
+    u.textContent = text;
+    panelBody.append(u);
+    panelBody.scrollTop = panelBody.scrollHeight;
+
+    // Typing bubble
+    const typingBubble = document.createElement("div");
+    typingBubble.className = "ciel-panel-msg assistant ciel-panel-typing";
+    typingBubble.innerHTML = `<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>`;
+    panelBody.append(typingBubble);
+    panelBody.scrollTop = panelBody.scrollHeight;
+
+    try {
+      const response = await fetch("/api/ciel", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, language: lang, model: "Ciel 3.2" })
+      });
+
+      if (!response.ok) throw new Error("API response error");
+      const data = await response.json();
+
+      typingBubble.classList.remove("ciel-panel-typing");
+      typingBubble.innerHTML = formatCielMarkdown(data.answer || (typeof getCielReply === "function" ? getCielReply(text, lang) : ""));
+
+      if (data.sources && data.sources.length > 0) {
+        const sourcesContainer = document.createElement("div");
+        sourcesContainer.className = "ciel-sources";
+        const sourcesLabel = lang === "id" ? "Sumber:" : "Sources:";
+        sourcesContainer.innerHTML = `<span>${sourcesLabel}</span>` + data.sources.map(s => `<a href="${s.url}" class="ciel-source-pill">${s.title} ↗</a>`).join("");
+        typingBubble.append(sourcesContainer);
+      }
+    } catch (err) {
+      typingBubble.classList.remove("ciel-panel-typing");
+      typingBubble.innerHTML = formatCielMarkdown(typeof getCielReply === "function" ? getCielReply(text, lang) : "Thinking...");
+    }
+
+    panelBody.scrollTop = panelBody.scrollHeight;
+  }
+
+  if (panelForm && panelInput) {
+    panelForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = panelInput.value.trim();
+      if (!val) return;
+      panelInput.value = "";
+      sendFloatingMessage(val);
+    });
+  }
+
+  panelBody.addEventListener("click", (e) => {
+    const chip = e.target.closest(".ciel-panel-chip");
+    if (chip) {
+      sendFloatingMessage(chip.textContent.trim());
+    }
+  });
+
+  // Apply current language translations to new elements
+  qsa("[data-i18n]", panel).forEach(el => {
+    const v = T[lang][el.dataset.i18n];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  qsa("[data-i18n]", dock).forEach(el => {
+    const v = T[lang][el.dataset.i18n];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  qsa("[data-i18n-placeholder]", panel).forEach(el => {
+    const v = T[lang][el.dataset.i18nPlaceholder];
+    if (v !== undefined) el.setAttribute("placeholder", v);
+  });
+}
+
 function bootSite(){
+  initCielFloatingDock();
   setLang(lang);
   observeReveals();
 }
 bootSite();
 document.addEventListener("DOMContentLoaded",bootSite,{once:true});
 window.addEventListener("pageshow",bootSite);
+
