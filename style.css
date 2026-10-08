@@ -2409,13 +2409,18 @@ img {
     cursor: none;
   }
 
+  body.cursor-ready input,
+  body.cursor-ready textarea {
+    cursor: text;
+  }
+
   #cursor-brush {
     position: fixed;
     inset: 0;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 120;
+    z-index: 9998;
     mix-blend-mode: multiply;
     opacity: 0.88;
   }
@@ -2425,9 +2430,9 @@ img {
     left: 0;
     top: 0;
     pointer-events: none;
-    z-index: 121;
+    z-index: 9999;
     transform: translate(-50%, -50%);
-    will-change: transform, width, height, border-color, background;
+    will-change: transform, width, height, border-color, background, opacity;
   }
 
   .cursor-dot {

@@ -937,10 +937,17 @@ if(finePointer&&!reduceMotion){
     }
   },{passive:true});
 
-  const interactive="a,button,textarea,select,.home-row,.lab-card,.signal-stream-card,.signal-feature,.home-signal-mini";
+  const interactive="a,button,select,.home-row,.lab-card,.signal-stream-card,.signal-feature,.home-signal-mini,.ciel-panel-chip,.ciel-dock-btn,.ciel-source-pill";
   document.addEventListener("mouseover",e=>{
-    if(e.target.closest(interactive)){
-      ring.classList.add("is-hover");
+    if(e.target.closest("input, textarea")){
+      dot.style.opacity = "0";
+      ring.style.opacity = "0";
+    } else {
+      dot.style.opacity = "1";
+      ring.style.opacity = "1";
+      if(e.target.closest(interactive)){
+        ring.classList.add("is-hover");
+      }
     }
   });
   document.addEventListener("mouseout",e=>{
